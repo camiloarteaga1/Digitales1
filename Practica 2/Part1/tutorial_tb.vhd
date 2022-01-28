@@ -40,8 +40,8 @@ Architecture behavior of tutorial_tb Is
 	begin		    
 		led_expected_int(0) := not(swt_in(0));
 		led_expected_int(1) := swt_in(1) and not(swt_in(2));
-		led_expected_int(2) := swt_in(2) and swt_in(3);
-		led_expected_int(3) := led_expected_int(1) or led_expected_int(3);
+		led_expected_int(3) := swt_in(2) and swt_in(3);
+		led_expected_int(2) := led_expected_int(1) or led_expected_int(3);
 		led_expected_int(7 downto 4) := swt_in(7 downto 4);
 
 	    led_expected := led_expected_int;
@@ -60,7 +60,7 @@ begin
 	    variable proc_out : STD_LOGIC_VECTOR(7 downto 0);
 
 	begin
-        for i in 0 to 127 loop   
+        for i in 0 to 255 loop   
 	      count := count + 1;
 	               	  
 		  wait for 50 ns;
@@ -80,7 +80,7 @@ begin
           end if;
 		  		  
 		  -- Increment the switch value counters.
-		  count_int_2 <= count_int_2 + 2;
+		  count_int_2 <= count_int_2 + 1;
         end loop;		 
        
 	end process;

@@ -1,0 +1,5 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/juanc/Desktop/Repositorio/Digitales1/Practica 2/Part1/Part1.sim/sim_1/synth/timing/xsim/tutorial_tb_time_synth.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tutorial
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/juanc/Desktop/Repositorio/Digitales1/Practica 2/Part1/tutorial_tb.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'tutorial_tb'
