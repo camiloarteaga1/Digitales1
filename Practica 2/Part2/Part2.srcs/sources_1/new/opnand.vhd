@@ -32,13 +32,12 @@ use IEEE.STD_LOGIC_1164.ALL;
 --use UNISIM.VComponents.all;
 
 entity opnand is
-    Port ( a : in STD_LOGIC;
-           b : in STD_LOGIC;
-           c : out STD_LOGIC);
+    Port ( inp : in std_logic_vector(1 downto 0);
+    	   sout : out std_logic );
 end opnand;
 
 architecture openand of opnand is
     begin
-        c <= a nand b;
+        sout <= inp(0) nand inp(1);
 
 end openand;

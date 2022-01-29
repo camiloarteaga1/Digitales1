@@ -29,8 +29,8 @@ architecture Behavioral of fun is
     
     --Inverter for the structural model
     component opinv port
-    ( ai : in std_logic;
-      oinv : out std_logic   
+    ( a : in std_logic;
+      c : out std_logic   
     );
     end component;
     
@@ -64,26 +64,26 @@ architecture Behavioral of fun is
      --Start(Structural)  
         --NOT X
         not_1 : opinv port map(
-            ai => input(0),
-            oinv => st(0)      
+            a => input(0),
+            c => st(0)      
         );
         
         --NOT Y
         not_2 : opinv port map(
-            ai => input(1),
-            oinv => st(1)      
+            a => input(1),
+            c => st(1)      
         );
         
         --NOT W
         not_3 : opinv port map(
-            ai => input(2),
-            oinv => st(2)      
+            a => input(2),
+            c => st(2)      
         );
         
         --NOT Z
         not_4 : opinv port map(
-            ai => input(3),
-            oinv => st(3)      
+            a => input(3),
+            c => st(3)      
         );
         
         --NANDs
@@ -170,7 +170,7 @@ architecture Behavioral of fun is
     process(input)
         begin
         case input is
-            when "0000" | "0\001" | "0010" | "0011" | "0100" | "1110" | "1111" => 
+            when "0000" | "0001" | "0010" | "0011" | "0100" | "1110" | "1111" => 
             output(2) <= '1';
             when others => 
             output(2) <= '0'; 
