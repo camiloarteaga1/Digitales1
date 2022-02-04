@@ -16,7 +16,7 @@ Compiling package ieee.std_logic_textio
 Compiling package ieee.numeric_std
 Compiling package unisim.vcomponents
 Compiling architecture opeinv of entity xil_defaultlib.opinv [opinv_default]
-Compiling architecture openand of entity xil_defaultlib.opnand [opnand_default]
+Compiling architecture openor of entity xil_defaultlib.opnor [opnor_default]
 Compiling architecture behavioral of entity xil_defaultlib.fun [fun_default]
 Compiling architecture behavior of entity xil_defaultlib.fun_tb
 Built simulation snapshot fun_tb_behav

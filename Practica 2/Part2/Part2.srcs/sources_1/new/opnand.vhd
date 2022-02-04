@@ -31,13 +31,13 @@ use IEEE.STD_LOGIC_1164.ALL;
 --library UNISIM;
 --use UNISIM.VComponents.all;
 
-entity opnand is
+entity opnor is
     Port ( inp : in std_logic_vector(1 downto 0);
     	   sout : out std_logic );
-end opnand;
+end opnor;
 
-architecture openand of opnand is
+architecture openor of opnor is
     begin
-        sout <= inp(0) nand inp(1);
+        sout <= inp(0) nor inp(1);
 
-end openand;
+end openor;
