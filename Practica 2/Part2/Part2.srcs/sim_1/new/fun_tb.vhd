@@ -65,10 +65,10 @@ begin
 
 --		  -- If the outputs match, then announce it to the simulator console.
           if (out_out(0) = proc_out and out_out(1) = proc_out and out_out(2) = proc_out) then
-                write(s,inp);write (s, string'("   LED output MATCHED at ")); write (s, count ); write (s, string'(". Expected: ")); write (s, proc_out); write (s, string'(" Actual: ")); write (s, out_out); 
+                write (s, string'("   LED output MATCHED at ")); write (s, count ); write (s, string'(". Expected: ")); write (s, proc_out); write (s, string'(" Actual: ")); write (s, out_out); 
                 writeline (output, s);
           else
-              write(s,inp);write(s, string'("LED output mis-matched at ")); write (s, count); write (s, string'(". Expected: ")); write (s, proc_out); write (s, string'(" Actual: ")); write (s, out_out); 
+              write(s, string'("LED output mis-matched at ")); write (s, count); write (s, string'(". Expected: ")); write (s, proc_out); write (s, string'(" Actual: ")); write (s, out_out); 
               writeline (output, s);
           end if;
           inpf<=inpf+1;

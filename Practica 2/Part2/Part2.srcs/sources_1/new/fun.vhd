@@ -36,7 +36,7 @@ architecture Behavioral of fun is
     );
     end component;
     
-    --NAND for the structural model
+    --NORr the structural model
     component opnor port
     ( inp : in std_logic_vector(1 downto 0);
       sout : out std_logic 
@@ -89,80 +89,80 @@ architecture Behavioral of fun is
             c => st(3)      
         );
         
-        --NANDs
-        nand_1 : opnor port map(
+        --NORs
+        nor_1 : opnor port map(
             inp(0) => st(1),
             inp(1) => input(1),
             sout => st(4)
         );
         
-        nand_2 : opnor port map(
+        nor_2 : opnor port map(
             inp(0) => input(3),
             inp(1) => st(1),
             sout => st(5)
         );
         
-        nand_3 : opnor port map(
+        nor_3 : opnor port map(
             inp(0) => st(4),
             inp(1) => st(4),
             sout => st(6)
         );
         
-        nand_4 : opnor port map(
+        nor_4 : opnor port map(
             inp(0) => st(5),
             inp(1) => st(5),
             sout => st(7)
         );
         
-        nand_5 : opnor port map(
+        nor_5 : opnor port map(
             inp(0) => st(6),
             inp(1) => st(3),
             sout => st(8)
         );
         
-        nand_6 : opnor port map(
+        nor_6 : opnor port map(
             inp(0) => st(7),
             inp(1) => st(2),
             sout => st(9)
         );
         
-        nand_7 : opnor port map(
+        nor_7 : opnor port map(
             inp(0) => st(8),
             inp(1) => st(9),
             sout => st(10)
         );
         
-        nand_8 : opnor port map(
+        nor_8 : opnor port map(
             inp(0) => st(10),
             inp(1) => st(10),
             sout => st(11)
         );
         
-        nand_9 : opnor port map(
+        nor_9 : opnor port map(
             inp(0) => st(0),
             inp(1) => input(2),
             sout => st(12)
         );
         
-        nand_10 : opnor port map(
+        nor_10 : opnor port map(
             inp(0) => st(0),
             inp(1) => input(1),
             sout => st(13)
         );
         
-        nand_11 : opnor port map(
+        nor_11 : opnor port map(
             inp(0) => st(12),
             inp(1) => st(13),
             sout => st(14)
         );
         
-        nand_12 : opnor port map(
+        nor_12 : opnor port map(
             inp(0) => st(14),
             inp(1) => st(14),
             sout => st(15)
         );
         
-        nand_13 : opnor port map(
+        nor_13 : opnor port map(
             inp(0) => st(11),
             inp(1) => st(15),
             sout => output(1)
