@@ -26,6 +26,8 @@ architecture Behavioral of fun is
     signal pr : std_logic_vector(12 downto 0); --signal for Data Flow
     signal st : std_logic_vector(15 downto 0); --signal for strutctural
     signal co : std_logic_vector(15 downto 0); --signal for comportamental
+    signal outp : std_logic;
+    
     
     --Inverter for the structural model
     component opinv port
@@ -44,57 +46,58 @@ architecture Behavioral of fun is
     begin
     
     --Start(Data flow)
-        output(0) <= pr(12);
+        
             
-            pr(0) <= not(input(1)) nand input(2);
-            pr(1) <= input(0) nand not(input(1));
-            pr(2) <= pr(0) nand pr(0);
-            pr(3) <= pr(1) nand pr(1);
-            pr(4) <= pr(2) nand not(input(3));
-            pr(5) <= pr(3) nand not(input(2));
+            pr(0) <= not(input(2)) nand input(1);
+            pr(1) <= input(3) nand (not(input(2)));
+            pr(2) <= pr(0);
+            pr(3) <= pr(1);
+            pr(4) <= pr(2) or input(0);
+            pr(5) <= pr(3) or input(1);
             pr(6) <= pr(4) nand pr(5);
-            pr(7) <= pr(6) nand pr(6);
-            pr(8) <= not(input(0)) nand input(1);
-            pr(9) <= not(input(0)) nand input(2);
+            pr(7) <= not pr(6);
+            pr(8) <= not(input(3)) nand input(2);
+            pr(9) <= not(input(3)) nand input(1);
             pr(10) <= pr(8) nand pr(9);
-            pr(11) <= pr(10) nand pr(10);
+            pr(11) <= not pr(10);
             pr(12) <= pr(7) nand pr(11);
+            output(0) <= pr(12);
      --End(Data Flow) 
      
      --Start(Structural)  
         --NOT X
         not_1 : opinv port map(
-            a => input(0),
+            a => input(3),
             c => st(0)      
         );
         
         --NOT Y
         not_2 : opinv port map(
-            a => input(1),
+            a => input(2),
             c => st(1)      
         );
         
         --NOT W
         not_3 : opinv port map(
-            a => input(2),
+            a => input(1),
             c => st(2)      
         );
         
         --NOT Z
         not_4 : opinv port map(
-            a => input(3),
+            a => input(0),
             c => st(3)      
         );
         
         --NANDs
         nand_1 : opnand port map(
             inp(0) => st(1),
-            inp(1) => input(2),
+            inp(1) => input(1),
             sout => st(4)
         );
         
         nand_2 : opnand port map(
-            inp(0) => input(0),
+            inp(0) => input(3),
             inp(1) => st(1),
             sout => st(5)
         );
@@ -137,13 +140,13 @@ architecture Behavioral of fun is
         
         nand_9 : opnand port map(
             inp(0) => st(0),
-            inp(1) => input(1),
+            inp(1) => input(2),
             sout => st(12)
         );
         
         nand_10 : opnand port map(
             inp(0) => st(0),
-            inp(1) => input(2),
+            inp(1) => input(1),
             sout => st(13)
         );
         
@@ -165,17 +168,29 @@ architecture Behavioral of fun is
             sout => output(1)
         ); 
      --END(Structural)
-     
+     -- | "0010" | "0011" | "0100" | "1110" | "1111"
      --Start(Comportamental)
     process(input)
         begin
         case input is
-            when "0000" | "0001" | "0010" | "0011" | "0100" | "1110" | "1111" => 
-            output(2) <= '1';
+            when "0000"  => 
+            outp <= '1';
+            when "0001" =>
+            outp <= '1';
+            when "0010" =>
+            outp <= '1';
+            when "0011" =>
+            outp <= '1';
+            when "0100" =>
+            outp <= '1';
+            when "1110" =>
+            outp <= '1';
+            when "1111" =>
+            outp <= '1';
             when others => 
-            output(2) <= '0'; 
-        end case;
+            outp <= '0'; 
+        end case;     
     end process;      
      --END(Comportamental)
-
+    output(2) <= outp; 
 end Behavioral;
