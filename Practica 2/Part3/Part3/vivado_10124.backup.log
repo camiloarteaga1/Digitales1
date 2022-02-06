@@ -2,10 +2,10 @@
 # Vivado v2021.2 (64-bit)
 # SW Build 3367213 on Tue Oct 19 02:48:09 MDT 2021
 # IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
-# Start of session at: Sat Feb  5 17:30:29 2022
-# Process ID: 7560
+# Start of session at: Fri Feb  4 16:48:04 2022
+# Process ID: 10124
 # Current directory: D:/Trabajos/Github/Digitales1/Practica 2/Part3/Part3
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent9612 D:\Trabajos\Github\Digitales1\Practica 2\Part3\Part3\Part3.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent5252 D:\Trabajos\Github\Digitales1\Practica 2\Part3\Part3\Part3.xpr
 # Log file: D:/Trabajos/Github/Digitales1/Practica 2/Part3/Part3/vivado.log
 # Journal file: D:/Trabajos/Github/Digitales1/Practica 2/Part3/Part3\vivado.jou
 # Running On: DESKTOP-VBL1J4F, OS: Windows, CPU Frequency: 2400 MHz, CPU Physical cores: 2, Host memory: 8480 MB
@@ -65,6 +65,7 @@ Finished scanning sources
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2021.2/data/ip'.
-open_project: Time (s): cpu = 00:00:27 ; elapsed = 00:00:12 . Memory (MB): peak = 1243.969 ; gain = 0.000
+open_project: Time (s): cpu = 00:00:25 ; elapsed = 00:00:11 . Memory (MB): peak = 1557.215 ; gain = 0.000
 update_compile_order -fileset sources_1
-update_compile_order -fileset sim_1
+exit
+INFO: [Common 17-206] Exiting Vivado at Fri Feb  4 17:46:06 2022...

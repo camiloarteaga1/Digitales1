@@ -24,13 +24,12 @@ entity ALU is
     Port( inputA : in STD_LOGIC_VECTOR(3 downto 0);
           inputB : in STD_LOGIC_VECTOR(3 downto 0);
           inputXY : in STD_LOGIC_VECTOR(1 downto 0);
-          outputS : out STD_LOGIC_VECTOR(3 downto 0)
+          outputS : out STD_LOGIC_VECTOR(3 downto 0);
+          output7 : out STD_LOGIC_VECTOR(6 downto 0)
           );              
 end ALU;
 
-architecture Behavioral of ALU is
-
-signal outS : std_logic_vector(3 downto 0);
+architecture Behavioral of ALU is    
 
     begin
         process(inputXY)
@@ -47,7 +46,13 @@ signal outS : std_logic_vector(3 downto 0);
                     outputS <= inputA + inputB;
                 else
                     outputS <= inputA nor inputB;                                                                   
-                end if;
-        end process;                                          
-
+                end if;                
+        end process;                                                  
+--        process(outputSF)
+--            begin
+--            case outputSF is 
+--                when "0000" =>
+--                output7 <= "0000001";                
+--            end case;            
+--        end process;            
 end Behavioral;
