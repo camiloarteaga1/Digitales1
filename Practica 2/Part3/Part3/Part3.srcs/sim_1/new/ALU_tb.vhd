@@ -28,7 +28,7 @@ Architecture behavior of ALU_tb Is
 	Signal switchXY : STD_LOGIC_VECTOR(1 downto 0) ;
 	Signal outputProcess : STD_LOGIC_VECTOR(4 downto 0);
 	Signal led_out : STD_LOGIC_VECTOR(6 downto 0);
-	Signal led_exp_out : STD_LOGIC_VECTOR(6 downto 0);
+	--Signal led_exp_out : STD_LOGIC_VECTOR(6 downto 0);
 		
 	Signal count_int_A : STD_LOGIC_VECTOR(4 downto 0) := "00000";
 	Signal count_int_B : STD_LOGIC_VECTOR(4 downto 0) := "00000";
@@ -36,12 +36,12 @@ Architecture behavior of ALU_tb Is
     Signal inp_exp : STD_LOGIC_VECTOR(3 downto 0) := "0000";
     
 	procedure expected_led (
-	    outputSF : in std_logic_vector(4 downto 0);		
+	    outputSR : in std_logic_vector(4 downto 0);		
 		led_expected : out std_logic_vector(6 downto 0)
 	) is		
 		   
 	begin		    
-		case outputSF(3 downto 0) is 
+		case outputSR(3 downto 0) is 
                 when "0000" =>
                 led_expected := "0000001";
                 when "0001" =>
@@ -83,7 +83,8 @@ begin
 			inputA => switchA,
 			inputB => switchB,
 			inputXY => switchXY,
-			outputS => outputProcess
+			outputS => outputProcess,
+			output7 => led_out
 		 );
 		 
 	process
@@ -117,7 +118,7 @@ begin
                   countXY := countXY + 1;
                   wait for 10 ns;                                                                       
                   expected_led (outputProcess, proc_out);
-                  write (s, switchXY); write(s, string'(" "));write (s, outputProcess);write(s, string'(" "));write (s, proc_out);                  
+                  write (s, switchXY); write(s, string'(" "));write (s, outputProcess);write(s, string'(" "));write (s, proc_out);write(s, string'(" "));write (s, led_out);                  
                   writeline (output, s);                                    
                   switchXY <= switchXY + 1; 
               end loop;
