@@ -88,10 +88,13 @@ begin
 	process
 		variable s : line;
 		variable i : integer := 0;
+		variable i2 : integer := 0;
+		variable i3 : integer := 0;
 		variable countA : integer := 0;
 		variable countB : integer := 0;
 		variable countXY : integer := 0; 
-	    variable proc_out : STD_LOGIC_VECTOR(7 downto 0);
+	    variable proc_out : STD_LOGIC_VECTOR(6 downto 0);
+	    variable inp_exp : STD_LOGIC_VECTOR(3 downto 0) := "0000";	    
 
 	begin
         for i in 0 to 15 loop   
@@ -101,17 +104,18 @@ begin
 		  switchA <= count_int_A;
 		  
 		  wait for 10 ns;
-		  for i in 0 to 15 loop
+		  for i2 in 0 to 15 loop
 		      countB := countB +1;
 		          wait for 50 ns;
 		          switchB <= count_int_B;
-		          for i in 0 to 3 loop
+		          for i3 in 0 to 3 loop
 		              countXY := countXY + 1;
 		              wait for 50 ns;
 		              switchXY <= count_int_XY;
 		              
 		              count_int_XY <= count_int_XY + 1; 
                   end loop;
+                  expected_led (inp_exp, proc_out);
           count_int_B <= count_int_B + 1;                    
           end loop;     
 --		  expected_led (switch, proc_out);
