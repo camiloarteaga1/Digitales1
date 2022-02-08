@@ -15,32 +15,33 @@ end ALU_tb;
 Architecture behavior of ALU_tb Is
 	Component ALU
 	port (
-          inputA : in STD_LOGIC_VECTOR(3 downto 0);
-          inputB : in STD_LOGIC_VECTOR(3 downto 0);
+          inputA : in STD_LOGIC_VECTOR(4 downto 0);
+          inputB : in STD_LOGIC_VECTOR(4 downto 0);
           inputXY : in STD_LOGIC_VECTOR(1 downto 0);
-          outputS : out STD_LOGIC_VECTOR(3 downto 0);
+          outputS : out STD_LOGIC_VECTOR(4 downto 0);
           output7 : out STD_LOGIC_VECTOR(6 downto 0)
 		);	
 	End Component;
 	
-	Signal switchA : STD_LOGIC_VECTOR(3 downto 0) ;
-	Signal switchB : STD_LOGIC_VECTOR(3 downto 0) ;
+	Signal switchA : STD_LOGIC_VECTOR(4 downto 0) ;
+	Signal switchB : STD_LOGIC_VECTOR(4 downto 0) ;
 	Signal switchXY : STD_LOGIC_VECTOR(1 downto 0) ;
-	Signal outputProcess : STD_LOGIC_VECTOR(3 downto 0);
+	Signal outputProcess : STD_LOGIC_VECTOR(4 downto 0);
 	Signal led_out : STD_LOGIC_VECTOR(6 downto 0);
 	Signal led_exp_out : STD_LOGIC_VECTOR(6 downto 0);
 		
-	Signal count_int_A : STD_LOGIC_VECTOR(3 downto 0) := "0000";
-	Signal count_int_B : STD_LOGIC_VECTOR(3 downto 0) := "0000";
+	Signal count_int_A : STD_LOGIC_VECTOR(4 downto 0) := "00000";
+	Signal count_int_B : STD_LOGIC_VECTOR(4 downto 0) := "00000";
     Signal count_int_XY : STD_LOGIC_VECTOR(1 downto 0) := "00";
+    Signal inp_exp : STD_LOGIC_VECTOR(3 downto 0) := "0000";
     
 	procedure expected_led (
-	    outputSF : in std_logic_vector(3 downto 0);		
+	    outputSF : in std_logic_vector(4 downto 0);		
 		led_expected : out std_logic_vector(6 downto 0)
 	) is		
 		   
 	begin		    
-		case outputSF is 
+		case outputSF(3 downto 0) is 
                 when "0000" =>
                 led_expected := "0000001";
                 when "0001" =>
@@ -71,7 +72,7 @@ Architecture behavior of ALU_tb Is
                 led_expected := "1111001";
                 when "1110" =>
                 led_expected := "0110011";
-                when "1111" =>
+                when others =>
                 led_expected := "1011011";                 
             end case;
 	    
@@ -94,30 +95,38 @@ begin
 		variable countB : integer := 0;
 		variable countXY : integer := 0; 
 	    variable proc_out : STD_LOGIC_VECTOR(6 downto 0);
-	    variable inp_exp : STD_LOGIC_VECTOR(3 downto 0) := "0000";	    
+	    	    
 
 	begin
+	    switchA <= count_int_A;
+	    switchB <= count_int_B;
+	    switchXY <= count_int_XY;	    
         for i in 0 to 15 loop   
 	      countA := countA + 1;
 	               	  
-		  wait for 50 ns;
-		  switchA <= count_int_A;
-		  
+		  wait for 50 ns;		  
+		  write (s, switchA);
+          writeline (output, s);
 		  wait for 10 ns;
 		  for i2 in 0 to 15 loop
 		      countB := countB +1;
-		          wait for 50 ns;
-		          switchB <= count_int_B;
-		          for i3 in 0 to 3 loop
-		              countXY := countXY + 1;
-		              wait for 50 ns;
-		              switchXY <= count_int_XY;
-		              
-		              count_int_XY <= count_int_XY + 1; 
-                  end loop;
-                  expected_led (inp_exp, proc_out);
-          count_int_B <= count_int_B + 1;                    
-          end loop;     
+              wait for 50 ns;              
+              write (s, switchB);
+              writeline (output, s);
+              for i3 in 0 to 3 loop
+                  countXY := countXY + 1;
+                  wait for 10 ns;                                                                       
+                  expected_led (outputProcess, proc_out);
+                  write (s, switchXY); write(s, string'(" "));write (s, outputProcess);write(s, string'(" "));write (s, proc_out);                  
+                  writeline (output, s);                                    
+                  switchXY <= switchXY + 1; 
+              end loop;
+              --count_int_XY <= "00";
+              write(s, string'("Ended loop "));write(s, countB);
+              writeline(output, s);                                      
+          switchB <= switchB + 1;                    
+          end loop;
+          switchB <= count_int_B;               
 --		  expected_led (switch, proc_out);
 --		  led_exp_out <= proc_out;
 
@@ -131,7 +140,8 @@ begin
 --          end if;
 		  		  
 		  -- Increment the switch value counters.
-		  count_int_A <= count_int_A + 1;
+		  --count_int_A <= count_int_A + 1;
+		  switchA <= switchA + 1;
         end loop;		 
        
 	end process;
