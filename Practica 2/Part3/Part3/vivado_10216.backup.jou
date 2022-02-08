@@ -1,0 +1,15 @@
+#-----------------------------------------------------------
+# Vivado v2021.2 (64-bit)
+# SW Build 3367213 on Tue Oct 19 02:48:09 MDT 2021
+# IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
+# Start of session at: Tue Feb  8 00:06:39 2022
+# Process ID: 10216
+# Current directory: D:/Trabajos/Github/Digitales1/Practica 2/Part3/Part3
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent16176 D:\Trabajos\Github\Digitales1\Practica 2\Part3\Part3\Part3.xpr
+# Log file: D:/Trabajos/Github/Digitales1/Practica 2/Part3/Part3/vivado.log
+# Journal file: D:/Trabajos/Github/Digitales1/Practica 2/Part3/Part3\vivado.jou
+# Running On: DESKTOP-VBL1J4F, OS: Windows, CPU Frequency: 2400 MHz, CPU Physical cores: 2, Host memory: 8480 MB
+#-----------------------------------------------------------
+start_gui
+open_project {D:/Trabajos/Github/Digitales1/Practica 2/Part3/Part3/Part3.xpr}
+update_compile_order -fileset sources_1

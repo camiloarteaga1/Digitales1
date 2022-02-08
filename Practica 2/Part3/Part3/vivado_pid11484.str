@@ -1,0 +1,176 @@
+/*
+
+Xilinx Vivado v2021.2 (64-bit) [Major: 2021, Minor: 2]
+SW Build: 3367213 on Tue Oct 19 02:48:09 MDT 2021
+IP Build: 3369179 on Thu Oct 21 08:25:16 MDT 2021
+
+Process ID (PID): 11484
+License: Customer
+Mode: GUI Mode
+
+Current time: 	Fri Feb 04 15:45:25 COT 2022
+Time zone: 	Colombia Standard Time (America/Bogota)
+
+OS: Windows 10
+OS Version: 10.0
+OS Architecture: amd64
+Available processors (cores): 4
+
+Screen size: 1366x768
+Screen resolution (DPI): 100
+Available screens: 1
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+Scale size: 12
+
+Java version: 	11.0.11 64-bit
+Java home: 	C:/Xilinx/Vivado/2021.2/tps/win64/jre11.0.11_9
+Java executable: 	C:/Xilinx/Vivado/2021.2/tps/win64/jre11.0.11_9/bin/java.exe
+Java arguments: 	[-Dsun.java2d.pmoffscreen=false, -Dhttps.protocols=TLSv1,TLSv1.1,TLSv1.2, -Dsun.java2d.xrender=false, -Dsun.java2d.d3d=false, -Dsun.awt.nopixfmt=true, -Dsun.java2d.dpiaware=true, -Dsun.java2d.uiScale.enabled=false, -Xverify:none, -Dswing.aatext=true, -XX:-UsePerfData, -Djdk.map.althashing.threshold=512, -XX:StringTableSize=4072, --add-opens=java.base/java.nio=ALL-UNNAMED, --add-opens=java.desktop/sun.swing=ALL-UNNAMED, --add-opens=java.desktop/javax.swing=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.tree=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.plaf.basic=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.plaf.synth=ALL-UNNAMED, --add-opens=java.desktop/com.sun.awt=ALL-UNNAMED, -XX:NewSize=60m, -XX:MaxNewSize=60m, -Xms256m, -Xmx3072m, -Xss5m]
+Java initial memory (-Xms): 	256 MB
+Java maximum memory (-Xmx):	 3 GB
+
+
+User name: 	Simón
+User home directory: C:/Users/Simón
+User working directory: D:/Trabajos/Github/Digitales1/Practica 2/Part3/Part3
+User country: 	CO
+User language: 	es
+User locale: 	es_CO
+
+RDI_BASEROOT: C:/Xilinx/Vivado
+HDI_APPROOT: C:/Xilinx/Vivado/2021.2
+RDI_DATADIR: C:/Xilinx/Vivado/2021.2/data
+RDI_BINDIR: C:/Xilinx/Vivado/2021.2/bin
+
+Vivado preferences file: C:/Users/Simón/AppData/Roaming/Xilinx/Vivado/2021.2/vivado.xml
+Vivado preferences directory: C:/Users/Simón/AppData/Roaming/Xilinx/Vivado/2021.2/
+Vivado layouts directory: C:/Users/Simón/AppData/Roaming/Xilinx/Vivado/2021.2/data/layouts
+PlanAhead jar file: 	C:/Xilinx/Vivado/2021.2/lib/classes/planAhead.jar
+Vivado log file: 	D:/Trabajos/Github/Digitales1/Practica 2/Part3/Part3/vivado.log
+Vivado journal file: 	D:/Trabajos/Github/Digitales1/Practica 2/Part3/Part3/vivado.jou
+Engine tmp dir: 	D:/Trabajos/Github/Digitales1/Practica 2/Part3/Part3/.Xil/Vivado-11484-DESKTOP-VBL1J4F
+
+Xilinx Environment Variables
+----------------------------
+XILINX: C:/Xilinx/Vivado/2021.2/ids_lite/ISE
+XILINX_DSP: C:/Xilinx/Vivado/2021.2/ids_lite/ISE
+XILINX_HLS: C:/Xilinx/Vitis_HLS/2021.2
+XILINX_PLANAHEAD: C:/Xilinx/Vivado/2021.2
+XILINX_VIVADO: C:/Xilinx/Vivado/2021.2
+XILINX_VIVADO_HLS: C:/Xilinx/Vivado/2021.2
+
+
+GUI allocated memory:	308 MB
+GUI max memory:		3,072 MB
+Engine allocated memory: 1,318 MB
+
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// TclEventType: PROJECT_OPEN_DIALOG
+// Opening Vivado Project: D:\Trabajos\Github\Digitales1\Practica 2\Part3\Part3\Part3.xpr. Version: Vivado v2021.2 
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: FLOW_ADDED
+// Tcl Message: open_project {D:/Trabajos/Github/Digitales1/Practica 2/Part3/Part3/Part3.xpr} 
+// HMemoryUtils.trashcanNow. Engine heap size: 1,318 MB. GUI used memory: 51 MB. Current time: 2/4/22, 3:45:26 PM COT
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_DASHBOARD_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 106 MB (+108568kb) [00:00:20]
+// [Engine Memory]: 1,318 MB (+1230281kb) [00:00:20]
+// WARNING: HEventQueue.dispatchEvent() is taking  3505 ms.
+// Tcl Message: open_project {D:/Trabajos/Github/Digitales1/Practica 2/Part3/Part3/Part3.xpr} 
+// Tcl Message: INFO: [filemgmt 56-3] Default IP Output Path : Could not find the directory 'D:/Trabajos/Github/Digitales1/Practica 2/Part3/Part3/Part3.gen/sources_1'. 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2021.2/data/ip'. 
+// Tcl Message: open_project: Time (s): cpu = 00:00:25 ; elapsed = 00:00:11 . Memory (MB): peak = 1571.312 ; gain = 0.000 
+// Project name: Part3; location: D:/Trabajos/Github/Digitales1/Practica 2/Part3/Part3; part: xc7a35ticpg236-1L
+dismissDialog("Open Project"); // bA
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints]", 0); // D
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints]", 0); // D
+// Tcl Message: update_compile_order -fileset sources_1 
+// PAPropertyPanels.initPanels (ALU.vhd) elapsed time: 0.3s
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, ALU(Behavioral) (ALU.vhd)]", 1, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, ALU(Behavioral) (ALU.vhd)]", 1, false, false, false, false, false, true); // D - Double Click
+floatFrame(PAResourceOtoP.PAViews_CODE, "ALU.vhd"); // aA
+// PAResourceOtoP.PAViews_CODE: Code: float view
+maximizeFrame(PAResourceOtoP.PAViews_CODE, "ALU.vhd"); // aA
+dockFrame(PAResourceOtoP.PAViews_CODE, "ALU.vhd"); // aA
+maximizeFrame(PAResourceOtoP.PAViews_CODE, "ALU.vhd"); // aA
+// PAResourceOtoP.PAViews_CODE: Code: dock view
+selectMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // ag
+selectMenu(PAResourceItoN.MainMenuMgr_PROJECT, "Project"); // al
+selectMenu(PAResourceItoN.MainMenuMgr_CHECKPOINT, "Checkpoint"); // al
+dismissMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // ag
+// Elapsed time: 71 seconds
+floatFrame(PAResourceOtoP.PAViews_CODE, "ALU.vhd"); // aA
+// PAResourceOtoP.PAViews_CODE: Code: float view
+// Elapsed time: 63 seconds
+maximizeFrame(PAResourceOtoP.PAViews_CODE, "ALU.vhd"); // aA
+unMaximizeFrame(PAResourceOtoP.PAViews_CODE, "ALU.vhd"); // aA
+dockFrame(PAResourceOtoP.PAViews_CODE, "ALU.vhd"); // aA
+// PAResourceOtoP.PAViews_CODE: Code: dock view
+floatFrame(PAResourceOtoP.PAViews_CODE, "ALU.vhd"); // aA
+// PAResourceOtoP.PAViews_CODE: Code: float view
+maximizeFrame(PAResourceOtoP.PAViews_CODE, "ALU.vhd"); // aA
+unMaximizeFrame(PAResourceOtoP.PAViews_CODE, "ALU.vhd"); // aA
+// [GUI Memory]: 136 MB (+25883kb) [00:03:14]
+// [GUI Memory]: 160 MB (+18438kb) [00:03:19]
+// Elapsed time: 12 seconds
+maximizeFrame(PAResourceOtoP.PAViews_CODE, "ALU.vhd"); // aA
+unMaximizeFrame(PAResourceOtoP.PAViews_CODE, "ALU.vhd"); // aA
+maximizeFrame(PAResourceOtoP.PAViews_CODE, "ALU.vhd"); // aA
+unMaximizeFrame(PAResourceOtoP.PAViews_CODE, "ALU.vhd"); // aA
+maximizeFrame(PAResourceOtoP.PAViews_CODE, "ALU.vhd"); // aA
+// PAResourceOtoP.PAViews_CODE: Code: close view
+// Elapsed time: 26 seconds
+closeFrame(PAResourceOtoP.PAViews_CODE, "ALU.vhd"); // aA
+dockFrame(PAResourceOtoP.PAViews_CODE, "ALU.vhd"); // aA
+maximizeFrame(PAResourceOtoP.PAViews_CODE, "ALU.vhd"); // aA
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // D
+// Elapsed time: 41 seconds
+floatFrame(PAResourceOtoP.PAViews_PROJECT_SUMMARY, "Project Summary"); // aA
+// PAResourceOtoP.PAViews_PROJECT_SUMMARY: Project Summary: float view
+maximizeFrame(PAResourceOtoP.PAViews_PROJECT_SUMMARY, "Project Summary"); // aA
+dockFrame(PAResourceOtoP.PAViews_PROJECT_SUMMARY, "Project Summary"); // aA
+maximizeFrame(PAResourceOtoP.PAViews_PROJECT_SUMMARY, "Project Summary"); // aA
+// PAResourceOtoP.PAViews_PROJECT_SUMMARY: Project Summary: dock view
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, ALU(Behavioral) (ALU.vhd)]", 1, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, ALU(Behavioral) (ALU.vhd)]", 1, false, false, false, false, false, true); // D - Double Click
+floatFrame(PAResourceOtoP.PAViews_CODE, "ALU.vhd"); // aA
+// PAResourceOtoP.PAViews_CODE: Code: float view
+maximizeFrame(PAResourceOtoP.PAViews_CODE, "ALU.vhd"); // aA
+// Elapsed time: 78 seconds
+selectCodeEditor("ALU.vhd", 95, 207); // be
+typeControlKey((HResource) null, "ALU.vhd", 'v'); // be
+selectCodeEditor("ALU.vhd", 230, 381); // be
+// Elapsed time: 10 seconds
+typeControlKey(null, null, 'z');
+selectCodeEditor("ALU.vhd", 232, 390); // be
+selectCodeEditor("ALU.vhd", 177, 303); // be
+selectCodeEditor("ALU.vhd", 200, 300); // be
+// Elapsed time: 16 seconds
+selectCodeEditor("ALU.vhd", 200, 326); // be
+selectCodeEditor("ALU.vhd", 238, 351); // be
+// HMemoryUtils.trashcanNow. Engine heap size: 1,318 MB. GUI used memory: 60 MB. Current time: 2/4/22, 4:15:27 PM COT
+// Elapsed time: 2097 seconds
+selectCodeEditor("ALU.vhd", 188, 249); // be
+selectCodeEditor("ALU.vhd", 212, 239); // be
