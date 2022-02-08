@@ -18,7 +18,7 @@ Architecture behavior of ALU_tb Is
           inputA : in STD_LOGIC_VECTOR(4 downto 0);
           inputB : in STD_LOGIC_VECTOR(4 downto 0);
           inputXY : in STD_LOGIC_VECTOR(1 downto 0);
-          outputS : out STD_LOGIC_VECTOR(4 downto 0);
+          outputSF : inout STD_LOGIC_VECTOR(4 downto 0);          
           output7 : out STD_LOGIC_VECTOR(6 downto 0)
 		);	
 	End Component;
@@ -27,7 +27,7 @@ Architecture behavior of ALU_tb Is
 	Signal switchB : STD_LOGIC_VECTOR(4 downto 0) ;
 	Signal switchXY : STD_LOGIC_VECTOR(1 downto 0) ;
 	Signal outputProcess : STD_LOGIC_VECTOR(4 downto 0);
-	Signal led_out : STD_LOGIC_VECTOR(6 downto 0);
+	Signal led_out : STD_LOGIC_VECTOR(6 downto 0);	
 	--Signal led_exp_out : STD_LOGIC_VECTOR(6 downto 0);
 		
 	Signal count_int_A : STD_LOGIC_VECTOR(4 downto 0) := "00000";
@@ -36,12 +36,31 @@ Architecture behavior of ALU_tb Is
     Signal inp_exp : STD_LOGIC_VECTOR(3 downto 0) := "0000";
     
 	procedure expected_led (
-	    outputSR : in std_logic_vector(4 downto 0);		
+	    inputAR : in STD_LOGIC_VECTOR(4 downto 0);
+        inputBR : in STD_LOGIC_VECTOR(4 downto 0);
+        inputXYR : in STD_LOGIC_VECTOR(1 downto 0);	    
+	    outputS : inout std_logic_vector(4 downto 0);		    
 		led_expected : out std_logic_vector(6 downto 0)
 	) is		
 		   
-	begin		    
-		case outputSR(3 downto 0) is 
+	begin	
+                    
+            outputS(4) := '0';
+                if inputXYR = "11" then
+                    outputS(3 downto 0) := inputAR(3 downto 0) xor inputBR(3 downto 0);                                          
+                elsif inputXYR = "10" then
+                    if inputBR < 2 then
+                        outputS := "00000";                        
+                    else
+                        outputS := inputBR-2;                        
+                    end if;                         
+                elsif inputXYR = "01" then
+                    outputS := inputAR + inputBR;                    
+                   
+                else
+                    outputS(3 downto 0) := inputAR(3 downto 0) nor inputBR(3 downto 0);                                                                                       
+                end if; 		    
+		case outputS(3 downto 0) is 
                 when "0000" =>
                 led_expected := "0000001";
                 when "0001" =>
@@ -82,12 +101,13 @@ begin
 	uut:  ALU PORT MAP (
 			inputA => switchA,
 			inputB => switchB,
-			inputXY => switchXY,
-			outputS => outputProcess,
-			output7 => led_out
+			inputXY => switchXY,			
+			output7 => led_out,
+			outputSF => outputProcess
 		 );
-		 
+    		 
 	process
+	
 		variable s : line;
 		variable i : integer := 0;
 		variable i2 : integer := 0;
@@ -96,6 +116,7 @@ begin
 		variable countB : integer := 0;
 		variable countXY : integer := 0; 
 	    variable proc_out : STD_LOGIC_VECTOR(6 downto 0);
+	    variable outputs : std_logic_vector(4 downto 0):= "00000";	    
 	    	    
 
 	begin
@@ -104,44 +125,30 @@ begin
 	    switchXY <= count_int_XY;	    
         for i in 0 to 15 loop   
 	      countA := countA + 1;
-	               	  
-		  wait for 50 ns;		  
-		  write (s, switchA);
-          writeline (output, s);
-		  wait for 10 ns;
+	               	  		  		  		            
+		  wait for 60 ns;
 		  for i2 in 0 to 15 loop
 		      countB := countB +1;
-              wait for 50 ns;              
-              write (s, switchB);
-              writeline (output, s);
+              wait for 50 ns; 
+              
               for i3 in 0 to 3 loop
                   countXY := countXY + 1;
                   wait for 10 ns;                                                                       
-                  expected_led (outputProcess, proc_out);
-                  write (s, switchXY); write(s, string'(" "));write (s, outputProcess);write(s, string'(" "));write (s, proc_out);write(s, string'(" "));write (s, led_out);                  
+                  expected_led (switchA,switchB,switchXY,outputs, proc_out);
+                  write(s, string'("A: "));write (s, switchA);write(s, string'(" B: "));write (s, switchB);write(s, string'(" XY: "));write (s, switchXY);
+                  writeline (output, s);
+                  write(s, string'(" Expected Out S: "));write (s, outputs);write(s, string'(" Actual Out S: "));write (s, outputProcess);write(s, string'(" Expected Out LCD: "));write (s, proc_out);write(s, string'(" Actual Out LCD: "));write (s, led_out);                  
                   writeline (output, s);                                    
                   switchXY <= switchXY + 1; 
               end loop;
-              --count_int_XY <= "00";
+              
               write(s, string'("Ended loop "));write(s, countB);
+              writeline(output, s);
+              write(s, string'("------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------"));
               writeline(output, s);                                      
           switchB <= switchB + 1;                    
           end loop;
           switchB <= count_int_B;               
---		  expected_led (switch, proc_out);
---		  led_exp_out <= proc_out;
-
-		  -- If the outputs match, then announce it to the simulator console.
---          if (led_out = proc_out) then
---                write (s, string'("LED output MATCHED at ")); write (s, count ); write (s, string'(". Expected: ")); write (s, proc_out); write (s, string'(" Actual: ")); write (s, led_out); 
---                writeline (output, s);
---          else
---              write (s, string'("LED output mis-matched at ")); write (s, count); write (s, string'(". Expected: ")); write (s, proc_out); write (s, string'(" Actual: ")); write (s, led_out); 
---              writeline (output, s);
---          end if;
-		  		  
-		  -- Increment the switch value counters.
-		  --count_int_A <= count_int_A + 1;
 		  switchA <= switchA + 1;
         end loop;		 
        

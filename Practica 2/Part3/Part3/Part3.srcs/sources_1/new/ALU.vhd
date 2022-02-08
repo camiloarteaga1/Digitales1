@@ -24,36 +24,31 @@ entity ALU is
     Port( inputA : in STD_LOGIC_VECTOR(4 downto 0);
           inputB : in STD_LOGIC_VECTOR(4 downto 0);
           inputXY : in STD_LOGIC_VECTOR(1 downto 0);
-          outputS : out STD_LOGIC_VECTOR(4 downto 0);          
+          outputSF : inout STD_LOGIC_VECTOR(4 downto 0);                    
           output7 : out STD_LOGIC_VECTOR(6 downto 0)
           );              
 end ALU;
 
 architecture Behavioral of ALU is    
 
-    Signal outputSF : std_logic_vector(4 downto 0); 
+    --Signal outputSF : std_logic_vector(4 downto 0); 
     begin
-        process(inputXY)
+        process(inputXY, outputSF)
         
             begin
-            outputS(4) <= '0';
-                if inputXY = "11" then
-                    outputS(3 downto 0) <= inputA(3 downto 0) xor inputB(3 downto 0);
+            outputSF(4) <= '0';
+                if inputXY = "11" then                    
                     outputSF(3 downto 0) <= inputA(3 downto 0) xor inputB(3 downto 0);                      
                 elsif inputXY = "10" then
-                    if inputB < 2 then
-                        outputS <= "00000";
+                    if inputB < 2 then                        
                         outputSF <= "00000";
-                    else
-                        outputS <= inputB-2;
+                    else                        
                         outputSF <= inputB-2;
                     end if;                         
-                elsif inputXY = "01" then
-                    outputS <= inputA + inputB;
+                elsif inputXY = "01" then                    
                     outputSF <= inputA + inputB;
                     
-                else
-                    outputS(3 downto 0) <= inputA(3 downto 0) nor inputB(3 downto 0);
+                else                    
                     outputSF(3 downto 0) <= inputA(3 downto 0) nor inputB(3 downto 0);                                                                   
                 end if;                
                 case outputSF(3 downto 0) is 
