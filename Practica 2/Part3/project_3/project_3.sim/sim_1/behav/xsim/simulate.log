@@ -1,0 +1,641 @@
+Time resolution is 1 ps
+A: 00000 B: 00000 XY: 00
+ Expected Out S: 01111 Actual Out S: 01111 Expected Out LCD: 1011011 Actual Out LCD: 1011011
+A: 00000 B: 00000 XY: 01
+ Expected Out S: 00000 Actual Out S: 00000 Expected Out LCD: 0000001 Actual Out LCD: 0000001
+A: 00000 B: 00000 XY: 10
+ Expected Out S: 00000 Actual Out S: 00000 Expected Out LCD: 0000001 Actual Out LCD: 0000001
+A: 00000 B: 00000 XY: 11
+ Expected Out S: 00000 Actual Out S: 00000 Expected Out LCD: 0000001 Actual Out LCD: 0000001
+Ended loop 1
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+A: 00000 B: 00001 XY: 00
+ Expected Out S: 01110 Actual Out S: 01110 Expected Out LCD: 0110011 Actual Out LCD: 0110011
+A: 00000 B: 00001 XY: 01
+ Expected Out S: 00001 Actual Out S: 00001 Expected Out LCD: 1001111 Actual Out LCD: 1001111
+A: 00000 B: 00001 XY: 10
+ Expected Out S: 00000 Actual Out S: 00000 Expected Out LCD: 0000001 Actual Out LCD: 0000001
+A: 00000 B: 00001 XY: 11
+ Expected Out S: 00001 Actual Out S: 00001 Expected Out LCD: 1001111 Actual Out LCD: 1001111
+Ended loop 2
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+A: 00000 B: 00010 XY: 00
+ Expected Out S: 01101 Actual Out S: 01101 Expected Out LCD: 1111001 Actual Out LCD: 1111001
+A: 00000 B: 00010 XY: 01
+ Expected Out S: 00010 Actual Out S: 00010 Expected Out LCD: 0010010 Actual Out LCD: 0010010
+A: 00000 B: 00010 XY: 10
+ Expected Out S: 00000 Actual Out S: 00000 Expected Out LCD: 0000001 Actual Out LCD: 0000001
+A: 00000 B: 00010 XY: 11
+ Expected Out S: 00010 Actual Out S: 00010 Expected Out LCD: 0010010 Actual Out LCD: 0010010
+Ended loop 3
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+A: 00000 B: 00011 XY: 00
+ Expected Out S: 01100 Actual Out S: 01100 Expected Out LCD: 1101101 Actual Out LCD: 1101101
+A: 00000 B: 00011 XY: 01
+ Expected Out S: 00011 Actual Out S: 00011 Expected Out LCD: 0000110 Actual Out LCD: 0000110
+A: 00000 B: 00011 XY: 10
+ Expected Out S: 00001 Actual Out S: 00001 Expected Out LCD: 1001111 Actual Out LCD: 1001111
+A: 00000 B: 00011 XY: 11
+ Expected Out S: 00011 Actual Out S: 00011 Expected Out LCD: 0000110 Actual Out LCD: 0000110
+Ended loop 4
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+A: 00000 B: 00100 XY: 00
+ Expected Out S: 01011 Actual Out S: 01011 Expected Out LCD: 0110000 Actual Out LCD: 0110000
+A: 00000 B: 00100 XY: 01
+ Expected Out S: 00100 Actual Out S: 00100 Expected Out LCD: 1001100 Actual Out LCD: 1001100
+A: 00000 B: 00100 XY: 10
+ Expected Out S: 00010 Actual Out S: 00010 Expected Out LCD: 0010010 Actual Out LCD: 0010010
+A: 00000 B: 00100 XY: 11
+ Expected Out S: 00100 Actual Out S: 00100 Expected Out LCD: 1001100 Actual Out LCD: 1001100
+Ended loop 5
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+A: 00000 B: 00101 XY: 00
+ Expected Out S: 01010 Actual Out S: 01010 Expected Out LCD: 1111110 Actual Out LCD: 1111110
+A: 00000 B: 00101 XY: 01
+ Expected Out S: 00101 Actual Out S: 00101 Expected Out LCD: 0100100 Actual Out LCD: 0100100
+A: 00000 B: 00101 XY: 10
+ Expected Out S: 00011 Actual Out S: 00011 Expected Out LCD: 0000110 Actual Out LCD: 0000110
+A: 00000 B: 00101 XY: 11
+ Expected Out S: 00101 Actual Out S: 00101 Expected Out LCD: 0100100 Actual Out LCD: 0100100
+Ended loop 6
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+A: 00000 B: 00110 XY: 00
+ Expected Out S: 01001 Actual Out S: 01001 Expected Out LCD: 0000100 Actual Out LCD: 0000100
+A: 00000 B: 00110 XY: 01
+ Expected Out S: 00110 Actual Out S: 00110 Expected Out LCD: 1100000 Actual Out LCD: 1100000
+A: 00000 B: 00110 XY: 10
+ Expected Out S: 00100 Actual Out S: 00100 Expected Out LCD: 1001100 Actual Out LCD: 1001100
+A: 00000 B: 00110 XY: 11
+ Expected Out S: 00110 Actual Out S: 00110 Expected Out LCD: 1100000 Actual Out LCD: 1100000
+Ended loop 7
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+A: 00000 B: 00111 XY: 00
+ Expected Out S: 01000 Actual Out S: 01000 Expected Out LCD: 0000000 Actual Out LCD: 0000000
+A: 00000 B: 00111 XY: 01
+ Expected Out S: 00111 Actual Out S: 00111 Expected Out LCD: 0001110 Actual Out LCD: 0001110
+A: 00000 B: 00111 XY: 10
+ Expected Out S: 00101 Actual Out S: 00101 Expected Out LCD: 0100100 Actual Out LCD: 0100100
+A: 00000 B: 00111 XY: 11
+ Expected Out S: 00111 Actual Out S: 00111 Expected Out LCD: 0001110 Actual Out LCD: 0001110
+Ended loop 8
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+A: 00000 B: 01000 XY: 00
+ Expected Out S: 00111 Actual Out S: 00111 Expected Out LCD: 0001110 Actual Out LCD: 0001110
+A: 00000 B: 01000 XY: 01
+ Expected Out S: 01000 Actual Out S: 01000 Expected Out LCD: 0000000 Actual Out LCD: 0000000
+A: 00000 B: 01000 XY: 10
+ Expected Out S: 00110 Actual Out S: 00110 Expected Out LCD: 1100000 Actual Out LCD: 1100000
+A: 00000 B: 01000 XY: 11
+ Expected Out S: 01000 Actual Out S: 01000 Expected Out LCD: 0000000 Actual Out LCD: 0000000
+Ended loop 9
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+A: 00000 B: 01001 XY: 00
+ Expected Out S: 00110 Actual Out S: 00110 Expected Out LCD: 1100000 Actual Out LCD: 1100000
+A: 00000 B: 01001 XY: 01
+ Expected Out S: 01001 Actual Out S: 01001 Expected Out LCD: 0000100 Actual Out LCD: 0000100
+A: 00000 B: 01001 XY: 10
+ Expected Out S: 00111 Actual Out S: 00111 Expected Out LCD: 0001110 Actual Out LCD: 0001110
+A: 00000 B: 01001 XY: 11
+ Expected Out S: 01001 Actual Out S: 01001 Expected Out LCD: 0000100 Actual Out LCD: 0000100
+Ended loop 10
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+A: 00000 B: 01010 XY: 00
+ Expected Out S: 00101 Actual Out S: 00101 Expected Out LCD: 0100100 Actual Out LCD: 0100100
+A: 00000 B: 01010 XY: 01
+ Expected Out S: 01010 Actual Out S: 01010 Expected Out LCD: 1111110 Actual Out LCD: 1111110
+A: 00000 B: 01010 XY: 10
+ Expected Out S: 01000 Actual Out S: 01000 Expected Out LCD: 0000000 Actual Out LCD: 0000000
+A: 00000 B: 01010 XY: 11
+ Expected Out S: 01010 Actual Out S: 01010 Expected Out LCD: 1111110 Actual Out LCD: 1111110
+Ended loop 11
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+A: 00000 B: 01011 XY: 00
+ Expected Out S: 00100 Actual Out S: 00100 Expected Out LCD: 1001100 Actual Out LCD: 1001100
+A: 00000 B: 01011 XY: 01
+ Expected Out S: 01011 Actual Out S: 01011 Expected Out LCD: 0110000 Actual Out LCD: 0110000
+A: 00000 B: 01011 XY: 10
+ Expected Out S: 01001 Actual Out S: 01001 Expected Out LCD: 0000100 Actual Out LCD: 0000100
+A: 00000 B: 01011 XY: 11
+ Expected Out S: 01011 Actual Out S: 01011 Expected Out LCD: 0110000 Actual Out LCD: 0110000
+Ended loop 12
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+A: 00000 B: 01100 XY: 00
+ Expected Out S: 00011 Actual Out S: 00011 Expected Out LCD: 0000110 Actual Out LCD: 0000110
+A: 00000 B: 01100 XY: 01
+ Expected Out S: 01100 Actual Out S: 01100 Expected Out LCD: 1101101 Actual Out LCD: 1101101
+A: 00000 B: 01100 XY: 10
+ Expected Out S: 01010 Actual Out S: 01010 Expected Out LCD: 1111110 Actual Out LCD: 1111110
+A: 00000 B: 01100 XY: 11
+ Expected Out S: 01100 Actual Out S: 01100 Expected Out LCD: 1101101 Actual Out LCD: 1101101
+Ended loop 13
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+A: 00000 B: 01101 XY: 00
+ Expected Out S: 00010 Actual Out S: 00010 Expected Out LCD: 0010010 Actual Out LCD: 0010010
+A: 00000 B: 01101 XY: 01
+ Expected Out S: 01101 Actual Out S: 01101 Expected Out LCD: 1111001 Actual Out LCD: 1111001
+A: 00000 B: 01101 XY: 10
+ Expected Out S: 01011 Actual Out S: 01011 Expected Out LCD: 0110000 Actual Out LCD: 0110000
+A: 00000 B: 01101 XY: 11
+ Expected Out S: 01101 Actual Out S: 01101 Expected Out LCD: 1111001 Actual Out LCD: 1111001
+Ended loop 14
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+A: 00000 B: 01110 XY: 00
+ Expected Out S: 00001 Actual Out S: 00001 Expected Out LCD: 1001111 Actual Out LCD: 1001111
+A: 00000 B: 01110 XY: 01
+ Expected Out S: 01110 Actual Out S: 01110 Expected Out LCD: 0110011 Actual Out LCD: 0110011
+A: 00000 B: 01110 XY: 10
+ Expected Out S: 01100 Actual Out S: 01100 Expected Out LCD: 1101101 Actual Out LCD: 1101101
+A: 00000 B: 01110 XY: 11
+ Expected Out S: 01110 Actual Out S: 01110 Expected Out LCD: 0110011 Actual Out LCD: 0110011
+Ended loop 15
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+A: 00000 B: 01111 XY: 00
+ Expected Out S: 00000 Actual Out S: 00000 Expected Out LCD: 0000001 Actual Out LCD: 0000001
+A: 00000 B: 01111 XY: 01
+ Expected Out S: 01111 Actual Out S: 01111 Expected Out LCD: 1011011 Actual Out LCD: 1011011
+A: 00000 B: 01111 XY: 10
+ Expected Out S: 01101 Actual Out S: 01101 Expected Out LCD: 1111001 Actual Out LCD: 1111001
+A: 00000 B: 01111 XY: 11
+ Expected Out S: 01111 Actual Out S: 01111 Expected Out LCD: 1011011 Actual Out LCD: 1011011
+Ended loop 16
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+A: 00001 B: 00000 XY: 00
+ Expected Out S: 01110 Actual Out S: 01110 Expected Out LCD: 0110011 Actual Out LCD: 0110011
+A: 00001 B: 00000 XY: 01
+ Expected Out S: 00001 Actual Out S: 00001 Expected Out LCD: 1001111 Actual Out LCD: 1001111
+A: 00001 B: 00000 XY: 10
+ Expected Out S: 00000 Actual Out S: 00000 Expected Out LCD: 0000001 Actual Out LCD: 0000001
+A: 00001 B: 00000 XY: 11
+ Expected Out S: 00001 Actual Out S: 00001 Expected Out LCD: 1001111 Actual Out LCD: 1001111
+Ended loop 17
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+A: 00001 B: 00001 XY: 00
+ Expected Out S: 01110 Actual Out S: 01110 Expected Out LCD: 0110011 Actual Out LCD: 0110011
+A: 00001 B: 00001 XY: 01
+ Expected Out S: 00010 Actual Out S: 00010 Expected Out LCD: 0010010 Actual Out LCD: 0010010
+A: 00001 B: 00001 XY: 10
+ Expected Out S: 00000 Actual Out S: 00000 Expected Out LCD: 0000001 Actual Out LCD: 0000001
+A: 00001 B: 00001 XY: 11
+ Expected Out S: 00000 Actual Out S: 00000 Expected Out LCD: 0000001 Actual Out LCD: 0000001
+Ended loop 18
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+A: 00001 B: 00010 XY: 00
+ Expected Out S: 01100 Actual Out S: 01100 Expected Out LCD: 1101101 Actual Out LCD: 1101101
+A: 00001 B: 00010 XY: 01
+ Expected Out S: 00011 Actual Out S: 00011 Expected Out LCD: 0000110 Actual Out LCD: 0000110
+A: 00001 B: 00010 XY: 10
+ Expected Out S: 00000 Actual Out S: 00000 Expected Out LCD: 0000001 Actual Out LCD: 0000001
+A: 00001 B: 00010 XY: 11
+ Expected Out S: 00011 Actual Out S: 00011 Expected Out LCD: 0000110 Actual Out LCD: 0000110
+Ended loop 19
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+A: 00001 B: 00011 XY: 00
+ Expected Out S: 01100 Actual Out S: 01100 Expected Out LCD: 1101101 Actual Out LCD: 1101101
+A: 00001 B: 00011 XY: 01
+ Expected Out S: 00100 Actual Out S: 00100 Expected Out LCD: 1001100 Actual Out LCD: 1001100
+A: 00001 B: 00011 XY: 10
+ Expected Out S: 00001 Actual Out S: 00001 Expected Out LCD: 1001111 Actual Out LCD: 1001111
+A: 00001 B: 00011 XY: 11
+ Expected Out S: 00010 Actual Out S: 00010 Expected Out LCD: 0010010 Actual Out LCD: 0010010
+Ended loop 20
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+A: 00001 B: 00100 XY: 00
+ Expected Out S: 01010 Actual Out S: 01010 Expected Out LCD: 1111110 Actual Out LCD: 1111110
+A: 00001 B: 00100 XY: 01
+ Expected Out S: 00101 Actual Out S: 00101 Expected Out LCD: 0100100 Actual Out LCD: 0100100
+A: 00001 B: 00100 XY: 10
+ Expected Out S: 00010 Actual Out S: 00010 Expected Out LCD: 0010010 Actual Out LCD: 0010010
+A: 00001 B: 00100 XY: 11
+ Expected Out S: 00101 Actual Out S: 00101 Expected Out LCD: 0100100 Actual Out LCD: 0100100
+Ended loop 21
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+A: 00001 B: 00101 XY: 00
+ Expected Out S: 01010 Actual Out S: 01010 Expected Out LCD: 1111110 Actual Out LCD: 1111110
+A: 00001 B: 00101 XY: 01
+ Expected Out S: 00110 Actual Out S: 00110 Expected Out LCD: 1100000 Actual Out LCD: 1100000
+A: 00001 B: 00101 XY: 10
+ Expected Out S: 00011 Actual Out S: 00011 Expected Out LCD: 0000110 Actual Out LCD: 0000110
+A: 00001 B: 00101 XY: 11
+ Expected Out S: 00100 Actual Out S: 00100 Expected Out LCD: 1001100 Actual Out LCD: 1001100
+Ended loop 22
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+A: 00001 B: 00110 XY: 00
+ Expected Out S: 01000 Actual Out S: 01000 Expected Out LCD: 0000000 Actual Out LCD: 0000000
+A: 00001 B: 00110 XY: 01
+ Expected Out S: 00111 Actual Out S: 00111 Expected Out LCD: 0001110 Actual Out LCD: 0001110
+A: 00001 B: 00110 XY: 10
+ Expected Out S: 00100 Actual Out S: 00100 Expected Out LCD: 1001100 Actual Out LCD: 1001100
+A: 00001 B: 00110 XY: 11
+ Expected Out S: 00111 Actual Out S: 00111 Expected Out LCD: 0001110 Actual Out LCD: 0001110
+Ended loop 23
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+A: 00001 B: 00111 XY: 00
+ Expected Out S: 01000 Actual Out S: 01000 Expected Out LCD: 0000000 Actual Out LCD: 0000000
+A: 00001 B: 00111 XY: 01
+ Expected Out S: 01000 Actual Out S: 01000 Expected Out LCD: 0000000 Actual Out LCD: 0000000
+A: 00001 B: 00111 XY: 10
+ Expected Out S: 00101 Actual Out S: 00101 Expected Out LCD: 0100100 Actual Out LCD: 0100100
+A: 00001 B: 00111 XY: 11
+ Expected Out S: 00110 Actual Out S: 00110 Expected Out LCD: 1100000 Actual Out LCD: 1100000
+Ended loop 24
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+A: 00001 B: 01000 XY: 00
+ Expected Out S: 00110 Actual Out S: 00110 Expected Out LCD: 1100000 Actual Out LCD: 1100000
+A: 00001 B: 01000 XY: 01
+ Expected Out S: 01001 Actual Out S: 01001 Expected Out LCD: 0000100 Actual Out LCD: 0000100
+A: 00001 B: 01000 XY: 10
+ Expected Out S: 00110 Actual Out S: 00110 Expected Out LCD: 1100000 Actual Out LCD: 1100000
+A: 00001 B: 01000 XY: 11
+ Expected Out S: 01001 Actual Out S: 01001 Expected Out LCD: 0000100 Actual Out LCD: 0000100
+Ended loop 25
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+A: 00001 B: 01001 XY: 00
+ Expected Out S: 00110 Actual Out S: 00110 Expected Out LCD: 1100000 Actual Out LCD: 1100000
+A: 00001 B: 01001 XY: 01
+ Expected Out S: 01010 Actual Out S: 01010 Expected Out LCD: 1111110 Actual Out LCD: 1111110
+A: 00001 B: 01001 XY: 10
+ Expected Out S: 00111 Actual Out S: 00111 Expected Out LCD: 0001110 Actual Out LCD: 0001110
+A: 00001 B: 01001 XY: 11
+ Expected Out S: 01000 Actual Out S: 01000 Expected Out LCD: 0000000 Actual Out LCD: 0000000
+Ended loop 26
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+A: 00001 B: 01010 XY: 00
+ Expected Out S: 00100 Actual Out S: 00100 Expected Out LCD: 1001100 Actual Out LCD: 1001100
+A: 00001 B: 01010 XY: 01
+ Expected Out S: 01011 Actual Out S: 01011 Expected Out LCD: 0110000 Actual Out LCD: 0110000
+A: 00001 B: 01010 XY: 10
+ Expected Out S: 01000 Actual Out S: 01000 Expected Out LCD: 0000000 Actual Out LCD: 0000000
+A: 00001 B: 01010 XY: 11
+ Expected Out S: 01011 Actual Out S: 01011 Expected Out LCD: 0110000 Actual Out LCD: 0110000
+Ended loop 27
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+A: 00001 B: 01011 XY: 00
+ Expected Out S: 00100 Actual Out S: 00100 Expected Out LCD: 1001100 Actual Out LCD: 1001100
+A: 00001 B: 01011 XY: 01
+ Expected Out S: 01100 Actual Out S: 01100 Expected Out LCD: 1101101 Actual Out LCD: 1101101
+A: 00001 B: 01011 XY: 10
+ Expected Out S: 01001 Actual Out S: 01001 Expected Out LCD: 0000100 Actual Out LCD: 0000100
+A: 00001 B: 01011 XY: 11
+ Expected Out S: 01010 Actual Out S: 01010 Expected Out LCD: 1111110 Actual Out LCD: 1111110
+Ended loop 28
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+A: 00001 B: 01100 XY: 00
+ Expected Out S: 00010 Actual Out S: 00010 Expected Out LCD: 0010010 Actual Out LCD: 0010010
+A: 00001 B: 01100 XY: 01
+ Expected Out S: 01101 Actual Out S: 01101 Expected Out LCD: 1111001 Actual Out LCD: 1111001
+A: 00001 B: 01100 XY: 10
+ Expected Out S: 01010 Actual Out S: 01010 Expected Out LCD: 1111110 Actual Out LCD: 1111110
+A: 00001 B: 01100 XY: 11
+ Expected Out S: 01101 Actual Out S: 01101 Expected Out LCD: 1111001 Actual Out LCD: 1111001
+Ended loop 29
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+A: 00001 B: 01101 XY: 00
+ Expected Out S: 00010 Actual Out S: 00010 Expected Out LCD: 0010010 Actual Out LCD: 0010010
+A: 00001 B: 01101 XY: 01
+ Expected Out S: 01110 Actual Out S: 01110 Expected Out LCD: 0110011 Actual Out LCD: 0110011
+A: 00001 B: 01101 XY: 10
+ Expected Out S: 01011 Actual Out S: 01011 Expected Out LCD: 0110000 Actual Out LCD: 0110000
+A: 00001 B: 01101 XY: 11
+ Expected Out S: 01100 Actual Out S: 01100 Expected Out LCD: 1101101 Actual Out LCD: 1101101
+Ended loop 30
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+A: 00001 B: 01110 XY: 00
+ Expected Out S: 00000 Actual Out S: 00000 Expected Out LCD: 0000001 Actual Out LCD: 0000001
+A: 00001 B: 01110 XY: 01
+ Expected Out S: 01111 Actual Out S: 01111 Expected Out LCD: 1011011 Actual Out LCD: 1011011
+A: 00001 B: 01110 XY: 10
+ Expected Out S: 01100 Actual Out S: 01100 Expected Out LCD: 1101101 Actual Out LCD: 1101101
+A: 00001 B: 01110 XY: 11
+ Expected Out S: 01111 Actual Out S: 01111 Expected Out LCD: 1011011 Actual Out LCD: 1011011
+Ended loop 31
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+A: 00001 B: 01111 XY: 00
+ Expected Out S: 00000 Actual Out S: 00000 Expected Out LCD: 0000001 Actual Out LCD: 0000001
+A: 00001 B: 01111 XY: 01
+ Expected Out S: 10000 Actual Out S: 10000 Expected Out LCD: 0000001 Actual Out LCD: 0000001
+A: 00001 B: 01111 XY: 10
+ Expected Out S: 01101 Actual Out S: 01101 Expected Out LCD: 1111001 Actual Out LCD: 1111001
+A: 00001 B: 01111 XY: 11
+ Expected Out S: 01110 Actual Out S: 01110 Expected Out LCD: 0110011 Actual Out LCD: 0110011
+Ended loop 32
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+A: 00010 B: 00000 XY: 00
+ Expected Out S: 01101 Actual Out S: 01101 Expected Out LCD: 1111001 Actual Out LCD: 1111001
+A: 00010 B: 00000 XY: 01
+ Expected Out S: 00010 Actual Out S: 00010 Expected Out LCD: 0010010 Actual Out LCD: 0010010
+A: 00010 B: 00000 XY: 10
+ Expected Out S: 00000 Actual Out S: 00000 Expected Out LCD: 0000001 Actual Out LCD: 0000001
+A: 00010 B: 00000 XY: 11
+ Expected Out S: 00010 Actual Out S: 00010 Expected Out LCD: 0010010 Actual Out LCD: 0010010
+Ended loop 33
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+A: 00010 B: 00001 XY: 00
+ Expected Out S: 01100 Actual Out S: 01100 Expected Out LCD: 1101101 Actual Out LCD: 1101101
+A: 00010 B: 00001 XY: 01
+ Expected Out S: 00011 Actual Out S: 00011 Expected Out LCD: 0000110 Actual Out LCD: 0000110
+A: 00010 B: 00001 XY: 10
+ Expected Out S: 00000 Actual Out S: 00000 Expected Out LCD: 0000001 Actual Out LCD: 0000001
+A: 00010 B: 00001 XY: 11
+ Expected Out S: 00011 Actual Out S: 00011 Expected Out LCD: 0000110 Actual Out LCD: 0000110
+Ended loop 34
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+A: 00010 B: 00010 XY: 00
+ Expected Out S: 01101 Actual Out S: 01101 Expected Out LCD: 1111001 Actual Out LCD: 1111001
+A: 00010 B: 00010 XY: 01
+ Expected Out S: 00100 Actual Out S: 00100 Expected Out LCD: 1001100 Actual Out LCD: 1001100
+A: 00010 B: 00010 XY: 10
+ Expected Out S: 00000 Actual Out S: 00000 Expected Out LCD: 0000001 Actual Out LCD: 0000001
+A: 00010 B: 00010 XY: 11
+ Expected Out S: 00000 Actual Out S: 00000 Expected Out LCD: 0000001 Actual Out LCD: 0000001
+Ended loop 35
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+A: 00010 B: 00011 XY: 00
+ Expected Out S: 01100 Actual Out S: 01100 Expected Out LCD: 1101101 Actual Out LCD: 1101101
+A: 00010 B: 00011 XY: 01
+ Expected Out S: 00101 Actual Out S: 00101 Expected Out LCD: 0100100 Actual Out LCD: 0100100
+A: 00010 B: 00011 XY: 10
+ Expected Out S: 00001 Actual Out S: 00001 Expected Out LCD: 1001111 Actual Out LCD: 1001111
+A: 00010 B: 00011 XY: 11
+ Expected Out S: 00001 Actual Out S: 00001 Expected Out LCD: 1001111 Actual Out LCD: 1001111
+Ended loop 36
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+A: 00010 B: 00100 XY: 00
+ Expected Out S: 01001 Actual Out S: 01001 Expected Out LCD: 0000100 Actual Out LCD: 0000100
+A: 00010 B: 00100 XY: 01
+ Expected Out S: 00110 Actual Out S: 00110 Expected Out LCD: 1100000 Actual Out LCD: 1100000
+A: 00010 B: 00100 XY: 10
+ Expected Out S: 00010 Actual Out S: 00010 Expected Out LCD: 0010010 Actual Out LCD: 0010010
+A: 00010 B: 00100 XY: 11
+ Expected Out S: 00110 Actual Out S: 00110 Expected Out LCD: 1100000 Actual Out LCD: 1100000
+Ended loop 37
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+A: 00010 B: 00101 XY: 00
+ Expected Out S: 01000 Actual Out S: 01000 Expected Out LCD: 0000000 Actual Out LCD: 0000000
+A: 00010 B: 00101 XY: 01
+ Expected Out S: 00111 Actual Out S: 00111 Expected Out LCD: 0001110 Actual Out LCD: 0001110
+A: 00010 B: 00101 XY: 10
+ Expected Out S: 00011 Actual Out S: 00011 Expected Out LCD: 0000110 Actual Out LCD: 0000110
+A: 00010 B: 00101 XY: 11
+ Expected Out S: 00111 Actual Out S: 00111 Expected Out LCD: 0001110 Actual Out LCD: 0001110
+Ended loop 38
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+A: 00010 B: 00110 XY: 00
+ Expected Out S: 01001 Actual Out S: 01001 Expected Out LCD: 0000100 Actual Out LCD: 0000100
+A: 00010 B: 00110 XY: 01
+ Expected Out S: 01000 Actual Out S: 01000 Expected Out LCD: 0000000 Actual Out LCD: 0000000
+A: 00010 B: 00110 XY: 10
+ Expected Out S: 00100 Actual Out S: 00100 Expected Out LCD: 1001100 Actual Out LCD: 1001100
+A: 00010 B: 00110 XY: 11
+ Expected Out S: 00100 Actual Out S: 00100 Expected Out LCD: 1001100 Actual Out LCD: 1001100
+Ended loop 39
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+A: 00010 B: 00111 XY: 00
+ Expected Out S: 01000 Actual Out S: 01000 Expected Out LCD: 0000000 Actual Out LCD: 0000000
+A: 00010 B: 00111 XY: 01
+ Expected Out S: 01001 Actual Out S: 01001 Expected Out LCD: 0000100 Actual Out LCD: 0000100
+A: 00010 B: 00111 XY: 10
+ Expected Out S: 00101 Actual Out S: 00101 Expected Out LCD: 0100100 Actual Out LCD: 0100100
+A: 00010 B: 00111 XY: 11
+ Expected Out S: 00101 Actual Out S: 00101 Expected Out LCD: 0100100 Actual Out LCD: 0100100
+Ended loop 40
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+A: 00010 B: 01000 XY: 00
+ Expected Out S: 00101 Actual Out S: 00101 Expected Out LCD: 0100100 Actual Out LCD: 0100100
+A: 00010 B: 01000 XY: 01
+ Expected Out S: 01010 Actual Out S: 01010 Expected Out LCD: 1111110 Actual Out LCD: 1111110
+A: 00010 B: 01000 XY: 10
+ Expected Out S: 00110 Actual Out S: 00110 Expected Out LCD: 1100000 Actual Out LCD: 1100000
+A: 00010 B: 01000 XY: 11
+ Expected Out S: 01010 Actual Out S: 01010 Expected Out LCD: 1111110 Actual Out LCD: 1111110
+Ended loop 41
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+A: 00010 B: 01001 XY: 00
+ Expected Out S: 00100 Actual Out S: 00100 Expected Out LCD: 1001100 Actual Out LCD: 1001100
+A: 00010 B: 01001 XY: 01
+ Expected Out S: 01011 Actual Out S: 01011 Expected Out LCD: 0110000 Actual Out LCD: 0110000
+A: 00010 B: 01001 XY: 10
+ Expected Out S: 00111 Actual Out S: 00111 Expected Out LCD: 0001110 Actual Out LCD: 0001110
+A: 00010 B: 01001 XY: 11
+ Expected Out S: 01011 Actual Out S: 01011 Expected Out LCD: 0110000 Actual Out LCD: 0110000
+Ended loop 42
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+A: 00010 B: 01010 XY: 00
+ Expected Out S: 00101 Actual Out S: 00101 Expected Out LCD: 0100100 Actual Out LCD: 0100100
+A: 00010 B: 01010 XY: 01
+ Expected Out S: 01100 Actual Out S: 01100 Expected Out LCD: 1101101 Actual Out LCD: 1101101
+A: 00010 B: 01010 XY: 10
+ Expected Out S: 01000 Actual Out S: 01000 Expected Out LCD: 0000000 Actual Out LCD: 0000000
+A: 00010 B: 01010 XY: 11
+ Expected Out S: 01000 Actual Out S: 01000 Expected Out LCD: 0000000 Actual Out LCD: 0000000
+Ended loop 43
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+A: 00010 B: 01011 XY: 00
+ Expected Out S: 00100 Actual Out S: 00100 Expected Out LCD: 1001100 Actual Out LCD: 1001100
+A: 00010 B: 01011 XY: 01
+ Expected Out S: 01101 Actual Out S: 01101 Expected Out LCD: 1111001 Actual Out LCD: 1111001
+A: 00010 B: 01011 XY: 10
+ Expected Out S: 01001 Actual Out S: 01001 Expected Out LCD: 0000100 Actual Out LCD: 0000100
+A: 00010 B: 01011 XY: 11
+ Expected Out S: 01001 Actual Out S: 01001 Expected Out LCD: 0000100 Actual Out LCD: 0000100
+Ended loop 44
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+A: 00010 B: 01100 XY: 00
+ Expected Out S: 00001 Actual Out S: 00001 Expected Out LCD: 1001111 Actual Out LCD: 1001111
+A: 00010 B: 01100 XY: 01
+ Expected Out S: 01110 Actual Out S: 01110 Expected Out LCD: 0110011 Actual Out LCD: 0110011
+A: 00010 B: 01100 XY: 10
+ Expected Out S: 01010 Actual Out S: 01010 Expected Out LCD: 1111110 Actual Out LCD: 1111110
+A: 00010 B: 01100 XY: 11
+ Expected Out S: 01110 Actual Out S: 01110 Expected Out LCD: 0110011 Actual Out LCD: 0110011
+Ended loop 45
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+A: 00010 B: 01101 XY: 00
+ Expected Out S: 00000 Actual Out S: 00000 Expected Out LCD: 0000001 Actual Out LCD: 0000001
+A: 00010 B: 01101 XY: 01
+ Expected Out S: 01111 Actual Out S: 01111 Expected Out LCD: 1011011 Actual Out LCD: 1011011
+A: 00010 B: 01101 XY: 10
+ Expected Out S: 01011 Actual Out S: 01011 Expected Out LCD: 0110000 Actual Out LCD: 0110000
+A: 00010 B: 01101 XY: 11
+ Expected Out S: 01111 Actual Out S: 01111 Expected Out LCD: 1011011 Actual Out LCD: 1011011
+Ended loop 46
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+A: 00010 B: 01110 XY: 00
+ Expected Out S: 00001 Actual Out S: 00001 Expected Out LCD: 1001111 Actual Out LCD: 1001111
+A: 00010 B: 01110 XY: 01
+ Expected Out S: 10000 Actual Out S: 10000 Expected Out LCD: 0000001 Actual Out LCD: 0000001
+A: 00010 B: 01110 XY: 10
+ Expected Out S: 01100 Actual Out S: 01100 Expected Out LCD: 1101101 Actual Out LCD: 1101101
+A: 00010 B: 01110 XY: 11
+ Expected Out S: 01100 Actual Out S: 01100 Expected Out LCD: 1101101 Actual Out LCD: 1101101
+Ended loop 47
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+A: 00010 B: 01111 XY: 00
+ Expected Out S: 00000 Actual Out S: 00000 Expected Out LCD: 0000001 Actual Out LCD: 0000001
+A: 00010 B: 01111 XY: 01
+ Expected Out S: 10001 Actual Out S: 10001 Expected Out LCD: 1001111 Actual Out LCD: 1001111
+A: 00010 B: 01111 XY: 10
+ Expected Out S: 01101 Actual Out S: 01101 Expected Out LCD: 1111001 Actual Out LCD: 1111001
+A: 00010 B: 01111 XY: 11
+ Expected Out S: 01101 Actual Out S: 01101 Expected Out LCD: 1111001 Actual Out LCD: 1111001
+Ended loop 48
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+A: 00011 B: 00000 XY: 00
+ Expected Out S: 01100 Actual Out S: 01100 Expected Out LCD: 1101101 Actual Out LCD: 1101101
+A: 00011 B: 00000 XY: 01
+ Expected Out S: 00011 Actual Out S: 00011 Expected Out LCD: 0000110 Actual Out LCD: 0000110
+A: 00011 B: 00000 XY: 10
+ Expected Out S: 00000 Actual Out S: 00000 Expected Out LCD: 0000001 Actual Out LCD: 0000001
+A: 00011 B: 00000 XY: 11
+ Expected Out S: 00011 Actual Out S: 00011 Expected Out LCD: 0000110 Actual Out LCD: 0000110
+Ended loop 49
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+A: 00011 B: 00001 XY: 00
+ Expected Out S: 01100 Actual Out S: 01100 Expected Out LCD: 1101101 Actual Out LCD: 1101101
+A: 00011 B: 00001 XY: 01
+ Expected Out S: 00100 Actual Out S: 00100 Expected Out LCD: 1001100 Actual Out LCD: 1001100
+A: 00011 B: 00001 XY: 10
+ Expected Out S: 00000 Actual Out S: 00000 Expected Out LCD: 0000001 Actual Out LCD: 0000001
+A: 00011 B: 00001 XY: 11
+ Expected Out S: 00010 Actual Out S: 00010 Expected Out LCD: 0010010 Actual Out LCD: 0010010
+Ended loop 50
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+A: 00011 B: 00010 XY: 00
+ Expected Out S: 01100 Actual Out S: 01100 Expected Out LCD: 1101101 Actual Out LCD: 1101101
+A: 00011 B: 00010 XY: 01
+ Expected Out S: 00101 Actual Out S: 00101 Expected Out LCD: 0100100 Actual Out LCD: 0100100
+A: 00011 B: 00010 XY: 10
+ Expected Out S: 00000 Actual Out S: 00000 Expected Out LCD: 0000001 Actual Out LCD: 0000001
+A: 00011 B: 00010 XY: 11
+ Expected Out S: 00001 Actual Out S: 00001 Expected Out LCD: 1001111 Actual Out LCD: 1001111
+Ended loop 51
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+A: 00011 B: 00011 XY: 00
+ Expected Out S: 01100 Actual Out S: 01100 Expected Out LCD: 1101101 Actual Out LCD: 1101101
+A: 00011 B: 00011 XY: 01
+ Expected Out S: 00110 Actual Out S: 00110 Expected Out LCD: 1100000 Actual Out LCD: 1100000
+A: 00011 B: 00011 XY: 10
+ Expected Out S: 00001 Actual Out S: 00001 Expected Out LCD: 1001111 Actual Out LCD: 1001111
+A: 00011 B: 00011 XY: 11
+ Expected Out S: 00000 Actual Out S: 00000 Expected Out LCD: 0000001 Actual Out LCD: 0000001
+Ended loop 52
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+A: 00011 B: 00100 XY: 00
+ Expected Out S: 01000 Actual Out S: 01000 Expected Out LCD: 0000000 Actual Out LCD: 0000000
+A: 00011 B: 00100 XY: 01
+ Expected Out S: 00111 Actual Out S: 00111 Expected Out LCD: 0001110 Actual Out LCD: 0001110
+A: 00011 B: 00100 XY: 10
+ Expected Out S: 00010 Actual Out S: 00010 Expected Out LCD: 0010010 Actual Out LCD: 0010010
+A: 00011 B: 00100 XY: 11
+ Expected Out S: 00111 Actual Out S: 00111 Expected Out LCD: 0001110 Actual Out LCD: 0001110
+Ended loop 53
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+A: 00011 B: 00101 XY: 00
+ Expected Out S: 01000 Actual Out S: 01000 Expected Out LCD: 0000000 Actual Out LCD: 0000000
+A: 00011 B: 00101 XY: 01
+ Expected Out S: 01000 Actual Out S: 01000 Expected Out LCD: 0000000 Actual Out LCD: 0000000
+A: 00011 B: 00101 XY: 10
+ Expected Out S: 00011 Actual Out S: 00011 Expected Out LCD: 0000110 Actual Out LCD: 0000110
+A: 00011 B: 00101 XY: 11
+ Expected Out S: 00110 Actual Out S: 00110 Expected Out LCD: 1100000 Actual Out LCD: 1100000
+Ended loop 54
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+A: 00011 B: 00110 XY: 00
+ Expected Out S: 01000 Actual Out S: 01000 Expected Out LCD: 0000000 Actual Out LCD: 0000000
+A: 00011 B: 00110 XY: 01
+ Expected Out S: 01001 Actual Out S: 01001 Expected Out LCD: 0000100 Actual Out LCD: 0000100
+A: 00011 B: 00110 XY: 10
+ Expected Out S: 00100 Actual Out S: 00100 Expected Out LCD: 1001100 Actual Out LCD: 1001100
+A: 00011 B: 00110 XY: 11
+ Expected Out S: 00101 Actual Out S: 00101 Expected Out LCD: 0100100 Actual Out LCD: 0100100
+Ended loop 55
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+A: 00011 B: 00111 XY: 00
+ Expected Out S: 01000 Actual Out S: 01000 Expected Out LCD: 0000000 Actual Out LCD: 0000000
+A: 00011 B: 00111 XY: 01
+ Expected Out S: 01010 Actual Out S: 01010 Expected Out LCD: 1111110 Actual Out LCD: 1111110
+A: 00011 B: 00111 XY: 10
+ Expected Out S: 00101 Actual Out S: 00101 Expected Out LCD: 0100100 Actual Out LCD: 0100100
+A: 00011 B: 00111 XY: 11
+ Expected Out S: 00100 Actual Out S: 00100 Expected Out LCD: 1001100 Actual Out LCD: 1001100
+Ended loop 56
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+A: 00011 B: 01000 XY: 00
+ Expected Out S: 00100 Actual Out S: 00100 Expected Out LCD: 1001100 Actual Out LCD: 1001100
+A: 00011 B: 01000 XY: 01
+ Expected Out S: 01011 Actual Out S: 01011 Expected Out LCD: 0110000 Actual Out LCD: 0110000
+A: 00011 B: 01000 XY: 10
+ Expected Out S: 00110 Actual Out S: 00110 Expected Out LCD: 1100000 Actual Out LCD: 1100000
+A: 00011 B: 01000 XY: 11
+ Expected Out S: 01011 Actual Out S: 01011 Expected Out LCD: 0110000 Actual Out LCD: 0110000
+Ended loop 57
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+A: 00011 B: 01001 XY: 00
+ Expected Out S: 00100 Actual Out S: 00100 Expected Out LCD: 1001100 Actual Out LCD: 1001100
+A: 00011 B: 01001 XY: 01
+ Expected Out S: 01100 Actual Out S: 01100 Expected Out LCD: 1101101 Actual Out LCD: 1101101
+A: 00011 B: 01001 XY: 10
+ Expected Out S: 00111 Actual Out S: 00111 Expected Out LCD: 0001110 Actual Out LCD: 0001110
+A: 00011 B: 01001 XY: 11
+ Expected Out S: 01010 Actual Out S: 01010 Expected Out LCD: 1111110 Actual Out LCD: 1111110
+Ended loop 58
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+A: 00011 B: 01010 XY: 00
+ Expected Out S: 00100 Actual Out S: 00100 Expected Out LCD: 1001100 Actual Out LCD: 1001100
+A: 00011 B: 01010 XY: 01
+ Expected Out S: 01101 Actual Out S: 01101 Expected Out LCD: 1111001 Actual Out LCD: 1111001
+A: 00011 B: 01010 XY: 10
+ Expected Out S: 01000 Actual Out S: 01000 Expected Out LCD: 0000000 Actual Out LCD: 0000000
+A: 00011 B: 01010 XY: 11
+ Expected Out S: 01001 Actual Out S: 01001 Expected Out LCD: 0000100 Actual Out LCD: 0000100
+Ended loop 59
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+A: 00011 B: 01011 XY: 00
+ Expected Out S: 00100 Actual Out S: 00100 Expected Out LCD: 1001100 Actual Out LCD: 1001100
+A: 00011 B: 01011 XY: 01
+ Expected Out S: 01110 Actual Out S: 01110 Expected Out LCD: 0110011 Actual Out LCD: 0110011
+A: 00011 B: 01011 XY: 10
+ Expected Out S: 01001 Actual Out S: 01001 Expected Out LCD: 0000100 Actual Out LCD: 0000100
+A: 00011 B: 01011 XY: 11
+ Expected Out S: 01000 Actual Out S: 01000 Expected Out LCD: 0000000 Actual Out LCD: 0000000
+Ended loop 60
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+A: 00011 B: 01100 XY: 00
+ Expected Out S: 00000 Actual Out S: 00000 Expected Out LCD: 0000001 Actual Out LCD: 0000001
+A: 00011 B: 01100 XY: 01
+ Expected Out S: 01111 Actual Out S: 01111 Expected Out LCD: 1011011 Actual Out LCD: 1011011
+A: 00011 B: 01100 XY: 10
+ Expected Out S: 01010 Actual Out S: 01010 Expected Out LCD: 1111110 Actual Out LCD: 1111110
+A: 00011 B: 01100 XY: 11
+ Expected Out S: 01111 Actual Out S: 01111 Expected Out LCD: 1011011 Actual Out LCD: 1011011
+Ended loop 61
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+A: 00011 B: 01101 XY: 00
+ Expected Out S: 00000 Actual Out S: 00000 Expected Out LCD: 0000001 Actual Out LCD: 0000001
+A: 00011 B: 01101 XY: 01
+ Expected Out S: 10000 Actual Out S: 10000 Expected Out LCD: 0000001 Actual Out LCD: 0000001
+A: 00011 B: 01101 XY: 10
+ Expected Out S: 01011 Actual Out S: 01011 Expected Out LCD: 0110000 Actual Out LCD: 0110000
+A: 00011 B: 01101 XY: 11
+ Expected Out S: 01110 Actual Out S: 01110 Expected Out LCD: 0110011 Actual Out LCD: 0110011
+Ended loop 62
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+A: 00011 B: 01110 XY: 00
+ Expected Out S: 00000 Actual Out S: 00000 Expected Out LCD: 0000001 Actual Out LCD: 0000001
+A: 00011 B: 01110 XY: 01
+ Expected Out S: 10001 Actual Out S: 10001 Expected Out LCD: 1001111 Actual Out LCD: 1001111
+A: 00011 B: 01110 XY: 10
+ Expected Out S: 01100 Actual Out S: 01100 Expected Out LCD: 1101101 Actual Out LCD: 1101101
+A: 00011 B: 01110 XY: 11
+ Expected Out S: 01101 Actual Out S: 01101 Expected Out LCD: 1111001 Actual Out LCD: 1111001
+Ended loop 63
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+A: 00011 B: 01111 XY: 00
+ Expected Out S: 00000 Actual Out S: 00000 Expected Out LCD: 0000001 Actual Out LCD: 0000001
+A: 00011 B: 01111 XY: 01
+ Expected Out S: 10010 Actual Out S: 10010 Expected Out LCD: 0010010 Actual Out LCD: 0010010
+A: 00011 B: 01111 XY: 10
+ Expected Out S: 01101 Actual Out S: 01101 Expected Out LCD: 1111001 Actual Out LCD: 1111001
+A: 00011 B: 01111 XY: 11
+ Expected Out S: 01100 Actual Out S: 01100 Expected Out LCD: 1101101 Actual Out LCD: 1101101
+Ended loop 64
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------

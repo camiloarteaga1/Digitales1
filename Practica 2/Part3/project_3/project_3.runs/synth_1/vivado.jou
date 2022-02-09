@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Vivado v2021.2 (64-bit)
+# SW Build 3367213 on Tue Oct 19 02:48:09 MDT 2021
+# IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
+# Start of session at: Wed Feb  9 12:42:58 2022
+# Process ID: 16488
+# Current directory: C:/Users/juanc/Desktop/probe/project_3/project_3.runs/synth_1
+# Command line: vivado.exe -log ALU.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source ALU.tcl
+# Log file: C:/Users/juanc/Desktop/probe/project_3/project_3.runs/synth_1/ALU.vds
+# Journal file: C:/Users/juanc/Desktop/probe/project_3/project_3.runs/synth_1\vivado.jou
+# Running On: DESKTOP-9EEIGPS, OS: Windows, CPU Frequency: 2208 MHz, CPU Physical cores: 6, Host memory: 17031 MB
+#-----------------------------------------------------------
+source ALU.tcl -notrace
