@@ -1,0 +1,313 @@
+/*
+
+Xilinx Vivado v2021.2 (64-bit) [Major: 2021, Minor: 2]
+SW Build: 3367213 on Tue Oct 19 02:48:09 MDT 2021
+IP Build: 3369179 on Thu Oct 21 08:25:16 MDT 2021
+
+Process ID (PID): 12000
+License: Customer
+Mode: GUI Mode
+
+Current time: 	Tue Feb 22 16:10:14 COT 2022
+Time zone: 	Colombia Standard Time (America/Bogota)
+
+OS: Windows 10
+OS Version: 10.0
+OS Architecture: amd64
+Available processors (cores): 4
+
+Screen size: 1366x768
+Screen resolution (DPI): 100
+Available screens: 1
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+Scale size: 12
+
+Java version: 	11.0.11 64-bit
+Java home: 	C:/Xilinx/Vivado/2021.2/tps/win64/jre11.0.11_9
+Java executable: 	C:/Xilinx/Vivado/2021.2/tps/win64/jre11.0.11_9/bin/java.exe
+Java arguments: 	[-Dsun.java2d.pmoffscreen=false, -Dhttps.protocols=TLSv1,TLSv1.1,TLSv1.2, -Dsun.java2d.xrender=false, -Dsun.java2d.d3d=false, -Dsun.awt.nopixfmt=true, -Dsun.java2d.dpiaware=true, -Dsun.java2d.uiScale.enabled=false, -Xverify:none, -Dswing.aatext=true, -XX:-UsePerfData, -Djdk.map.althashing.threshold=512, -XX:StringTableSize=4072, --add-opens=java.base/java.nio=ALL-UNNAMED, --add-opens=java.desktop/sun.swing=ALL-UNNAMED, --add-opens=java.desktop/javax.swing=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.tree=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.plaf.basic=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.plaf.synth=ALL-UNNAMED, --add-opens=java.desktop/com.sun.awt=ALL-UNNAMED, -XX:NewSize=60m, -XX:MaxNewSize=60m, -Xms256m, -Xmx3072m, -Xss5m]
+Java initial memory (-Xms): 	256 MB
+Java maximum memory (-Xmx):	 3 GB
+
+
+User name: 	Simón
+User home directory: C:/Users/Simón
+User working directory: D:/Trabajos/Github/Digitales1/Practica 3/Practica3
+User country: 	CO
+User language: 	es
+User locale: 	es_CO
+
+RDI_BASEROOT: C:/Xilinx/Vivado
+HDI_APPROOT: C:/Xilinx/Vivado/2021.2
+RDI_DATADIR: C:/Xilinx/Vivado/2021.2/data
+RDI_BINDIR: C:/Xilinx/Vivado/2021.2/bin
+
+Vivado preferences file: C:/Users/Simón/AppData/Roaming/Xilinx/Vivado/2021.2/vivado.xml
+Vivado preferences directory: C:/Users/Simón/AppData/Roaming/Xilinx/Vivado/2021.2/
+Vivado layouts directory: C:/Users/Simón/AppData/Roaming/Xilinx/Vivado/2021.2/data/layouts
+PlanAhead jar file: 	C:/Xilinx/Vivado/2021.2/lib/classes/planAhead.jar
+Vivado log file: 	D:/Trabajos/Github/Digitales1/Practica 3/Practica3/vivado.log
+Vivado journal file: 	D:/Trabajos/Github/Digitales1/Practica 3/Practica3/vivado.jou
+Engine tmp dir: 	D:/Trabajos/Github/Digitales1/Practica 3/Practica3/.Xil/Vivado-12000-DESKTOP-VBL1J4F
+
+Xilinx Environment Variables
+----------------------------
+XILINX: C:/Xilinx/Vivado/2021.2/ids_lite/ISE
+XILINX_DSP: C:/Xilinx/Vivado/2021.2/ids_lite/ISE
+XILINX_HLS: C:/Xilinx/Vitis_HLS/2021.2
+XILINX_PLANAHEAD: C:/Xilinx/Vivado/2021.2
+XILINX_VIVADO: C:/Xilinx/Vivado/2021.2
+XILINX_VIVADO_HLS: C:/Xilinx/Vivado/2021.2
+
+
+GUI allocated memory:	256 MB
+GUI max memory:		3,072 MB
+Engine allocated memory: 1,263 MB
+
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// TclEventType: PROJECT_OPEN_DIALOG
+// Opening Vivado Project: D:\Trabajos\Github\Digitales1\Practica 3\Practica3\Practica3.xpr. Version: Vivado v2021.2 
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: FLOW_ADDED
+// Tcl Message: open_project {D:/Trabajos/Github/Digitales1/Practica 3/Practica3/Practica3.xpr} 
+// HMemoryUtils.trashcanNow. Engine heap size: 1,263 MB. GUI used memory: 52 MB. Current time: 2/22/22, 4:10:15 PM COT
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_DASHBOARD_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 107 MB (+109410kb) [00:00:25]
+// [Engine Memory]: 1,263 MB (+1172572kb) [00:00:25]
+// WARNING: HEventQueue.dispatchEvent() is taking  4583 ms.
+// Tcl Message: open_project {D:/Trabajos/Github/Digitales1/Practica 3/Practica3/Practica3.xpr} 
+// Tcl Message: INFO: [filemgmt 56-3] Default IP Output Path : Could not find the directory 'D:/Trabajos/Github/Digitales1/Practica 3/Practica3/Practica3.gen/sources_1'. 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2021.2/data/ip'. 
+// Tcl Message: open_project: Time (s): cpu = 00:00:28 ; elapsed = 00:00:14 . Memory (MB): peak = 1246.105 ; gain = 0.000 
+// Project name: Practica3; location: D:/Trabajos/Github/Digitales1/Practica 3/Practica3; part: xc7a35ticpg236-1L
+dismissDialog("Open Project"); // bA
+// Tcl Message: update_compile_order -fileset sources_1 
+// Elapsed time: 16 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Syntax Error Files]", 1); // D
+// PAPropertyPanels.initPanels (ROMa.vhd) elapsed time: 0.3s
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Syntax Error Files, ROMa.vhd]", 2, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Syntax Error Files, ROMa.vhd]", 2, false, false, false, false, false, true); // D - Double Click
+// [GUI Memory]: 114 MB (+2271kb) [00:00:48]
+maximizeView(PAResourceOtoP.PAViews_BASE_WORKSPACE, "BaseWorkspace"); // N
+// Elapsed time: 483 seconds
+selectCodeEditor("ROMa.vhd", 66, 237); // be
+typeControlKey((HResource) null, "ROMa.vhd", 'v'); // be
+selectButton("OptionPane.button", "Yes"); // JButton
+// Elapsed time: 52 seconds
+typeControlKey(null, null, 'z');
+// Elapsed time: 123 seconds
+typeControlKey((HResource) null, "ROMa.vhd", 'v'); // be
+selectCodeEditor("ROMa.vhd", 1, 211); // be
+// Elapsed time: 11 seconds
+selectCodeEditor("ROMa.vhd", 205, 265); // be
+selectCodeEditor("ROMa.vhd", 105, 147); // be
+selectCodeEditor("ROMa.vhd", 51, 142); // be
+selectCodeEditor("ROMa.vhd", 203, 278); // be
+// Elapsed time: 29 seconds
+selectCodeEditor("ROMa.vhd", 219, 178); // be
+selectCodeEditor("ROMa.vhd", 378, 182); // be
+unMinimizeFrame(PAResourceOtoP.PAViews_SOURCES, "Sources"); // aA
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Syntax Error Files, ROMb.vhd]", 3, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Syntax Error Files, ROMb.vhd]", 3, false, false, false, false, false, true); // D - Double Click
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "ROMa.vhd", 1); // m
+// Elapsed time: 189 seconds
+selectCodeEditor("ROMa.vhd", 209, 265); // be
+// Elapsed time: 49 seconds
+selectCodeEditor("ROMa.vhd", 158, 288); // be
+selectCodeEditor("ROMa.vhd", 288, 161); // be
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "ROMb.vhd", 2); // m
+selectCodeEditor("ROMb.vhd", 384, 174); // be
+selectCodeEditor("ROMb.vhd", 216, 173); // be
+// Elapsed time: 19 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "ROMa.vhd", 1); // m
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "ROMb.vhd", 2); // m
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "ROMa.vhd", 1); // m
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "ROMb.vhd", 2); // m
+selectCodeEditor("ROMb.vhd", 478, 197); // be
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "ROMa.vhd", 1); // m
+selectCodeEditor("ROMa.vhd", 2, 228); // be
+typeControlKey((HResource) null, "ROMa.vhd", 'c'); // be
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "ROMb.vhd", 2); // m
+selectCodeEditor("ROMb.vhd", 32, 225); // be
+selectCodeEditor("ROMb.vhd", 20, 245); // be
+typeControlKey((HResource) null, "ROMb.vhd", 'v'); // be
+// Elapsed time: 112 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "ROMa.vhd", 1); // m
+selectButton(PAResourceItoN.MainToolbarMgr_OPEN, (String) null); // ae
+selectButton(PAResourceItoN.MainToolbarMgr_OPEN, (String) null); // ae
+selectMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // ag
+selectMenu(PAResourceItoN.MainMenuMgr_PROJECT, "Project"); // al
+selectMenu(PAResourceItoN.MainMenuMgr_CHECKPOINT, "Checkpoint"); // al
+dismissMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // ag
+selectCodeEditor("ROMa.vhd", 428, 97); // be
+selectButton(RDIResourceCommand.RDICommands_SAVE_FILE, (String) null); // D
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "ROMb.vhd", 2); // m
+selectButton(RDIResourceCommand.RDICommands_SAVE_FILE, (String) null); // D
+// TclEventType: DG_GRAPH_STALE
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "ROMa.vhd", 1); // m
+unMinimizeFrame(PAResourceOtoP.PAViews_SOURCES, "Sources"); // aA
+// HMemoryUtils.trashcanNow. Engine heap size: 1,263 MB. GUI used memory: 60 MB. Current time: 2/22/22, 4:40:16 PM COT
+// Elapsed time: 805 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "ROMb.vhd", 2); // m
+// Elapsed time: 12 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Project Summary", 0); // m
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "ROMa.vhd", 1); // m
+unMinimizeFrame(PAResourceOtoP.PAViews_SOURCES, "Sources"); // aA
+// Elapsed time: 54 seconds
+unMinimizeFrame(PAResourceOtoP.PAViews_SOURCES, "Sources"); // aA
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Circuit(Behavioral) (Circuit.vhd)]", 1, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Circuit(Behavioral) (Circuit.vhd)]", 1, false, false, false, false, false, true); // D - Double Click
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Circuit(Behavioral) (Circuit.vhd)]", 1, false); // D
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "ROMa.vhd", 1); // m
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "ROMb.vhd", 2); // m
+selectCodeEditor("ROMb.vhd", 184, 194); // be
+selectCodeEditor("ROMb.vhd", 489, 201); // be
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "ROMa.vhd", 1); // m
+selectCodeEditor("ROMa.vhd", 498, 197); // be
+selectCodeEditor("ROMa.vhd", 438, 216); // be
+// HMemoryUtils.trashcanNow. Engine heap size: 1,263 MB. GUI used memory: 52 MB. Current time: 2/22/22, 5:10:17 PM COT
+// Elapsed time: 2221 seconds
+selectCodeEditor("ROMa.vhd", 376, 193); // be
+selectCodeEditor("ROMa.vhd", 390, 201); // be
+selectCodeEditor("ROMa.vhd", 408, 198); // be
+selectCodeEditor("ROMa.vhd", 429, 216); // be
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "ROMb.vhd", 2); // m
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Circuit.vhd", 3); // m
+selectCodeEditor("Circuit.vhd", 12, 386); // be
+// Elapsed time: 14 seconds
+selectCodeEditor("Circuit.vhd", 70, 316); // be
+// Elapsed time: 16 seconds
+selectCodeEditor("Circuit.vhd", 28, 352); // be
+// Elapsed time: 254 seconds
+typeControlKey((HResource) null, "Circuit.vhd", 'c'); // be
+typeControlKey((HResource) null, "Circuit.vhd", 'v'); // be
+// Elapsed time: 51 seconds
+typeControlKey((HResource) null, "Circuit.vhd", 'c'); // be
+typeControlKey((HResource) null, "Circuit.vhd", 'v'); // be
+selectCodeEditor("Circuit.vhd", 94, 351); // be
+// Elapsed time: 72 seconds
+selectCodeEditor("Circuit.vhd", 8, 393); // be
+selectCodeEditor("Circuit.vhd", 2, 384); // be
+// Elapsed time: 219 seconds
+selectCodeEditor("Circuit.vhd", 40, 130); // be
+// Elapsed time: 73 seconds
+selectCodeEditor("Circuit.vhd", 25, 362); // be
+// Elapsed time: 43 seconds
+selectCodeEditor("Circuit.vhd", 90, 385); // be
+// Elapsed time: 193 seconds
+selectCodeEditor("Circuit.vhd", 17, 161); // be
+// Elapsed time: 37 seconds
+selectCodeEditor("Circuit.vhd", 88, 184); // be
+typeControlKey((HResource) null, "Circuit.vhd", 'c'); // be
+typeControlKey((HResource) null, "Circuit.vhd", 'v'); // be
+// Elapsed time: 12 seconds
+selectCodeEditor("Circuit.vhd", 70, 333); // be
+// Elapsed time: 42 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "ROMb.vhd", 2); // m
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Circuit.vhd", 3); // m
+// HMemoryUtils.trashcanNow. Engine heap size: 1,263 MB. GUI used memory: 51 MB. Current time: 2/22/22, 5:40:17 PM COT
+// Elapsed time: 54 seconds
+selectCodeEditor("Circuit.vhd", 96, 55); // be
+selectCodeEditor("Circuit.vhd", 92, 74); // be
+// Elapsed time: 18 seconds
+selectCodeEditor("Circuit.vhd", 178, 336); // be
+// Elapsed time: 102 seconds
+selectCodeEditor("Circuit.vhd", 112, 366); // be
+// Elapsed time: 14 seconds
+selectCodeEditor("Circuit.vhd", 110, 314); // be
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+// Elapsed time: 16 seconds
+selectCodeEditor("Circuit.vhd", 79, 330); // be
+// Elapsed time: 47 seconds
+selectCodeEditor("Circuit.vhd", 82, 388); // be
+// Elapsed time: 17 seconds
+typeControlKey(null, null, 'z');
+// Elapsed time: 25 seconds
+selectCodeEditor("Circuit.vhd", 148, 312); // be
+// Elapsed time: 14 seconds
+selectCodeEditor("Circuit.vhd", 76, 367); // be
+// Elapsed time: 67 seconds
+selectCodeEditor("Circuit.vhd", 48, 244); // be
+// Elapsed time: 23 seconds
+selectCodeEditor("Circuit.vhd", 92, 262); // be
+// Elapsed time: 106 seconds
+selectCodeEditor("Circuit.vhd", 98, 265); // be
+// Elapsed time: 18 seconds
+selectCodeEditor("Circuit.vhd", 96, 343); // be
+selectCodeEditor("Circuit.vhd", 90, 331); // be
+// Elapsed time: 13 seconds
+selectCodeEditor("Circuit.vhd", 157, 370); // be
+selectCodeEditor("Circuit.vhd", 106, 264); // be
+// Elapsed time: 37 seconds
+selectCodeEditor("Circuit.vhd", 42, 263, false, false, false, true, false); // be - Popup Trigger
+selectCodeEditor("Circuit.vhd", 25, 275); // be
+// Elapsed time: 14 seconds
+selectCodeEditor("Circuit.vhd", 87, 386); // be
+// Elapsed time: 24 seconds
+typeControlKey((HResource) null, "Circuit.vhd", 'v'); // be
+// Elapsed time: 21 seconds
+selectCodeEditor("Circuit.vhd", 46, 284); // be
+// Elapsed time: 90 seconds
+selectCodeEditor("Circuit.vhd", 39, 261); // be
+// Elapsed time: 12 seconds
+typeControlKey(null, null, 'z');
+// Elapsed time: 19 seconds
+selectCodeEditor("Circuit.vhd", 11, 398); // be
+// Elapsed time: 18 seconds
+selectCodeEditor("Circuit.vhd", 56, 247); // be
+// Elapsed time: 13 seconds
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+selectCodeEditor("Circuit.vhd", 76, 262); // be
+selectCodeEditor("Circuit.vhd", 65, 238); // be
+// Elapsed time: 16 seconds
+selectCodeEditor("Circuit.vhd", 78, 269); // be
+typeControlKey(null, null, 'z');
+selectCodeEditor("Circuit.vhd", 123, 333); // be
+// Elapsed time: 13 seconds
+selectCodeEditor("Circuit.vhd", 87, 242); // be
+// Elapsed time: 68 seconds
+selectButton(RDIResourceCommand.RDICommands_SAVE_FILE, (String) null); // D
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
