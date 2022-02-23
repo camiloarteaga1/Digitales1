@@ -39,9 +39,10 @@ end Circuit;
 
 architecture Behavioral of Circuit is
 
-    --Counter
-    type auxi is array(0 to 2) of integer;
-    signal aux : auxi := (others => 1); --Initializing in 1
+    --CLOCK 
+    signal clk1 : std_logic;
+    --Counter    
+    signal aux : integer := 1;
 
     --ROMs outputs
     signal outROMA : std_logic_vector(3 downto 0);
@@ -69,9 +70,22 @@ architecture Behavioral of Circuit is
           ); 
     end component;
 
-    begin    
-    
-    --Upper Components
+    begin
+        
+    --CLOCK
+    CLK_DIV1 : process(clk)
+        begin
+            if (clk' event and clk='1') then
+                if(aux = 100000000) then                    
+                    aux <= 1;
+                    clk1 <= not(clk1);
+                else
+                    aux <= aux + 1;
+                end if;
+            end if;
+    end process;
+        
+--------Upper Components
         Rom_A : ROMa port map(
                  addA => Add_A,
                  outA => outROMA   
@@ -86,23 +100,19 @@ architecture Behavioral of Circuit is
                     BA <= DataA;                    
                 end if;
         end process;
-        
-    --FLIP - FLOP 1
-    CLK_DIV1 : process(clk)
-        begin
-            if (clk' event and clk='1') then
-                if(aux(0) = 100000000) then
-                    if (en(0) = '1') then
-                        QA <= BA;
-                    end if;
-                    aux(0) <= 1;
-                else
-                    aux(0) <= aux(0) + 1;
+
+     --FLIP FLOP
+        process(clk1)
+            begin
+            if (clk1' event and clk1='1') then
+                if (en(0) = '1') then
+                    QA <= BA;
                 end if;
-            end if;
-    end process;
+            end if;          
+        end process;        
     
-    --Lower Components             
+    
+--------Lower Components             
         Rom_B : ROMb port map(
                  addB => Add_B,
                  outB => outROMB   
@@ -111,23 +121,18 @@ architecture Behavioral of Circuit is
     --Buffers
         BB <= DataB when not(FB) = '1' else "ZZZZ";
         BB <= outROMB when not(not(FB)) = '1' else "ZZZZ";
-        
+    
     --FLIP - FLOP 2
-        CLK_DIV2 : process(clk)
+        process(clk1)
         begin
-            if (clk' event and clk='1') then
-                if(aux(1) = 100000000) then
-                    if (en(1) = '1') then
-                        QB <= BB;
-                    end if;
-                    aux(1) <= 1;
-                else
-                    aux(1) <= aux(1) + 1;
+            if (clk1' event and clk1='1') then
+                if (en(1) = '1') then
+                    QB <= BB;
                 end if;
             end if;
         end process;
               
-     --ALU
+--------ALU
         process(Sel_ALU)
             begin
                 if(Sel_ALU = "000") then
@@ -163,20 +168,51 @@ architecture Behavioral of Circuit is
             end process;
             
     --FLIP - FLOP 3
-        CLK_DIV3 : process(clk)
+        process(clk1)
         begin
-            if (clk' event and clk='1') then
-                if(aux(2) = 100000000) then
-                    if (en(2) = '1') then
-                        QC <= s(3 downto 0);
-                    end if;
-                    aux(2) <= 1;
-                else
-                    aux(2) <= aux(2) + 1;
-                end if;
+            if (clk1' event and clk1='1') then 
+                if (en(2) = '1') then
+                    QC <= s(3 downto 0);
+                end if;                    
             end if;
         end process;
         
     --Decoder
-                           
+        process(QC)
+        begin
+            case QC is
+                when "0000" =>
+                    salida <= "0000001";
+                when "0001" =>
+                    salida <= "1001111"; 
+                when "0010" =>
+                    salida <= "0010010";
+                when "0011" =>
+                    salida <= "0000110";
+                when "0100" =>
+                    salida <= "1001100";
+                when "0101" =>
+                    salida <= "0100100";
+                when "0110" =>
+                    salida <= "1100000";
+                when "0111" =>
+                    salida <= "0001110";
+                when "1000" =>
+                    salida <= "0000000";
+                when "1001" =>
+                    salida <= "0000100";
+                when "1010" =>
+                    salida <= "0001000";
+                when "1011" =>
+                    salida <= "1100000";
+                when "1100" =>
+                    salida <= "0110001";
+                when "1101" =>
+                    salida <= "1000010";
+                when "1110" =>
+                    salida <= "0110000";
+                when others =>
+                     salida <= "0111000";                         
+            end case; 
+        end process;                          
 end Behavioral;
