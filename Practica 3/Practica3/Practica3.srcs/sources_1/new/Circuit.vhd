@@ -189,7 +189,7 @@ architecture Behavioral of Circuit is
             end if;
         end process;
         
-    --Decoder BCD
+--------Decoder BCD
         process(QC)
         begin
             case QC is
