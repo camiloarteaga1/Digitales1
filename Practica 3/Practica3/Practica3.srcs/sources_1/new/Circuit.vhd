@@ -91,9 +91,8 @@ architecture Behavioral of Circuit is
                  outA => outROMA   
              );
     --MUX 2:1         
-        process
-            begin
-                wait for 10ms;
+        process(FA)
+            begin                
                 if FA = '0' then
                     BA <= outROMA;
                 else 
@@ -122,6 +121,19 @@ architecture Behavioral of Circuit is
         BB <= DataB when not(FB) = '1' else "ZZZZ";
         BB <= outROMB when not(not(FB)) = '1' else "ZZZZ";
     
+--    process(FB)
+--            begin
+--                if not(FB) = '1' then
+--                    BB <= DataB;
+--                elsif not(FB) = '0' then
+--                    BB <= "ZZZZ";
+--                elsif not(not(FB)) = '1' then                     
+--                    BB <= outROMB;
+--                elsif not(not(FB)) = '0' then
+--                    BB <= "ZZZZ";
+--                end if;                                            
+--        end process;
+
     --FLIP - FLOP 2
         process(clk1)
         begin
