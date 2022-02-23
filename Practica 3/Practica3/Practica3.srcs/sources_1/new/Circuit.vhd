@@ -36,11 +36,18 @@ entity Circuit is
   );
 end Circuit;
 
+
 architecture Behavioral of Circuit is
 
+    --Counter
+    type auxi is array(0 to 2) of integer;
+    signal aux : auxi := (others => 1); --Initializing in 1
+
+    --ROMs outputs
     signal outROMA : std_logic_vector(3 downto 0);
     signal outROMB : std_logic_vector(3 downto 0);
-    signal aux : integer;
+    
+    --Processes outputs
     signal BA : STD_LOGIC_VECTOR(3 downto 0);
     signal BB : STD_LOGIC_VECTOR(3 downto 0);
     signal S : STD_LOGIC_VECTOR(4 downto 0); --Pos 4, carry out
@@ -49,6 +56,7 @@ architecture Behavioral of Circuit is
     --Signals for Flip Flops
     signal QA, QB, QC : STD_LOGIC_VECTOR(3 downto 0);
     
+    --ROMs
     component ROMa port
         ( addA : in std_logic_vector(2 downto 0);
           outA : out std_logic_vector(3 downto 0)
@@ -68,7 +76,7 @@ architecture Behavioral of Circuit is
                  addA => Add_A,
                  outA => outROMA   
              );
-             
+    --MUX 2:1         
         process
             begin
                 wait for 10ms;
@@ -83,15 +91,15 @@ architecture Behavioral of Circuit is
     CLK_DIV1 : process(clk)
         begin
             if (clk' event and clk='1') then
-                if(aux = 100000000) then
+                if(aux(0) = 100000000) then
                     if (en(0) = '1') then
                         QA <= BA;
                     end if;
-                    aux <= 0;
+                    aux(0) <= 1;
                 else
-                    aux <= aux+1;
+                    aux(0) <= aux(0) + 1;
                 end if;
-            end if;               
+            end if;
     end process;
     
     --Lower Components             
@@ -108,13 +116,13 @@ architecture Behavioral of Circuit is
         CLK_DIV2 : process(clk)
         begin
             if (clk' event and clk='1') then
-                if(aux = 100000000) then
+                if(aux(1) = 100000000) then
                     if (en(1) = '1') then
                         QB <= BB;
                     end if;
-                    aux <= 0;
+                    aux(1) <= 1;
                 else
-                    aux <= aux+1;
+                    aux(1) <= aux(1) + 1;
                 end if;
             end if;
         end process;
@@ -158,16 +166,17 @@ architecture Behavioral of Circuit is
         CLK_DIV3 : process(clk)
         begin
             if (clk' event and clk='1') then
-                if(aux = 100000000) then
+                if(aux(2) = 100000000) then
                     if (en(2) = '1') then
                         QC <= s(3 downto 0);
                     end if;
-                    aux <= 0;
+                    aux(2) <= 1;
                 else
-                    aux <= aux+1;
+                    aux(2) <= aux(2) + 1;
                 end if;
             end if;
         end process;
         
-    --Decoder                                            
+    --Decoder
+                           
 end Behavioral;
