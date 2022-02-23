@@ -40,10 +40,8 @@ end Circuit;
 
 architecture Behavioral of Circuit is
 
-    signal outMUXA : std_logic_vector(3 downto 0);
-    signal outMUXB : std_logic_vector(3 downto 0);
-    signal AuxA : std_logic_vector(2 downto 0);
-    signal AuxB : std_logic_vector(2 downto 0);
+    signal outROMA : std_logic_vector(3 downto 0);
+    signal outROMB : std_logic_vector(3 downto 0);
     
     component ROMa port
         ( addA : in std_logic_vector(2 downto 0);
@@ -58,15 +56,30 @@ architecture Behavioral of Circuit is
     end component;
 
     begin
-        process (FA, BA, AuxA)
+    --CLOCK
+    
+    
+    
+    
+    --Upper Components
+        Rom_A : ROMa port map(
+                 addA => Add_A,
+                 outA => outROMA   
+             );
+        process
             begin
-                if FA = '0' then          
-                     RomA_1 : ROMa port map(
-                         addA => AuxA(2 downto 0),
-                         outA => BA   
-                     );
-                 else
-                    BA <= DataA;
-                end if;           
-        end process;
+                if FA = '0' then
+                    BA <= outROMA;
+                else 
+                    BA <= DataA;                    
+                end if;
+        end process;            
+             
+             
+    --Lower Components             
+        Rom_B : ROMb port map(
+                 addB => Add_B,
+                 outB => BB   
+             );      
+                                                        
 end Behavioral;

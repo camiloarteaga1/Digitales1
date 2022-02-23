@@ -1,0 +1,204 @@
+/*
+
+Xilinx Vivado v2021.2 (64-bit) [Major: 2021, Minor: 2]
+SW Build: 3367213 on Tue Oct 19 02:48:09 MDT 2021
+IP Build: 3369179 on Thu Oct 21 08:25:16 MDT 2021
+
+Process ID (PID): 13924
+License: Customer
+Mode: GUI Mode
+
+Current time: 	Tue Feb 22 18:36:51 COT 2022
+Time zone: 	Colombia Standard Time (America/Bogota)
+
+OS: Windows 10
+OS Version: 10.0
+OS Architecture: amd64
+Available processors (cores): 4
+
+Screen size: 1366x768
+Screen resolution (DPI): 100
+Available screens: 1
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+Scale size: 12
+
+Java version: 	11.0.11 64-bit
+Java home: 	C:/Xilinx/Vivado/2021.2/tps/win64/jre11.0.11_9
+Java executable: 	C:/Xilinx/Vivado/2021.2/tps/win64/jre11.0.11_9/bin/java.exe
+Java arguments: 	[-Dsun.java2d.pmoffscreen=false, -Dhttps.protocols=TLSv1,TLSv1.1,TLSv1.2, -Dsun.java2d.xrender=false, -Dsun.java2d.d3d=false, -Dsun.awt.nopixfmt=true, -Dsun.java2d.dpiaware=true, -Dsun.java2d.uiScale.enabled=false, -Xverify:none, -Dswing.aatext=true, -XX:-UsePerfData, -Djdk.map.althashing.threshold=512, -XX:StringTableSize=4072, --add-opens=java.base/java.nio=ALL-UNNAMED, --add-opens=java.desktop/sun.swing=ALL-UNNAMED, --add-opens=java.desktop/javax.swing=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.tree=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.plaf.basic=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.plaf.synth=ALL-UNNAMED, --add-opens=java.desktop/com.sun.awt=ALL-UNNAMED, -XX:NewSize=60m, -XX:MaxNewSize=60m, -Xms256m, -Xmx3072m, -Xss5m]
+Java initial memory (-Xms): 	256 MB
+Java maximum memory (-Xmx):	 3 GB
+
+
+User name: 	Simón
+User home directory: C:/Users/Simón
+User working directory: D:/Trabajos/Github/Digitales1/Practica 3/Practica3
+User country: 	CO
+User language: 	es
+User locale: 	es_CO
+
+RDI_BASEROOT: C:/Xilinx/Vivado
+HDI_APPROOT: C:/Xilinx/Vivado/2021.2
+RDI_DATADIR: C:/Xilinx/Vivado/2021.2/data
+RDI_BINDIR: C:/Xilinx/Vivado/2021.2/bin
+
+Vivado preferences file: C:/Users/Simón/AppData/Roaming/Xilinx/Vivado/2021.2/vivado.xml
+Vivado preferences directory: C:/Users/Simón/AppData/Roaming/Xilinx/Vivado/2021.2/
+Vivado layouts directory: C:/Users/Simón/AppData/Roaming/Xilinx/Vivado/2021.2/data/layouts
+PlanAhead jar file: 	C:/Xilinx/Vivado/2021.2/lib/classes/planAhead.jar
+Vivado log file: 	D:/Trabajos/Github/Digitales1/Practica 3/Practica3/vivado.log
+Vivado journal file: 	D:/Trabajos/Github/Digitales1/Practica 3/Practica3/vivado.jou
+Engine tmp dir: 	D:/Trabajos/Github/Digitales1/Practica 3/Practica3/.Xil/Vivado-13924-DESKTOP-VBL1J4F
+
+Xilinx Environment Variables
+----------------------------
+XILINX: C:/Xilinx/Vivado/2021.2/ids_lite/ISE
+XILINX_DSP: C:/Xilinx/Vivado/2021.2/ids_lite/ISE
+XILINX_HLS: C:/Xilinx/Vitis_HLS/2021.2
+XILINX_PLANAHEAD: C:/Xilinx/Vivado/2021.2
+XILINX_VIVADO: C:/Xilinx/Vivado/2021.2
+XILINX_VIVADO_HLS: C:/Xilinx/Vivado/2021.2
+
+
+GUI allocated memory:	256 MB
+GUI max memory:		3,072 MB
+Engine allocated memory: 1,263 MB
+
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// WARNING: HEventQueue.dispatchEvent() is taking  1129 ms.
+// TclEventType: PROJECT_OPEN_DIALOG
+// Opening Vivado Project: D:\Trabajos\Github\Digitales1\Practica 3\Practica3\Practica3.xpr. Version: Vivado v2021.2 
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: FLOW_ADDED
+// Tcl Message: open_project {D:/Trabajos/Github/Digitales1/Practica 3/Practica3/Practica3.xpr} 
+// HMemoryUtils.trashcanNow. Engine heap size: 1,263 MB. GUI used memory: 52 MB. Current time: 2/22/22, 6:36:52 PM COT
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_DASHBOARD_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_NEW
+// Tcl Message: open_project {D:/Trabajos/Github/Digitales1/Practica 3/Practica3/Practica3.xpr} 
+// Tcl Message: INFO: [Project 1-313] Project file moved from 'C:/Users/juanc/Documents/GitHub/Digitales1/Practica 3/Practica3' since last save. INFO: [filemgmt 56-2] Default IP Output Path : Could not find the directory 'D:/Trabajos/Github/Digitales1/Practica 3/Practica3/Practica3.gen/sources_1', nor could it be found using path 'C:/Users/juanc/Documents/GitHub/Digitales1/Practica 3/Practica3/Practica3.gen/sources_1'. 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified 
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 108 MB (+110423kb) [00:00:35]
+// [Engine Memory]: 1,263 MB (+1172892kb) [00:00:35]
+// WARNING: HEventQueue.dispatchEvent() is taking  6132 ms.
+// Tcl Message: INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2021.2/data/ip'. 
+// Tcl Message: open_project: Time (s): cpu = 00:00:30 ; elapsed = 00:00:17 . Memory (MB): peak = 1245.754 ; gain = 0.000 
+// Project name: Practica3; location: D:/Trabajos/Github/Digitales1/Practica 3/Practica3; part: xc7a35ticpg236-1L
+dismissDialog("Open Project"); // bA
+// Tcl Message: update_compile_order -fileset sources_1 
+// Elapsed time: 49 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Syntax Error Files]", 1); // D
+// PAPropertyPanels.initPanels (Circuit.vhd) elapsed time: 0.4s
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Syntax Error Files, Circuit.vhd]", 2, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Syntax Error Files, Circuit.vhd]", 2, false, false, false, false, false, true); // D - Double Click
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Syntax Error Files, Circuit.vhd]", 2, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Syntax Error Files, Circuit.vhd]", 2, false, false, false, false, false, true); // D - Double Click
+maximizeView(PAResourceOtoP.PAViews_BASE_WORKSPACE, "BaseWorkspace"); // N
+// Elapsed time: 11 seconds
+selectCodeEditor("Circuit.vhd", 167, 335); // be
+// Elapsed time: 13 seconds
+typeControlKey((HResource) null, "Circuit.vhd", 'v'); // be
+// Elapsed time: 11 seconds
+selectCodeEditor("Circuit.vhd", 334, 236); // be
+selectCodeEditor("Circuit.vhd", 264, 249); // be
+// Elapsed time: 31 seconds
+selectCodeEditor("Circuit.vhd", 276, 224); // be
+selectCodeEditor("Circuit.vhd", 184, 274); // be
+// Elapsed time: 15 seconds
+selectCodeEditor("Circuit.vhd", 134, 272); // be
+selectCodeEditor("Circuit.vhd", 23, 230); // be
+selectCodeEditor("Circuit.vhd", 27, 232, false, false, false, false, true); // be - Double Click
+selectCodeEditor("Circuit.vhd", 23, 229); // be
+// Elapsed time: 11 seconds
+selectCodeEditor("Circuit.vhd", 58, 303); // be
+selectCodeEditor("Circuit.vhd", 234, 333); // be
+selectCodeEditor("Circuit.vhd", 142, 299); // be
+selectCodeEditor("Circuit.vhd", 207, 300); // be
+// Elapsed time: 14 seconds
+selectCodeEditor("Circuit.vhd", 113, 355); // be
+selectCodeEditor("Circuit.vhd", 113, 344); // be
+selectCodeEditor("Circuit.vhd", 177, 300); // be
+selectCodeEditor("Circuit.vhd", 105, 276); // be
+typeControlKey((HResource) null, "Circuit.vhd", 'c'); // be
+// Elapsed time: 12 seconds
+typeControlKey((HResource) null, "Circuit.vhd", 'v'); // be
+selectCodeEditor("Circuit.vhd", 83, 289); // be
+// Elapsed time: 14 seconds
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+selectCodeEditor("Circuit.vhd", 208, 316); // be
+selectCodeEditor("Circuit.vhd", 148, 290); // be
+selectCodeEditor("Circuit.vhd", 141, 314); // be
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+// [GUI Memory]: 117 MB (+3780kb) [00:05:13]
+// Elapsed time: 134 seconds
+selectCodeEditor("Circuit.vhd", 35, 187); // be
+// Elapsed time: 79 seconds
+selectCodeEditor("Circuit.vhd", 120, 315); // be
+// Elapsed time: 107 seconds
+selectCodeEditor("Circuit.vhd", 190, 280); // be
+selectCodeEditor("Circuit.vhd", 118, 109); // be
+// Elapsed time: 13 seconds
+selectCodeEditor("Circuit.vhd", 177, 324); // be
+selectCodeEditor("Circuit.vhd", 151, 250); // be
+// Elapsed time: 26 seconds
+selectCodeEditor("Circuit.vhd", 206, 259); // be
+selectCodeEditor("Circuit.vhd", 195, 265); // be
+// Elapsed time: 12 seconds
+selectCodeEditor("Circuit.vhd", 283, 295); // be
+selectCodeEditor("Circuit.vhd", 137, 291); // be
+selectCodeEditor("Circuit.vhd", 120, 279); // be
+// Elapsed time: 42 seconds
+selectCodeEditor("Circuit.vhd", 167, 177); // be
+// Elapsed time: 46 seconds
+selectCodeEditor("Circuit.vhd", 121, 113); // be
+selectCodeEditor("Circuit.vhd", 225, 110); // be
+// Elapsed time: 90 seconds
+selectCodeEditor("Circuit.vhd", 85, 38); // be
+// Elapsed time: 16 seconds
+unMinimizeFrame(PAResourceOtoP.PAViews_SOURCES, "Sources"); // aA
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints]", 2); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1, Basys3_Master.xdc]", 4, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1, Basys3_Master.xdc]", 4, false, false, false, false, false, true); // D - Double Click
+// Elapsed time: 29 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Circuit.vhd", 1); // m
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Basys3_Master.xdc", 2); // m
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Circuit.vhd", 1); // m
+selectCodeEditor("Circuit.vhd", 44, 246); // be
+selectCodeEditor("Circuit.vhd", 210, 247); // be
+// Elapsed time: 418 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Basys3_Master.xdc", 2); // m
+// Elapsed time: 385 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Circuit.vhd", 1); // m
+selectButton(RDIResourceCommand.RDICommands_SAVE_FILE, (String) null); // D
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
