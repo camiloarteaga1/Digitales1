@@ -2,16 +2,16 @@
 # Vivado v2021.2 (64-bit)
 # SW Build 3367213 on Tue Oct 19 02:48:09 MDT 2021
 # IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
-# Start of session at: Wed Feb 23 16:19:27 2022
-# Process ID: 9132
-# Current directory: D:/Trabajos/Github/Digitales1/Practica 3/Practica3
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent3340 D:\Trabajos\Github\Digitales1\Practica 3\Practica3\Practica3.xpr
-# Log file: D:/Trabajos/Github/Digitales1/Practica 3/Practica3/vivado.log
-# Journal file: D:/Trabajos/Github/Digitales1/Practica 3/Practica3\vivado.jou
-# Running On: DESKTOP-VBL1J4F, OS: Windows, CPU Frequency: 2400 MHz, CPU Physical cores: 2, Host memory: 8480 MB
+# Start of session at: Thu Feb 24 12:32:54 2022
+# Process ID: 16468
+# Current directory: C:/Users/juanc/Documents/GitHub/Digitales1/Practica 3/Practica3
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent10304 C:\Users\juanc\Documents\GitHub\Digitales1\Practica 3\Practica3\Practica3.xpr
+# Log file: C:/Users/juanc/Documents/GitHub/Digitales1/Practica 3/Practica3/vivado.log
+# Journal file: C:/Users/juanc/Documents/GitHub/Digitales1/Practica 3/Practica3\vivado.jou
+# Running On: Okami, OS: Windows, CPU Frequency: 2208 MHz, CPU Physical cores: 6, Host memory: 17031 MB
 #-----------------------------------------------------------
 start_gui
-open_project {D:/Trabajos/Github/Digitales1/Practica 3/Practica3/Practica3.xpr}
+open_project {C:/Users/juanc/Documents/GitHub/Digitales1/Practica 3/Practica3/Practica3.xpr}
 WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu105:part0:1.6 available at C:/Xilinx/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu105/1.6/board.xml as part xcku040-ffva1156-2-e specified in board_part file is either invalid or not available
 WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu105:part0:1.7 available at C:/Xilinx/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu105/1.7/board.xml as part xcku040-ffva1156-2-e specified in board_part file is either invalid or not available
 WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu116:part0:1.4 available at C:/Xilinx/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu116/1.4/board.xml as part xcku5p-ffvb676-2-e specified in board_part file is either invalid or not available
@@ -59,12 +59,13 @@ WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216_es:part0:1.2 avai
 WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216ld:part0:2.0 available at C:/Xilinx/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu216ld/production/2.0/board.xml as part xczu59dr-ffvf1760-2-i specified in board_part file is either invalid or not available
 WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216ld_es:part0:1.0 available at C:/Xilinx/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu216ld/es/1.0/board.xml as part xczu59dr-ffvf1760-2-i-es1 specified in board_part file is either invalid or not available
 WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670:part0:1.0 available at C:/Xilinx/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670/1.0/board.xml as part xczu67dr-fsve1156-2-i specified in board_part file is either invalid or not available
-INFO: [Project 1-313] Project file moved from 'C:/Users/juanc/Documents/GitHub/Digitales1/Practica 3/Practica3' since last save.
-INFO: [filemgmt 56-2] Default IP Output Path : Could not find the directory 'D:/Trabajos/Github/Digitales1/Practica 3/Practica3/Practica3.gen/sources_1', nor could it be found using path 'C:/Users/juanc/Documents/GitHub/Digitales1/Practica 3/Practica3/Practica3.gen/sources_1'.
+INFO: [filemgmt 56-3] Default IP Output Path : Could not find the directory 'C:/Users/juanc/Documents/GitHub/Digitales1/Practica 3/Practica3/Practica3.gen/sources_1'.
 Scanning sources...
 Finished scanning sources
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2021.2/data/ip'.
-open_project: Time (s): cpu = 00:00:28 ; elapsed = 00:00:13 . Memory (MB): peak = 1560.414 ; gain = 0.000
+open_project: Time (s): cpu = 00:00:23 ; elapsed = 00:00:09 . Memory (MB): peak = 1589.777 ; gain = 0.000
+update_compile_order -fileset sources_1
+add_files -norecurse {{C:/Users/juanc/Documents/GitHub/Digitales1/Practica 3/Practica3/Practica3.srcs/sim_1/new/Circuit_tb.vhd}}
 update_compile_order -fileset sources_1
