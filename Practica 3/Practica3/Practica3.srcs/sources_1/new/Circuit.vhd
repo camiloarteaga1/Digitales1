@@ -3,7 +3,7 @@
 -- Engineer: Simon Sanchez Rua - Juan Camilo Arteaga Ibarra
 -- 
 -- Create Date: 02/11/2022 05:24:01 PM
--- Design Name: Diseño e implemetacion de circuitos combinacionales modulare
+-- Design Name: DiseÃ±o e implemetacion de circuitos combinacionales modulare
 -- Module Name: Circuit - Behavioral
 -- Project Name: Practica 3
 ----------------------------------------------------------------------------------

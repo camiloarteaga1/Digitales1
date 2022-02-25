@@ -156,11 +156,11 @@ Architecture Behavioral of Circuit_tb Is
     
     begin
         if(inputSel_ALU = "000") then
-            if(inputQ1 < inputQ2) then
-                s := "00000";
-            else
-                s(3 downto 0) := inputQ1(3 downto 0) - inputQ2(3 downto 0);
-            end if;
+--            if(inputQ1 < inputQ2) then
+                  s := "00000";
+--            else
+--                s(3 downto 0) := inputQ1(3 downto 0) - inputQ2(3 downto 0);
+--            end if;
         
         elsif (inputSel_ALU ="001") then
             s(3 downto 0) := inputQ1(3 downto 0) nor inputQ2(3 downto 0);
@@ -296,7 +296,7 @@ begin
                                 Decoder(flipflop13, output7); --Last operation
                                 sel_ALU <= sel_ALU + 1; --Change the Sel Alu value
                                 --wait for 30ms;
-                                write(s, string'("Adders A: "));write (s, add_a);write(s, string'("ROM A: "));write (s, outRomA);write(s, string'(" Data B: "));write (s, datab);
+                                write(s, string'("Address A: "));write (s, add_a);write(s, string'(" ROM A: "));write (s, outRomA);write(s, string'(" Data B: "));write (s, datab);
                                 writeline(output, s);
                                 write(s, string'(" Expected Out Decoder: "));write (s, output7);write(s, string'(" Actual Out Decoder: "));write (s, salida);write(s, string'(" Expected Out Carry: "));write (s, outCarry);write(s, string'(" Actual Out Carry: "));write (s, Carry);                  
                                 writeline (output, s);
@@ -340,7 +340,7 @@ begin
                                 Decoder(flipflop13, output7); --Last operation
                                 sel_ALU <= sel_ALU + 1; --Change the Sel Alu value
                                 --wait for 30ms;
-                                write(s, string'("Adders A: "));write (s, add_a);write(s, string'("ROM A: "));write (s, outRomA);write(s, string'(" Adders B: "));write (s, add_b);write(s, string'(" ROM B: "));write (s, outRomB);
+                                write(s, string'("Address A: "));write (s, add_a);write(s, string'(" ROM A: "));write (s, outRomA);write(s, string'(" Address B: "));write (s, add_b);write(s, string'(" ROM B: "));write (s, outRomB);
                                 writeline(output, s);
                                 write(s, string'(" Expected Out Decoder: "));write (s, output7);write(s, string'(" Actual Out Decoder: "));write (s, salida);write(s, string'(" Expected Out Carry: "));write (s, outCarry);write(s, string'(" Actual Out Carry: "));write (s, Carry);                  
                                 writeline (output, s);
@@ -383,7 +383,7 @@ begin
                                 Decoder(flipflop13, output7); --Last operation
                                 sel_ALU <= sel_ALU + 1; --Change the Sel Alu value
                                 --wait for 30ms;
-                                write(s, string'("Data A: "));write (s, dataa);write(s, string'("Data B: "));write (s, datab);
+                                write(s, string'("Data A: "));write (s, dataa);write(s, string'(" Data B: "));write (s, datab);
                                 writeline(output, s);
                                 write(s, string'(" Expected Out Decoder: "));write (s, output7);write(s, string'(" Actual Out Decoder: "));write (s, salida);write(s, string'(" Expected Out Carry: "));write (s, outCarry);write(s, string'(" Actual Out Carry: "));write (s, Carry);                  
                                 writeline (output, s);
@@ -426,7 +426,7 @@ begin
                                 Decoder(flipflop13, output7); --Last operation
                                 sel_ALU <= sel_ALU + 1; --Change the Sel Alu value
                                 --wait for 30ms;
-                                write(s, string'("Adders B: "));write (s, add_b);write(s, string'("ROM B: "));write (s, outRomB);write(s, string'(" Data A: "));write (s, dataa);
+                                write(s, string'("Address B: "));write (s, add_b);write(s, string'(" ROM B: "));write (s, outRomB);write(s, string'(" Data A: "));write (s, dataa);
                                 writeline(output, s);
                                 write(s, string'(" Expected Out Decoder: "));write (s, output7);write(s, string'(" Actual Out Decoder: "));write (s, salida);write(s, string'(" Expected Out Carry: "));write (s, outCarry);write(s, string'(" Actual Out Carry: "));write (s, Carry);                  
                                 writeline (output, s);

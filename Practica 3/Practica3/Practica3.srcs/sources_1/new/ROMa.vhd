@@ -4,9 +4,11 @@ use IEEE.Std_logic_arith.all;
 use IEEE.std_logic_unsigned.all;
 use IEEE.numeric_std.all;
 
-entity ROMa is
-    Port ( addrs : in std_logic_vector(2 downto 0);
-    data : out STD_LOGIC_VECTOR (3 downto 0));
+entity ROMa is 
+    Port (
+        addA : in std_logic_vector(2 downto 0);
+        outA : out STD_LOGIC_VECTOR (3 downto 0)
+    );
 end ROMa;
 
 architecture Behavioral of ROMa is
@@ -15,5 +17,5 @@ architecture Behavioral of ROMa is
     
     -- inicio de la arquitectura
     Begin
-        data <= ROM(conv_integer(addrs));
+        outA <= ROM(conv_integer(addA));
 end Behavioral;

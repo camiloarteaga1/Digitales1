@@ -4,9 +4,10 @@ use IEEE.Std_logic_arith.all;
 use IEEE.std_logic_unsigned.all;
 use IEEE.numeric_std.all;
 
-entity ROMb is
-Port ( addrs : in std_logic_vector(2 downto 0);
-data : out STD_LOGIC_VECTOR (3 downto 0));
+entity ROMb is 
+    Port ( 
+        addB : in std_logic_vector(2 downto 0);
+        outB : out STD_LOGIC_VECTOR (3 downto 0));
 end ROMb;
 
 architecture Behavioral of ROMb is
@@ -15,5 +16,5 @@ architecture Behavioral of ROMb is
     
     -- inicio de la arquitectura
     Begin
-        data <= ROM(conv_integer(addrs));
+        outB <= ROM(conv_integer(addB));
 end Behavioral;
