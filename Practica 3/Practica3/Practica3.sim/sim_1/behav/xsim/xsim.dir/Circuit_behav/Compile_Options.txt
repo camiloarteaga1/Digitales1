@@ -1,1 +1,0 @@
---incr --debug "typical" --relax --mt "2" -L "xil_defaultlib" -L "secureip" --snapshot "Circuit_behav" "xil_defaultlib.Circuit" -log "elaborate.log" 
