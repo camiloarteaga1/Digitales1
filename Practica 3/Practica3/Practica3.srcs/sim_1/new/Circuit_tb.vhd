@@ -45,8 +45,8 @@ Architecture Behavioral of Circuit_tb Is
     Signal add_b : STD_LOGIC_VECTOR(2 downto 0) := "000";
     Signal dataa : STD_LOGIC_VECTOR(3 downto 0) := "0000";
     Signal datab : STD_LOGIC_VECTOR(3 downto 0) := "0000";
-    Signal fa : STD_LOGIC := '0';
-    Signal fb : STD_LOGIC := '0';
+    Signal fa : STD_LOGIC ;
+    Signal fb : STD_LOGIC ;
     Signal ena : STD_LOGIC_VECTOR(0 to 2) := "111";
     Signal sel_ALU : STD_LOGIC_VECTOR(2 downto 0) := "000";
     Signal salida : STD_LOGIC_VECTOR(6 downto 0) := "0000000";
@@ -152,15 +152,15 @@ Architecture Behavioral of Circuit_tb Is
         outputC : out std_logic
     ) is
     
-    variable s : std_logic_vector(4 downto 0);
+    variable s : std_logic_vector(4 downto 0) := "00000";
     
     begin
         if(inputSel_ALU = "000") then
---            if(inputQ1 < inputQ2) then
-                  s := "00000";
---            else
---                s(3 downto 0) := inputQ1(3 downto 0) - inputQ2(3 downto 0);
---            end if;
+            if(inputQ1 < inputQ2) then    
+                s := "00000";              
+            else
+                s(3 downto 0) := inputQ1(3 downto 0) - inputQ2(3 downto 0);
+            end if;
         
         elsif (inputSel_ALU ="001") then
             s(3 downto 0) := inputQ1(3 downto 0) nor inputQ2(3 downto 0);
@@ -249,8 +249,8 @@ begin
     
     process
         variable s : line;
-        variable auxa : std_logic := '0';
-        variable auxb : std_logic := '0';
+        variable auxa : integer := 0;
+        variable auxb : integer := 0;
         variable count_adda : integer := 0;
         variable count_addb : integer := 0;
         variable count_dataa : integer := 0;
@@ -268,12 +268,20 @@ begin
         variable outRomB : std_logic_vector(3 downto 0);
       
     begin
-        for auxa in std_logic range '0' to '1' loop
-            fa <= auxa;
-            
-            for auxb in std_logic range '0' to '1' loop
-                fb <= auxb;
-                
+        for auxa in 0 to 1 loop
+            if auxa = 0 then
+                fa <= '0';
+            else
+                fa <= '1';                
+            end if;
+            for auxb in 0 to 1 loop
+                if auxb = 0 then
+                    fb <= '0';
+                else
+                    fb <= '1';                
+                end if;
+                write(s, string'(" FA: "));write (s, fa);write(s, string'(" FB: "));write (s, fb);
+                writeline (output, s); 
                 if fa = '0' and fb = '0' then
                     for count_adda in 0 to 7 loop
                         for count_datab in 0 to 15 loop
@@ -293,14 +301,17 @@ begin
                                 ALU(flipflop13, flipflop2, sel_ALU, outputALU, outCarry);
                                 --Carry <= outCarry;
                                 FLIPFLOP(ena(2), outputALU, flipflop13); --Third FLip-Flop
-                                Decoder(flipflop13, output7); --Last operation
-                                sel_ALU <= sel_ALU + 1; --Change the Sel Alu value
+                                Decoder(flipflop13, output7); --Last operation                                
                                 --wait for 30ms;
                                 write(s, string'("Address A: "));write (s, add_a);write(s, string'(" ROM A: "));write (s, outRomA);write(s, string'(" Data B: "));write (s, datab);
                                 writeline(output, s);
                                 write(s, string'(" Expected Out Decoder: "));write (s, output7);write(s, string'(" Actual Out Decoder: "));write (s, salida);write(s, string'(" Expected Out Carry: "));write (s, outCarry);write(s, string'(" Actual Out Carry: "));write (s, Carry);                  
                                 writeline (output, s);
-                                            
+                                write(s, string'(" Expected ALU: "));write (s, outputALU);
+                                writeline (output, s);
+                                write(s, string'(" sel ALU: "));write (s, sel_ALU);
+                                writeline (output, s); 
+                                sel_ALU <= sel_ALU + 1; --Change the Sel Alu value                                           
                             end loop;
                             
                             sel_ALU <= "000";
@@ -344,7 +355,9 @@ begin
                                 writeline(output, s);
                                 write(s, string'(" Expected Out Decoder: "));write (s, output7);write(s, string'(" Actual Out Decoder: "));write (s, salida);write(s, string'(" Expected Out Carry: "));write (s, outCarry);write(s, string'(" Actual Out Carry: "));write (s, Carry);                  
                                 writeline (output, s);
-                            
+                                write(s, string'(" Expected ALU: "));write (s, outputALU);
+                                writeline (output, s);
+                                
                             end loop;
                             
                             sel_ALU <= "000";
@@ -387,7 +400,9 @@ begin
                                 writeline(output, s);
                                 write(s, string'(" Expected Out Decoder: "));write (s, output7);write(s, string'(" Actual Out Decoder: "));write (s, salida);write(s, string'(" Expected Out Carry: "));write (s, outCarry);write(s, string'(" Actual Out Carry: "));write (s, Carry);                  
                                 writeline (output, s);
-                            
+                                write(s, string'(" Expected ALU: "));write (s, outputALU);
+                                writeline (output, s);
+                                
                             end loop;
                             
                             sel_ALU <= "000";
@@ -430,7 +445,9 @@ begin
                                 writeline(output, s);
                                 write(s, string'(" Expected Out Decoder: "));write (s, output7);write(s, string'(" Actual Out Decoder: "));write (s, salida);write(s, string'(" Expected Out Carry: "));write (s, outCarry);write(s, string'(" Actual Out Carry: "));write (s, Carry);                  
                                 writeline (output, s);
-                            
+                                write(s, string'(" Expected ALU: "));write (s, outputALU);
+                                writeline (output, s);
+                                
                             end loop;
                             
                             sel_ALU <= "000";
@@ -451,8 +468,8 @@ begin
                 
             end loop;
             
-            fb <= '0';
-            auxb := '0';
+            --fb <= '0';
+            auxb := 0;
         
         end loop;             
     
