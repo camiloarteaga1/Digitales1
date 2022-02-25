@@ -149,22 +149,22 @@ architecture Behavioral of Circuit is
             begin
                 if(Sel_ALU = "000") then
                     if(QA < QB) then
-                        s <= "0000";
+                        s <= "00000";
                     else
-                        s <= QA - QB;
+                        s(3 downto 0) <= QA(3 downto 0) - QB(3 downto 0);
                     end if;
                 
                 elsif (Sel_ALU ="001") then
-                    s <= QA(3 downto 0) nor QB(3 downto 0);
+                    s(3 downto 0) <= QA(3 downto 0) nor QB(3 downto 0);
                     
                 elsif (Sel_ALU ="010") then
                     s <= QA + 2;
                     
                 elsif (Sel_ALU ="011") then
-                    s <= QA(3 downto 0) xnor QB(3 downto 0);
+                    s(3 downto 0) <= QA(3 downto 0) xnor QB(3 downto 0);
                     
                 elsif (Sel_ALU ="100") then
-                    s <= QB;
+                    s(3 downto 0) <= QB(3 downto 0);
                     
                 elsif (Sel_ALU ="101") then
                     s <= QA + QA;
@@ -173,7 +173,7 @@ architecture Behavioral of Circuit is
                     s <= QB + QA;
                     
                 else
-                    s <= QA(3 downto 0) and QB(3 downto 0);
+                    s(3 downto 0) <= QA(3 downto 0) and QB(3 downto 0);
                                                                  
                 end if;
                 carry <= s(4);

@@ -49,7 +49,7 @@ Architecture Behavioral of Circuit_tb Is
     Signal fb : STD_LOGIC := '0';
     Signal ena : STD_LOGIC_VECTOR(0 to 2) := "111";
     Signal sel_ALU : STD_LOGIC_VECTOR(2 downto 0) := "000";
-    Signal salida : STD_LOGIC_VECTOR(6 downto 0) := "000000";
+    Signal salida : STD_LOGIC_VECTOR(6 downto 0) := "0000000";
     Signal CLK : STD_LOGIC := '0';
     Signal Carry : STD_LOGIC := '0';
           
@@ -157,22 +157,22 @@ Architecture Behavioral of Circuit_tb Is
     begin
         if(inputSel_ALU = "000") then
             if(inputQ1 < inputQ2) then
-                s := "0000";
+                s := "00000";
             else
-                s := inputQ1 - inputQ2;
+                s(3 downto 0) := inputQ1(3 downto 0) - inputQ2(3 downto 0);
             end if;
         
         elsif (inputSel_ALU ="001") then
-            s := inputQ1(3 downto 0) nor inputQ2(3 downto 0);
+            s(3 downto 0) := inputQ1(3 downto 0) nor inputQ2(3 downto 0);
             
         elsif (inputSel_ALU ="010") then
             s := inputQ1 + 2;
             
         elsif (inputSel_ALU ="011") then
-            s := inputQ1(3 downto 0) xnor inputQ2(3 downto 0);
+            s(3 downto 0) := inputQ1(3 downto 0) xnor inputQ2(3 downto 0);
             
         elsif (inputSel_ALU ="100") then
-            s := inputQ2;
+            s(3 downto 0) := inputQ2;
             
         elsif (inputSel_ALU ="101") then
             s := inputQ1 + inputQ1;
@@ -181,7 +181,7 @@ Architecture Behavioral of Circuit_tb Is
             s := inputQ2 + inputQ1;
             
         else
-            s := inputQ1(3 downto 0) and inputQ2(3 downto 0);
+            s(3 downto 0) := inputQ1(3 downto 0) and inputQ2(3 downto 0);
                                                          
         End if;
         outputC := s(4);
@@ -256,7 +256,7 @@ begin
         variable count_dataa : integer := 0;
         variable count_datab : integer := 0;
         variable count_dataSel : integer := 0;
-        variable output : std_logic_vector(6 downto 0);
+        variable output7 : std_logic_vector(6 downto 0);
         variable flipflop13 : std_logic_vector(3 downto 0);
         variable flipflop2 : std_logic_vector(3 downto 0);
         variable upper : std_logic_vector(3 downto 0);
@@ -291,13 +291,16 @@ begin
                             
                             for count_dataSel in 0 to 7 loop
                                 ALU(flipflop13, flipflop2, sel_ALU, outputALU, outCarry);
-                                Carry <= outCarry;
+                                --Carry <= outCarry;
                                 FLIPFLOP(ena(2), outputALU, flipflop13); --Third FLip-Flop
-                                Decoder(flipflop13, output); --Last operation
+                                Decoder(flipflop13, output7); --Last operation
                                 sel_ALU <= sel_ALU + 1; --Change the Sel Alu value
                                 --wait for 30ms;
-                                --Salida aca
-                            
+                                write(s, string'("Adders A: "));write (s, add_a);write(s, string'("ROM A: "));write (s, outRomA);write(s, string'(" Data B: "));write (s, datab);
+                                writeline(output, s);
+                                write(s, string'(" Expected Out Decoder: "));write (s, output7);write(s, string'(" Actual Out Decoder: "));write (s, salida);write(s, string'(" Expected Out Carry: "));write (s, outCarry);write(s, string'(" Actual Out Carry: "));write (s, Carry);                  
+                                writeline (output, s);
+                                            
                             end loop;
                             
                             sel_ALU <= "000";
@@ -334,10 +337,13 @@ begin
                                 ALU(flipflop13, flipflop2, sel_ALU, outputALU, outCarry);
                                 Carry <= outCarry;
                                 FLIPFLOP(ena(2), outputALU, flipflop13); --Third FLip-Flop
-                                Decoder(flipflop13, output); --Last operation
+                                Decoder(flipflop13, output7); --Last operation
                                 sel_ALU <= sel_ALU + 1; --Change the Sel Alu value
                                 --wait for 30ms;
-                                --Salida aca
+                                write(s, string'("Adders A: "));write (s, add_a);write(s, string'("ROM A: "));write (s, outRomA);write(s, string'(" Adders B: "));write (s, add_b);write(s, string'(" ROM B: "));write (s, outRomB);
+                                writeline(output, s);
+                                write(s, string'(" Expected Out Decoder: "));write (s, output7);write(s, string'(" Actual Out Decoder: "));write (s, salida);write(s, string'(" Expected Out Carry: "));write (s, outCarry);write(s, string'(" Actual Out Carry: "));write (s, Carry);                  
+                                writeline (output, s);
                             
                             end loop;
                             
@@ -374,10 +380,13 @@ begin
                                 ALU(flipflop13, flipflop2, sel_ALU, outputALU, outCarry);
                                 Carry <= outCarry;
                                 FLIPFLOP(ena(2), outputALU, flipflop13); --Third FLip-Flop
-                                Decoder(flipflop13, output); --Last operation
+                                Decoder(flipflop13, output7); --Last operation
                                 sel_ALU <= sel_ALU + 1; --Change the Sel Alu value
                                 --wait for 30ms;
-                                --Salida aca
+                                write(s, string'("Data A: "));write (s, dataa);write(s, string'("Data B: "));write (s, datab);
+                                writeline(output, s);
+                                write(s, string'(" Expected Out Decoder: "));write (s, output7);write(s, string'(" Actual Out Decoder: "));write (s, salida);write(s, string'(" Expected Out Carry: "));write (s, outCarry);write(s, string'(" Actual Out Carry: "));write (s, Carry);                  
+                                writeline (output, s);
                             
                             end loop;
                             
@@ -414,10 +423,13 @@ begin
                                 ALU(flipflop13, flipflop2, sel_ALU, outputALU, outCarry);
                                 Carry <= outCarry;
                                 FLIPFLOP(ena(2), outputALU, flipflop13); --Third FLip-Flop
-                                Decoder(flipflop13, output); --Last operation
+                                Decoder(flipflop13, output7); --Last operation
                                 sel_ALU <= sel_ALU + 1; --Change the Sel Alu value
                                 --wait for 30ms;
-                                --Salida aca
+                                write(s, string'("Adders B: "));write (s, add_b);write(s, string'("ROM B: "));write (s, outRomB);write(s, string'(" Data A: "));write (s, dataa);
+                                writeline(output, s);
+                                write(s, string'(" Expected Out Decoder: "));write (s, output7);write(s, string'(" Actual Out Decoder: "));write (s, salida);write(s, string'(" Expected Out Carry: "));write (s, outCarry);write(s, string'(" Actual Out Carry: "));write (s, Carry);                  
+                                writeline (output, s);
                             
                             end loop;
                             

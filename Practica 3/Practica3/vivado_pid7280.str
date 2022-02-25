@@ -1,0 +1,933 @@
+/*
+
+Xilinx Vivado v2021.2 (64-bit) [Major: 2021, Minor: 2]
+SW Build: 3367213 on Tue Oct 19 02:48:09 MDT 2021
+IP Build: 3369179 on Thu Oct 21 08:25:16 MDT 2021
+
+Process ID (PID): 7280
+License: Customer
+Mode: GUI Mode
+
+Current time: 	Thu Feb 24 19:54:41 COT 2022
+Time zone: 	Colombia Standard Time (America/Bogota)
+
+OS: Windows 10
+OS Version: 10.0
+OS Architecture: amd64
+Available processors (cores): 4
+
+Screen size: 1366x768
+Screen resolution (DPI): 100
+Available screens: 1
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+Scale size: 12
+
+Java version: 	11.0.11 64-bit
+Java home: 	C:/Xilinx/Vivado/2021.2/tps/win64/jre11.0.11_9
+Java executable: 	C:/Xilinx/Vivado/2021.2/tps/win64/jre11.0.11_9/bin/java.exe
+Java arguments: 	[-Dsun.java2d.pmoffscreen=false, -Dhttps.protocols=TLSv1,TLSv1.1,TLSv1.2, -Dsun.java2d.xrender=false, -Dsun.java2d.d3d=false, -Dsun.awt.nopixfmt=true, -Dsun.java2d.dpiaware=true, -Dsun.java2d.uiScale.enabled=false, -Xverify:none, -Dswing.aatext=true, -XX:-UsePerfData, -Djdk.map.althashing.threshold=512, -XX:StringTableSize=4072, --add-opens=java.base/java.nio=ALL-UNNAMED, --add-opens=java.desktop/sun.swing=ALL-UNNAMED, --add-opens=java.desktop/javax.swing=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.tree=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.plaf.basic=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.plaf.synth=ALL-UNNAMED, --add-opens=java.desktop/com.sun.awt=ALL-UNNAMED, -XX:NewSize=60m, -XX:MaxNewSize=60m, -Xms256m, -Xmx3072m, -Xss5m]
+Java initial memory (-Xms): 	256 MB
+Java maximum memory (-Xmx):	 3 GB
+
+
+User name: 	Simón
+User home directory: C:/Users/Simón
+User working directory: D:/Trabajos/Github/Digitales1/Practica 3/Practica3
+User country: 	CO
+User language: 	es
+User locale: 	es_CO
+
+RDI_BASEROOT: C:/Xilinx/Vivado
+HDI_APPROOT: C:/Xilinx/Vivado/2021.2
+RDI_DATADIR: C:/Xilinx/Vivado/2021.2/data
+RDI_BINDIR: C:/Xilinx/Vivado/2021.2/bin
+
+Vivado preferences file: C:/Users/Simón/AppData/Roaming/Xilinx/Vivado/2021.2/vivado.xml
+Vivado preferences directory: C:/Users/Simón/AppData/Roaming/Xilinx/Vivado/2021.2/
+Vivado layouts directory: C:/Users/Simón/AppData/Roaming/Xilinx/Vivado/2021.2/data/layouts
+PlanAhead jar file: 	C:/Xilinx/Vivado/2021.2/lib/classes/planAhead.jar
+Vivado log file: 	D:/Trabajos/Github/Digitales1/Practica 3/Practica3/vivado.log
+Vivado journal file: 	D:/Trabajos/Github/Digitales1/Practica 3/Practica3/vivado.jou
+Engine tmp dir: 	D:/Trabajos/Github/Digitales1/Practica 3/Practica3/.Xil/Vivado-7280-DESKTOP-VBL1J4F
+
+Xilinx Environment Variables
+----------------------------
+XILINX: C:/Xilinx/Vivado/2021.2/ids_lite/ISE
+XILINX_DSP: C:/Xilinx/Vivado/2021.2/ids_lite/ISE
+XILINX_HLS: C:/Xilinx/Vitis_HLS/2021.2
+XILINX_PLANAHEAD: C:/Xilinx/Vivado/2021.2
+XILINX_VIVADO: C:/Xilinx/Vivado/2021.2
+XILINX_VIVADO_HLS: C:/Xilinx/Vivado/2021.2
+
+
+GUI allocated memory:	256 MB
+GUI max memory:		3,072 MB
+Engine allocated memory: 1,269 MB
+
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// TclEventType: PROJECT_OPEN_DIALOG
+// Opening Vivado Project: D:\Trabajos\Github\Digitales1\Practica 3\Practica3\Pr3.xpr. Version: Vivado v2021.2 
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: FLOW_ADDED
+// Tcl Message: open_project {D:/Trabajos/Github/Digitales1/Practica 3/Practica3/Pr3.xpr} 
+// HMemoryUtils.trashcanNow. Engine heap size: 1,269 MB. GUI used memory: 51 MB. Current time: 2/24/22, 7:54:42 PM COT
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_DASHBOARD_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_NEW
+// Tcl Message: open_project {D:/Trabajos/Github/Digitales1/Practica 3/Practica3/Pr3.xpr} 
+// Tcl Message: INFO: [Project 1-313] Project file moved from 'C:/Users/juanc/Documents/GitHub/Digitales1/Practica 3/Pr3' since last save. INFO: [filemgmt 56-2] Default IP Output Path : Could not find the directory 'D:/Trabajos/Github/Digitales1/Practica 3/Practica3/Pr3.gen/sources_1', nor could it be found using path 'C:/Users/juanc/Documents/GitHub/Digitales1/Practica 3/Pr3/Pr3.gen/sources_1'. 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [Project 1-1877] Auto incremental dir location 'C:/Users/juanc/Documents/GitHub/Digitales1/Practica 3/Pr3/Pr3.srcs/utils_1/imports/synth_1' of run 'synth_1' is not writable, setting it to default location 'D:/Trabajos/Github/Digitales1/Practica 3/Practica3/Pr3.srcs/utils_1/imports/synth_1'. INFO: [Project 1-1877] Auto incremental dir location 'C:/Users/juanc/Documents/GitHub/Digitales1/Practica 3/Pr3/Pr3.srcs/utils_1/imports/impl_1' of run 'impl_1' is not writable, setting it to default location 'D:/Trabajos/Github/Digitales1/Practica 3/Practica3/Pr3.srcs/utils_1/imports/impl_1'. INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified 
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 105 MB (+108063kb) [00:00:20]
+// [Engine Memory]: 1,269 MB (+1179175kb) [00:00:20]
+// WARNING: HEventQueue.dispatchEvent() is taking  4654 ms.
+// Tcl Message: INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2021.2/data/ip'. 
+// Tcl Message: open_project: Time (s): cpu = 00:00:27 ; elapsed = 00:00:13 . Memory (MB): peak = 1554.477 ; gain = 0.000 
+// Project name: Pr3; location: D:/Trabajos/Github/Digitales1/Practica 3/Practica3; part: xc7a35ticpg236-1L
+dismissDialog("Open Project"); // bA
+// Tcl Message: update_compile_order -fileset sources_1 
+// Elapsed time: 24 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources]", 3); // D
+// PAPropertyPanels.initPanels (Circuit_tb.vhd) elapsed time: 0.2s
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, Circuit_tb(Behavioral) (Circuit_tb.vhd)]", 5, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, Circuit_tb(Behavioral) (Circuit_tb.vhd)]", 5, true, false, false, false, false, true); // D - Double Click - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, Circuit_tb(Behavioral) (Circuit_tb.vhd)]", 5, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, Circuit_tb(Behavioral) (Circuit_tb.vhd)]", 5, true, false, false, false, false, true); // D - Double Click - Node
+maximizeView(PAResourceOtoP.PAViews_BASE_WORKSPACE, "BaseWorkspace"); // N
+floatFrame(PAResourceOtoP.PAViews_CODE, "Circuit_tb.vhd"); // aA
+// PAResourceOtoP.PAViews_CODE: Code: float view
+maximizeFrame(PAResourceOtoP.PAViews_CODE, "Circuit_tb.vhd"); // aA
+// Elapsed time: 242 seconds
+collapseTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, RTL Analysis, Open Elaborated Design]", 12); // n
+expandTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, RTL Analysis, Open Elaborated Design]", 12); // n
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, RTL Analysis, Open Elaborated Design, Schematic]", 15, false); // n
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Elaborate Design"); // A
+// Tcl Message: synth_design -rtl -rtl_skip_mlo -name rtl_1 
+// Tcl Message: Command: synth_design -rtl -rtl_skip_mlo -name rtl_1 Starting synth_design Using part: xc7a35ticpg236-1L Top: Circuit 
+// TclEventType: ELABORATE_START
+// HMemoryUtils.trashcanNow. Engine heap size: 1,338 MB. GUI used memory: 59 MB. Current time: 2/24/22, 7:59:43 PM COT
+// TclEventType: ELABORATE_FAIL
+// TclEventType: DESIGN_NEW_FAILED
+// Tcl Message: INFO: [Device 21-403] Loading part xc7a35ticpg236-1L 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: Starting RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1676.836 ; gain = 122.359 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: INFO: [Synth 8-638] synthesizing module 'Circuit' [D:/Trabajos/Github/Digitales1/Practica 3/Practica3/Pr3.srcs/sources_1/new/Circuit.vhd:40] INFO: [Synth 8-637] synthesizing blackbox instance 'Rom_A' of component 'ROMa' [D:/Trabajos/Github/Digitales1/Practica 3/Practica3/Pr3.srcs/sources_1/new/Circuit.vhd:89] 
+// Tcl Message: INFO: [Synth 8-637] synthesizing blackbox instance 'Rom_B' of component 'ROMb' [D:/Trabajos/Github/Digitales1/Practica 3/Practica3/Pr3.srcs/sources_1/new/Circuit.vhd:115] 
+// Tcl Message: ERROR: [Synth 8-690] width mismatch in assignment; target has 5 bits, source has 4 bits [D:/Trabajos/Github/Digitales1/Practica 3/Practica3/Pr3.srcs/sources_1/new/Circuit.vhd:152] 
+// Tcl Message: ERROR: [Synth 8-285] failed synthesizing module 'Circuit' [D:/Trabajos/Github/Digitales1/Practica 3/Practica3/Pr3.srcs/sources_1/new/Circuit.vhd:40] 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: Finished RTL Elaboration : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 1758.074 ; gain = 203.598 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: RTL Elaboration failed 
+// Tcl Message: 4 Infos, 4 Warnings, 0 Critical Warnings and 3 Errors encountered. synth_design failed 
+// Tcl Message: ERROR: [Vivado_Tcl 4-5] Elaboration failed - please see the console for details 
+// CommandFailedException: ERROR: [Common 17-69] Command failed: ERROR: [Vivado_Tcl 4-5] Elaboration failed - please see the console for details  
+// Elapsed time: 20 seconds
+dismissDialog("Open Elaborated Design"); // bA
+// [Engine Memory]: 1,611 MB (+291570kb) [00:05:25]
+// Elapsed time: 62 seconds
+selectButton(PAResourceAtoD.CmdMsgDialog_OK, "OK"); // f
+dismissDialog("Critical Messages"); // W
+// [GUI Memory]: 113 MB (+2565kb) [00:16:12]
+// Elapsed time: 884 seconds
+unMinimizeFrame(PAResourceOtoP.PAViews_SOURCES, "Sources"); // aA
+// Elapsed time: 114 seconds
+selectCodeEditor("Circuit_tb.vhd", 320, 342); // be
+// Elapsed time: 26 seconds
+typeControlKey((HResource) null, "Circuit_tb.vhd", 'v'); // be
+selectCodeEditor("Circuit_tb.vhd", 129, 363); // be
+// Elapsed time: 19 seconds
+selectCodeEditor("Circuit_tb.vhd", 354, 352); // be
+// Elapsed time: 25 seconds
+selectCodeEditor("Circuit_tb.vhd", 547, 503); // be
+// Elapsed time: 19 seconds
+typeControlKey((HResource) null, "Circuit_tb.vhd", 'c'); // be
+typeControlKey((HResource) null, "Circuit_tb.vhd", 'v'); // be
+selectCodeEditor("Circuit_tb.vhd", 374, 502); // be
+// Elapsed time: 10 seconds
+selectCodeEditor("Circuit_tb.vhd", 572, 507); // be
+// Elapsed time: 15 seconds
+selectCodeEditor("Circuit_tb.vhd", 697, 498); // be
+// Elapsed time: 95 seconds
+selectCodeEditor("Circuit_tb.vhd", 931, 503); // be
+// HMemoryUtils.trashcanNow. Engine heap size: 1,611 MB. GUI used memory: 60 MB. Current time: 2/24/22, 8:29:43 PM COT
+// Elapsed time: 764 seconds
+selectCodeEditor("Circuit_tb.vhd", 235, 368); // be
+// Elapsed time: 53 seconds
+selectCodeEditor("Circuit_tb.vhd", 352, 329); // be
+selectCodeEditor("Circuit_tb.vhd", 528, 333); // be
+// Elapsed time: 22 seconds
+selectCodeEditor("Circuit_tb.vhd", 972, 333); // be
+// Elapsed time: 130 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Circuit(Behavioral) (Circuit.vhd)]", 1, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Circuit(Behavioral) (Circuit.vhd)]", 1, true, false, false, false, false, true); // D - Double Click - Node
+floatFrame(PAResourceOtoP.PAViews_CODE, "Circuit.vhd"); // aA
+// PAResourceOtoP.PAViews_CODE: Code: float view
+maximizeFrame(PAResourceOtoP.PAViews_CODE, "Circuit.vhd"); // aA
+// Elapsed time: 21 seconds
+selectCodeEditor("Circuit_tb.vhd", 596, 422); // be
+selectCodeEditor("Circuit_tb.vhd", 266, 319); // be
+// Elapsed time: 35 seconds
+selectCodeEditor("Circuit_tb.vhd", 468, 310); // be
+// Elapsed time: 20 seconds
+selectCodeEditor("Circuit_tb.vhd", 395, 307); // be
+// Elapsed time: 55 seconds
+selectCodeEditor("Circuit_tb.vhd", 1099, 524); // be
+// Elapsed time: 16 seconds
+selectCodeEditor("Circuit_tb.vhd", 966, 516); // be
+// Elapsed time: 80 seconds
+selectCodeEditor("Circuit_tb.vhd", 361, 342); // be
+selectCodeEditor("Circuit_tb.vhd", 917, 466); // be
+selectCodeEditor("Circuit_tb.vhd", 1124, 468); // be
+// Elapsed time: 82 seconds
+selectCodeEditor("Circuit_tb.vhd", 302, 454); // be
+// Elapsed time: 19 seconds
+selectCodeEditor("Circuit_tb.vhd", 287, 445); // be
+selectCodeEditor("Circuit_tb.vhd", 236, 415); // be
+// Elapsed time: 23 seconds
+selectCodeEditor("Circuit_tb.vhd", 340, 448); // be
+// Elapsed time: 67 seconds
+selectCodeEditor("Circuit_tb.vhd", 181, 268); // be
+// Elapsed time: 181 seconds
+selectCodeEditor("Circuit_tb.vhd", 338, 298); // be
+// Elapsed time: 35 seconds
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+// Elapsed time: 28 seconds
+selectCodeEditor("Circuit_tb.vhd", 293, 444); // be
+// Elapsed time: 17 seconds
+selectCodeEditor("Circuit_tb.vhd", 305, 447); // be
+// Elapsed time: 24 seconds
+selectCodeEditor("Circuit_tb.vhd", 407, 432); // be
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+selectCodeEditor("Circuit_tb.vhd", 395, 508); // be
+selectCodeEditor("Circuit_tb.vhd", 224, 501); // be
+selectCodeEditor("Circuit_tb.vhd", 219, 534); // be
+// Elapsed time: 14 seconds
+selectComboBox("FindAndReplaceDialog.aN_Find what:", "output", -1); // JComboBox
+selectComboBox("FindAndReplaceDialog.aN_Replace with:", "output7", -1); // JComboBox
+selectButton("FindAndReplaceDialog.aN_Find", "Find"); // JButton
+// Elapsed time: 52 seconds
+selectCodeEditor("Circuit_tb.vhd", 233, 206); // be
+// Elapsed time: 12 seconds
+selectCodeEditor("Circuit_tb.vhd", 405, 351); // be
+selectCodeEditor("Circuit_tb.vhd", 220, 214); // be
+selectCodeEditor("Circuit_tb.vhd", 290, 234); // be
+selectCodeEditor("Circuit_tb.vhd", 348, 224); // be
+selectCodeEditor("Circuit_tb.vhd", 248, 215); // be
+selectCodeEditor("Circuit_tb.vhd", 702, 207); // be
+selectCodeEditor("Circuit_tb.vhd", 1037, 225); // be
+selectCodeEditor("Circuit_tb.vhd", 346, 227); // be
+selectCodeEditor("Circuit_tb.vhd", 377, 232); // be
+selectCodeEditor("Circuit_tb.vhd", 400, 258); // be
+selectCodeEditor("Circuit_tb.vhd", 402, 173); // be
+// Elapsed time: 12 seconds
+selectButton(RDIResourceCommand.RDICommands_SAVE_FILE, (String) null); // D
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("Circuit_tb.vhd", 223, 278); // be
+typeControlKey((HResource) null, "Circuit_tb.vhd", 'c'); // be
+selectCodeEditor("Circuit_tb.vhd", 313, 267); // be
+typeControlKey((HResource) null, "Circuit_tb.vhd", 'v'); // be
+// Elapsed time: 49 seconds
+selectCodeEditor("Circuit_tb.vhd", 407, 362); // be
+selectCodeEditor("Circuit_tb.vhd", 634, 365); // be
+typeControlKey((HResource) null, "Circuit_tb.vhd", 'c'); // be
+typeControlKey((HResource) null, "Circuit_tb.vhd", 'v'); // be
+selectCodeEditor("Circuit_tb.vhd", 747, 372); // be
+// Elapsed time: 20 seconds
+selectCodeEditor("Circuit_tb.vhd", 846, 515); // be
+// Elapsed time: 18 seconds
+selectCodeEditor("Circuit_tb.vhd", 866, 513); // be
+selectCodeEditor("Circuit_tb.vhd", 1004, 517); // be
+// Elapsed time: 44 seconds
+selectCodeEditor("Circuit_tb.vhd", 320, 329); // be
+typeControlKey((HResource) null, "Circuit_tb.vhd", 'v'); // be
+typeControlKey(null, null, 'z');
+selectCodeEditor("Circuit_tb.vhd", 221, 107); // be
+typeControlKey((HResource) null, "Circuit_tb.vhd", 'c'); // be
+selectCodeEditor("Circuit_tb.vhd", 329, 234); // be
+typeControlKey((HResource) null, "Circuit_tb.vhd", 'v'); // be
+selectCodeEditor("Circuit_tb.vhd", 405, 225); // be
+selectCodeEditor("Circuit_tb.vhd", 539, 229); // be
+// Elapsed time: 22 seconds
+selectCodeEditor("Circuit_tb.vhd", 716, 275); // be
+// Elapsed time: 39 seconds
+selectCodeEditor("Circuit_tb.vhd", 692, 382); // be
+selectCodeEditor("Circuit_tb.vhd", 824, 433); // be
+selectCodeEditor("Circuit_tb.vhd", 827, 429); // be
+// Elapsed time: 22 seconds
+selectCodeEditor("Circuit_tb.vhd", 383, 338); // be
+typeControlKey((HResource) null, "Circuit_tb.vhd", 'c'); // be
+selectCodeEditor("Circuit_tb.vhd", 331, 200); // be
+typeControlKey((HResource) null, "Circuit_tb.vhd", 'v'); // be
+selectCodeEditor("Circuit_tb.vhd", 410, 195); // be
+selectCodeEditor("Circuit_tb.vhd", 549, 197); // be
+// Elapsed time: 15 seconds
+selectButton(RDIResourceCommand.RDICommands_SAVE_FILE, (String) null); // D
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 14 seconds
+selectCodeEditor("Circuit_tb.vhd", 176, 403); // be
+// Elapsed time: 102 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Simulation, Run Simulation]", 10, false); // n
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Simulation, Run Simulation]", 10, false); // n
+selectMenuItem(PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL, "Run Behavioral Simulation"); // ao
+// Run Command: PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL
+// TclEventType: LAUNCH_SIM
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Tcl Message: launch_simulation 
+// Tcl Message: Command: launch_simulation  
+// Tcl Message: INFO: [Vivado 12-12493] Simulation top is 'Circuit_tb' 
+// Tcl Message: INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/Trabajos/Github/Digitales1/Practica 3/Practica3/Pr3.sim/sim_1/behav/xsim' INFO: [SIM-utils-51] Simulation object is 'sim_1' INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2021.2/tps/boost_1_72_0' INFO: [SIM-utils-54] Inspecting design source files for 'Circuit_tb' in fileset 'sim_1'... INFO: [USF-XSim-97] Finding global include files... INFO: [USF-XSim-98] Fetching design files from 'sim_1'... INFO: [USF-XSim-2] XSim::Compile design 
+// Tcl Message: INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/Trabajos/Github/Digitales1/Practica 3/Practica3/Pr3.sim/sim_1/behav/xsim' 
+// HMemoryUtils.trashcanNow. Engine heap size: 1,611 MB. GUI used memory: 54 MB. Current time: 2/24/22, 8:59:43 PM COT
+// Tcl Message: "xvhdl --incr --relax -prj Circuit_tb_vhdl.prj" 
+// TclEventType: LAUNCH_SIM_LOG
+// Tcl Message: INFO: [VRFC 10-163] Analyzing VHDL file "D:/Trabajos/Github/Digitales1/Practica 3/Practica3/Pr3.srcs/sources_1/new/Circuit.vhd" into library xil_defaultlib INFO: [VRFC 10-3107] analyzing entity 'Circuit' INFO: [VRFC 10-163] Analyzing VHDL file "D:/Trabajos/Github/Digitales1/Practica 3/Practica3/Pr3.srcs/sim_1/new/Circuit_tb.vhd" into library xil_defaultlib INFO: [VRFC 10-3107] analyzing entity 'Circuit_tb' 
+// Tcl Message: INFO: [USF-XSim-69] 'compile' step finished in '4' seconds INFO: [USF-XSim-3] XSim::Elaborate design INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/Trabajos/Github/Digitales1/Practica 3/Practica3/Pr3.sim/sim_1/behav/xsim' 
+// Tcl Message: "xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot Circuit_tb_behav xil_defaultlib.Circuit_tb -log elaborate.log" 
+// TclEventType: LAUNCH_SIM
+// Tcl Message: Vivado Simulator v2021.2 Copyright 1986-1999, 2001-2021 Xilinx, Inc. All Rights Reserved. Running: C:/Xilinx/Vivado/2021.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot Circuit_tb_behav xil_defaultlib.Circuit_tb -log elaborate.log  Using 2 slave threads. 
+// Tcl Message: Starting static elaboration ERROR: [VRFC 10-664] expression has 6 elements ; expected 7 [D:/Trabajos/Github/Digitales1/Practica 3/Practica3/Pr3.srcs/sim_1/new/Circuit_tb.vhd:52] ERROR: [XSIM 43-3321] Static elaboration of top level VHDL design unit circuit_tb in library work failed. 
+// Tcl Message: INFO: [USF-XSim-69] 'elaborate' step finished in '4' seconds INFO: [USF-XSim-99] Step results log file:'D:/Trabajos/Github/Digitales1/Practica 3/Practica3/Pr3.sim/sim_1/behav/xsim/elaborate.log' 
+// Tcl Message: ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or 'D:/Trabajos/Github/Digitales1/Practica 3/Practica3/Pr3.sim/sim_1/behav/xsim/elaborate.log' file for more information. ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation. 
+// Tcl Message: launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:08 . Memory (MB): peak = 1759.770 ; gain = 0.000 
+// Tcl Message: ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors. 
+// CommandFailedException: ERROR: [Common 17-69] Command failed: ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.  
+// HOptionPane Error: 'ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.  (Run Simulation)'
+// 'd' command handler elapsed time: 11 seconds
+// Elapsed time: 11 seconds
+selectButton("OptionPane.button", "OK"); // JButton
+unMinimizeFrame(PAResourceOtoP.PAViews_MESSAGES, "Messages"); // aA
+selectButton(PAResourceAtoD.CmdMsgDialog_OPEN_MESSAGES_VIEW, "Open Messages View"); // a
+// Run Command: PAResourceCommand.PACommandNames_MESSAGE_WINDOW
+dismissDialog("Critical Messages"); // a
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Vivado Commands, General Messages, [Synth 8-690] width mismatch in assignment; target has 5 bits, source has 4 bits [D:/Trabajos/Github/Digitales1/Practica 3/Practica3/Pr3.srcs/sources_1/new/Circuit.vhd:152]. ]", 2, false); // ah
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;D:\Trabajos\Github\Digitales1\Practica 3\Practica3\Pr3.srcs\sources_1\new\Circuit.vhd;-;;-;16;-;line;-;152;-;;-;16;-;"); // ah
+// Elapsed time: 35 seconds
+selectCodeEditor("Circuit.vhd", 210, 248); // be
+selectButton(RDIResourceCommand.RDICommands_SAVE_FILE, (String) null); // D
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Simulation, Run Simulation]", 10, false); // n
+selectMenuItem(PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL, "Run Behavioral Simulation"); // ao
+// Run Command: PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL
+// TclEventType: LAUNCH_SIM
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Tcl Message: launch_simulation 
+// Tcl Message: Command: launch_simulation  
+// Tcl Message: INFO: [Vivado 12-12493] Simulation top is 'Circuit_tb' 
+// Tcl Message: INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/Trabajos/Github/Digitales1/Practica 3/Practica3/Pr3.sim/sim_1/behav/xsim' INFO: [SIM-utils-51] Simulation object is 'sim_1' INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2021.2/tps/boost_1_72_0' INFO: [SIM-utils-54] Inspecting design source files for 'Circuit_tb' in fileset 'sim_1'... INFO: [USF-XSim-97] Finding global include files... INFO: [USF-XSim-98] Fetching design files from 'sim_1'... INFO: [USF-XSim-2] XSim::Compile design INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/Trabajos/Github/Digitales1/Practica 3/Practica3/Pr3.sim/sim_1/behav/xsim' 
+// Tcl Message: "xvhdl --incr --relax -prj Circuit_tb_vhdl.prj" 
+// TclEventType: LAUNCH_SIM_LOG
+// Tcl Message: INFO: [VRFC 10-163] Analyzing VHDL file "D:/Trabajos/Github/Digitales1/Practica 3/Practica3/Pr3.srcs/sources_1/new/Circuit.vhd" into library xil_defaultlib INFO: [VRFC 10-3107] analyzing entity 'Circuit' 
+// Tcl Message: INFO: [USF-XSim-69] 'compile' step finished in '3' seconds INFO: [USF-XSim-3] XSim::Elaborate design INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/Trabajos/Github/Digitales1/Practica 3/Practica3/Pr3.sim/sim_1/behav/xsim' 
+// Tcl Message: "xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot Circuit_tb_behav xil_defaultlib.Circuit_tb -log elaborate.log" 
+// TclEventType: LAUNCH_SIM
+// Tcl Message: Vivado Simulator v2021.2 Copyright 1986-1999, 2001-2021 Xilinx, Inc. All Rights Reserved. Running: C:/Xilinx/Vivado/2021.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot Circuit_tb_behav xil_defaultlib.Circuit_tb -log elaborate.log  Using 2 slave threads. Starting static elaboration ERROR: [VRFC 10-664] expression has 6 elements ; expected 7 [D:/Trabajos/Github/Digitales1/Practica 3/Practica3/Pr3.srcs/sim_1/new/Circuit_tb.vhd:52] ERROR: [XSIM 43-3321] Static elaboration of top level VHDL design unit circuit_tb in library work failed. 
+// Tcl Message: INFO: [USF-XSim-69] 'elaborate' step finished in '4' seconds INFO: [USF-XSim-99] Step results log file:'D:/Trabajos/Github/Digitales1/Practica 3/Practica3/Pr3.sim/sim_1/behav/xsim/elaborate.log' 
+// Tcl Message: ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or 'D:/Trabajos/Github/Digitales1/Practica 3/Practica3/Pr3.sim/sim_1/behav/xsim/elaborate.log' file for more information. ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation. 
+// Tcl Message: launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:07 . Memory (MB): peak = 1767.805 ; gain = 0.000 
+// Tcl Message: ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors. 
+// CommandFailedException: ERROR: [Common 17-69] Command failed: ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.  
+// HOptionPane Error: 'ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.  (Run Simulation)'
+// 'd' command handler elapsed time: 9 seconds
+selectButton("OptionPane.button", "OK"); // JButton
+selectButton(PAResourceAtoD.CmdMsgDialog_OPEN_MESSAGES_VIEW, "Open Messages View"); // a
+// Run Command: PAResourceCommand.PACommandNames_MESSAGE_WINDOW
+dismissDialog("Critical Messages"); // a
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Simulation, sim_1, [VRFC 10-664] expression has 6 elements ; expected 7 [D:/Trabajos/Github/Digitales1/Practica 3/Practica3/Pr3.srcs/sim_1/new/Circuit_tb.vhd:52]. ]", 9, false); // ah
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;D:\Trabajos\Github\Digitales1\Practica 3\Practica3\Pr3.srcs\sim_1\new\Circuit_tb.vhd;-;;-;16;-;line;-;52;-;;-;16;-;"); // ah
+selectCodeEditor("Circuit_tb.vhd", 372, 177); // be
+selectButton(RDIResourceCommand.RDICommands_SAVE_FILE, (String) null); // D
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Simulation, Run Simulation]", 10, false); // n
+selectMenuItem(PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL, "Run Behavioral Simulation"); // ao
+// Run Command: PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL
+// TclEventType: LAUNCH_SIM
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Tcl Message: launch_simulation 
+// Tcl Message: Command: launch_simulation  
+// Tcl Message: INFO: [Vivado 12-12493] Simulation top is 'Circuit_tb' 
+// Tcl Message: INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/Trabajos/Github/Digitales1/Practica 3/Practica3/Pr3.sim/sim_1/behav/xsim' INFO: [SIM-utils-51] Simulation object is 'sim_1' INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2021.2/tps/boost_1_72_0' INFO: [SIM-utils-54] Inspecting design source files for 'Circuit_tb' in fileset 'sim_1'... INFO: [USF-XSim-97] Finding global include files... INFO: [USF-XSim-98] Fetching design files from 'sim_1'... INFO: [USF-XSim-2] XSim::Compile design INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/Trabajos/Github/Digitales1/Practica 3/Practica3/Pr3.sim/sim_1/behav/xsim' 
+// Tcl Message: "xvhdl --incr --relax -prj Circuit_tb_vhdl.prj" 
+// TclEventType: LAUNCH_SIM_LOG
+// Tcl Message: INFO: [VRFC 10-163] Analyzing VHDL file "D:/Trabajos/Github/Digitales1/Practica 3/Practica3/Pr3.srcs/sim_1/new/Circuit_tb.vhd" into library xil_defaultlib INFO: [VRFC 10-3107] analyzing entity 'Circuit_tb' 
+// Tcl Message: INFO: [USF-XSim-69] 'compile' step finished in '4' seconds INFO: [USF-XSim-3] XSim::Elaborate design INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/Trabajos/Github/Digitales1/Practica 3/Practica3/Pr3.sim/sim_1/behav/xsim' 
+// Tcl Message: "xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot Circuit_tb_behav xil_defaultlib.Circuit_tb -log elaborate.log" 
+// TclEventType: LAUNCH_SIM
+// Tcl Message: INFO: [USF-XSim-69] 'elaborate' step finished in '4' seconds INFO: [USF-XSim-99] Step results log file:'D:/Trabajos/Github/Digitales1/Practica 3/Practica3/Pr3.sim/sim_1/behav/xsim/elaborate.log' 
+// Tcl Message: ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or 'D:/Trabajos/Github/Digitales1/Practica 3/Practica3/Pr3.sim/sim_1/behav/xsim/elaborate.log' file for more information. ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation. 
+// Tcl Message: launch_simulation: Time (s): cpu = 00:00:02 ; elapsed = 00:00:08 . Memory (MB): peak = 1767.805 ; gain = 0.000 
+// Tcl Message: ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors. 
+// CommandFailedException: ERROR: [Common 17-69] Command failed: ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.  
+// HOptionPane Error: 'ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.  (Run Simulation)'
+// 'd' command handler elapsed time: 18 seconds
+// Elapsed time: 18 seconds
+selectButton("OptionPane.button", "OK"); // JButton
+selectButton(PAResourceAtoD.CmdMsgDialog_OPEN_MESSAGES_VIEW, "Open Messages View"); // a
+// Run Command: PAResourceCommand.PACommandNames_MESSAGE_WINDOW
+dismissDialog("Critical Messages"); // a
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Vivado Commands, General Messages, [Synth 8-690] width mismatch in assignment; target has 5 bits, source has 4 bits [D:/Trabajos/Github/Digitales1/Practica 3/Practica3/Pr3.srcs/sources_1/new/Circuit.vhd:152]. ]", 2, false); // ah
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;D:\Trabajos\Github\Digitales1\Practica 3\Practica3\Pr3.srcs\sources_1\new\Circuit.vhd;-;;-;16;-;line;-;152;-;;-;16;-;"); // ah
+// Elapsed time: 23 seconds
+selectCodeEditor("Circuit.vhd", 144, 350); // be
+// Elapsed time: 12 seconds
+typeControlKey((HResource) null, "Circuit.vhd", 'c'); // be
+selectCodeEditor("Circuit.vhd", 150, 399); // be
+typeControlKey((HResource) null, "Circuit.vhd", 'v'); // be
+selectCodeEditor("Circuit.vhd", 146, 451); // be
+typeControlKey((HResource) null, "Circuit.vhd", 'v'); // be
+// Elapsed time: 10 seconds
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Simulation, sim_1, [VRFC 10-664] expression has 4 elements ; expected 5 [D:/Trabajos/Github/Digitales1/Practica 3/Practica3/Pr3.srcs/sources_1/new/Circuit.vhd:167]. ]", 9, false); // ah
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;D:\Trabajos\Github\Digitales1\Practica 3\Practica3\Pr3.srcs\sources_1\new\Circuit.vhd;-;;-;16;-;line;-;167;-;;-;16;-;"); // ah
+// Elapsed time: 17 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Simulation, Run Simulation]", 10, false); // n
+selectMenuItem(PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL, "Run Behavioral Simulation"); // ao
+// Run Command: PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL
+selectButton(PAResourceQtoS.SaveProjectUtils_SAVE, "Save"); // a
+// TclEventType: DG_GRAPH_STALE
+dismissDialog("Save Project"); // al
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: LAUNCH_SIM
+// Tcl Message: launch_simulation 
+// Tcl Message: Command: launch_simulation  
+// Tcl Message: INFO: [Vivado 12-12493] Simulation top is 'Circuit_tb' 
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Tcl Message: INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/Trabajos/Github/Digitales1/Practica 3/Practica3/Pr3.sim/sim_1/behav/xsim' INFO: [SIM-utils-51] Simulation object is 'sim_1' INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2021.2/tps/boost_1_72_0' INFO: [SIM-utils-54] Inspecting design source files for 'Circuit_tb' in fileset 'sim_1'... INFO: [USF-XSim-97] Finding global include files... INFO: [USF-XSim-98] Fetching design files from 'sim_1'... INFO: [USF-XSim-2] XSim::Compile design INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/Trabajos/Github/Digitales1/Practica 3/Practica3/Pr3.sim/sim_1/behav/xsim' 
+// Tcl Message: "xvhdl --incr --relax -prj Circuit_tb_vhdl.prj" 
+// TclEventType: LAUNCH_SIM_LOG
+// Tcl Message: INFO: [VRFC 10-163] Analyzing VHDL file "D:/Trabajos/Github/Digitales1/Practica 3/Practica3/Pr3.srcs/sources_1/new/Circuit.vhd" into library xil_defaultlib INFO: [VRFC 10-3107] analyzing entity 'Circuit' 
+// Tcl Message: INFO: [USF-XSim-69] 'compile' step finished in '3' seconds INFO: [USF-XSim-3] XSim::Elaborate design INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/Trabajos/Github/Digitales1/Practica 3/Practica3/Pr3.sim/sim_1/behav/xsim' 
+// Tcl Message: "xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot Circuit_tb_behav xil_defaultlib.Circuit_tb -log elaborate.log" 
+// TclEventType: LAUNCH_SIM
+// Tcl Message: INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds INFO: [USF-XSim-99] Step results log file:'D:/Trabajos/Github/Digitales1/Practica 3/Practica3/Pr3.sim/sim_1/behav/xsim/elaborate.log' 
+// Tcl Message: ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or 'D:/Trabajos/Github/Digitales1/Practica 3/Practica3/Pr3.sim/sim_1/behav/xsim/elaborate.log' file for more information. ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation. 
+// Tcl Message: launch_simulation: Time (s): cpu = 00:00:00 ; elapsed = 00:00:09 . Memory (MB): peak = 1767.805 ; gain = 0.000 
+// Tcl Message: ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors. 
+// CommandFailedException: ERROR: [Common 17-69] Command failed: ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.  
+// HOptionPane Error: 'ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.  (Run Simulation)'
+// 'd' command handler elapsed time: 13 seconds
+// Elapsed time: 12 seconds
+selectButton("OptionPane.button", "OK"); // JButton
+selectButton(PAResourceAtoD.CmdMsgDialog_OK, "OK"); // f
+selectButton(PAResourceAtoD.CmdMsgDialog_OPEN_MESSAGES_VIEW, "Open Messages View"); // a
+// Run Command: PAResourceCommand.PACommandNames_MESSAGE_WINDOW
+dismissDialog("Critical Messages"); // a
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Vivado Commands, General Messages, [Synth 8-285] failed synthesizing module 'Circuit' [D:/Trabajos/Github/Digitales1/Practica 3/Practica3/Pr3.srcs/sources_1/new/Circuit.vhd:40]. ]", 3, false); // ah
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;D:\Trabajos\Github\Digitales1\Practica 3\Practica3\Pr3.srcs\sources_1\new\Circuit.vhd;-;;-;16;-;line;-;40;-;;-;16;-;"); // ah
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Vivado Commands, General Messages, [Synth 8-690] width mismatch in assignment; target has 5 bits, source has 4 bits [D:/Trabajos/Github/Digitales1/Practica 3/Practica3/Pr3.srcs/sources_1/new/Circuit.vhd:152]. ]", 2, false); // ah
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;D:\Trabajos\Github\Digitales1\Practica 3\Practica3\Pr3.srcs\sources_1\new\Circuit.vhd;-;;-;16;-;line;-;152;-;;-;16;-;"); // ah
+// Elapsed time: 35 seconds
+selectCodeEditor("Circuit.vhd", 187, 441); // be
+typeControlKey((HResource) null, "Circuit.vhd", 'v'); // be
+// Elapsed time: 17 seconds
+selectButton(RDIResourceCommand.RDICommands_SAVE_FILE, (String) null); // D
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Simulation, Run Simulation]", 10, false); // n
+selectMenuItem(PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL, "Run Behavioral Simulation"); // ao
+// Run Command: PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL
+// TclEventType: LAUNCH_SIM
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Tcl Message: launch_simulation 
+// Tcl Message: Command: launch_simulation  
+// Tcl Message: INFO: [Vivado 12-12493] Simulation top is 'Circuit_tb' 
+// Tcl Message: INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/Trabajos/Github/Digitales1/Practica 3/Practica3/Pr3.sim/sim_1/behav/xsim' INFO: [SIM-utils-51] Simulation object is 'sim_1' INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2021.2/tps/boost_1_72_0' INFO: [SIM-utils-54] Inspecting design source files for 'Circuit_tb' in fileset 'sim_1'... INFO: [USF-XSim-97] Finding global include files... INFO: [USF-XSim-98] Fetching design files from 'sim_1'... INFO: [USF-XSim-2] XSim::Compile design INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/Trabajos/Github/Digitales1/Practica 3/Practica3/Pr3.sim/sim_1/behav/xsim' 
+// Tcl Message: "xvhdl --incr --relax -prj Circuit_tb_vhdl.prj" 
+// TclEventType: LAUNCH_SIM_LOG
+// Tcl Message: INFO: [VRFC 10-163] Analyzing VHDL file "D:/Trabajos/Github/Digitales1/Practica 3/Practica3/Pr3.srcs/sources_1/new/Circuit.vhd" into library xil_defaultlib INFO: [VRFC 10-3107] analyzing entity 'Circuit' 
+// Tcl Message: INFO: [USF-XSim-69] 'compile' step finished in '3' seconds INFO: [USF-XSim-3] XSim::Elaborate design INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/Trabajos/Github/Digitales1/Practica 3/Practica3/Pr3.sim/sim_1/behav/xsim' 
+// Tcl Message: "xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot Circuit_tb_behav xil_defaultlib.Circuit_tb -log elaborate.log" 
+// Tcl Message: Vivado Simulator v2021.2 Copyright 1986-1999, 2001-2021 Xilinx, Inc. All Rights Reserved. Running: C:/Xilinx/Vivado/2021.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot Circuit_tb_behav xil_defaultlib.Circuit_tb -log elaborate.log  Using 2 slave threads. 
+// TclEventType: LAUNCH_SIM
+// Tcl Message: INFO: [USF-XSim-69] 'elaborate' step finished in '4' seconds INFO: [USF-XSim-99] Step results log file:'D:/Trabajos/Github/Digitales1/Practica 3/Practica3/Pr3.sim/sim_1/behav/xsim/elaborate.log' 
+// Tcl Message: ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or 'D:/Trabajos/Github/Digitales1/Practica 3/Practica3/Pr3.sim/sim_1/behav/xsim/elaborate.log' file for more information. ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation. 
+// Tcl Message: launch_simulation: Time (s): cpu = 00:00:00 ; elapsed = 00:00:07 . Memory (MB): peak = 1767.805 ; gain = 0.000 
+// Tcl Message: ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors. 
+// CommandFailedException: ERROR: [Common 17-69] Command failed: ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.  
+// HOptionPane Error: 'ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.  (Run Simulation)'
+// 'd' command handler elapsed time: 8 seconds
+selectButton("OptionPane.button", "OK"); // JButton
+selectButton(PAResourceAtoD.CmdMsgDialog_OPEN_MESSAGES_VIEW, "Open Messages View"); // a
+// Run Command: PAResourceCommand.PACommandNames_MESSAGE_WINDOW
+dismissDialog("Critical Messages"); // a
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Simulation, sim_1, [VRFC 10-664] expression has 4 elements ; expected 5 [D:/Trabajos/Github/Digitales1/Practica 3/Practica3/Pr3.srcs/sim_1/new/Circuit_tb.vhd:160]. ]", 9, false); // ah
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;D:\Trabajos\Github\Digitales1\Practica 3\Practica3\Pr3.srcs\sim_1\new\Circuit_tb.vhd;-;;-;16;-;line;-;160;-;;-;16;-;"); // ah
+selectCodeEditor("Circuit_tb.vhd", 173, 181); // be
+selectCodeEditor("Circuit_tb.vhd", 90, 278); // be
+typeControlKey((HResource) null, "Circuit_tb.vhd", 'v'); // be
+selectCodeEditor("Circuit_tb.vhd", 87, 382); // be
+typeControlKey((HResource) null, "Circuit_tb.vhd", 'v'); // be
+typeControlKey(null, null, 'z');
+typeControlKey((HResource) null, "Circuit_tb.vhd", 'v'); // be
+selectCodeEditor("Circuit_tb.vhd", 88, 333); // be
+typeControlKey((HResource) null, "Circuit_tb.vhd", 'v'); // be
+selectCodeEditor("Circuit_tb.vhd", 90, 488); // be
+typeControlKey((HResource) null, "Circuit_tb.vhd", 'v'); // be
+selectButton(RDIResourceCommand.RDICommands_SAVE_FILE, (String) null); // D
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Vivado Commands, General Messages, [Synth 8-690] width mismatch in assignment; target has 5 bits, source has 4 bits [D:/Trabajos/Github/Digitales1/Practica 3/Practica3/Pr3.srcs/sources_1/new/Circuit.vhd:152]. ]", 2, false); // ah
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;D:\Trabajos\Github\Digitales1\Practica 3\Practica3\Pr3.srcs\sources_1\new\Circuit.vhd;-;;-;16;-;line;-;152;-;;-;16;-;"); // ah
+// Elapsed time: 14 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Simulation, Run Simulation]", 10, false); // n
+selectMenuItem(PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL, "Run Behavioral Simulation"); // ao
+// Run Command: PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL
+// TclEventType: LAUNCH_SIM
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Tcl Message: launch_simulation 
+// Tcl Message: Command: launch_simulation  
+// Tcl Message: INFO: [Vivado 12-12493] Simulation top is 'Circuit_tb' 
+// Tcl Message: INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/Trabajos/Github/Digitales1/Practica 3/Practica3/Pr3.sim/sim_1/behav/xsim' INFO: [SIM-utils-51] Simulation object is 'sim_1' INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2021.2/tps/boost_1_72_0' INFO: [SIM-utils-54] Inspecting design source files for 'Circuit_tb' in fileset 'sim_1'... INFO: [USF-XSim-97] Finding global include files... INFO: [USF-XSim-98] Fetching design files from 'sim_1'... INFO: [USF-XSim-2] XSim::Compile design INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/Trabajos/Github/Digitales1/Practica 3/Practica3/Pr3.sim/sim_1/behav/xsim' 
+// Tcl Message: "xvhdl --incr --relax -prj Circuit_tb_vhdl.prj" 
+// Tcl Message: INFO: [VRFC 10-163] Analyzing VHDL file "D:/Trabajos/Github/Digitales1/Practica 3/Practica3/Pr3.srcs/sim_1/new/Circuit_tb.vhd" into library xil_defaultlib 
+// TclEventType: LAUNCH_SIM_LOG
+// Tcl Message: INFO: [VRFC 10-3107] analyzing entity 'Circuit_tb' 
+// Tcl Message: INFO: [USF-XSim-69] 'compile' step finished in '4' seconds INFO: [USF-XSim-3] XSim::Elaborate design INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/Trabajos/Github/Digitales1/Practica 3/Practica3/Pr3.sim/sim_1/behav/xsim' 
+// Tcl Message: "xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot Circuit_tb_behav xil_defaultlib.Circuit_tb -log elaborate.log" 
+// Tcl Message: Vivado Simulator v2021.2 Copyright 1986-1999, 2001-2021 Xilinx, Inc. All Rights Reserved. Running: C:/Xilinx/Vivado/2021.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot Circuit_tb_behav xil_defaultlib.Circuit_tb -log elaborate.log  Using 2 slave threads. 
+// TclEventType: LAUNCH_SIM
+// TclEventType: LOAD_FEATURE
+// Tcl Message: Built simulation snapshot Circuit_tb_behav 
+// Tcl Message: run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:08 . Memory (MB): peak = 1767.805 ; gain = 0.000 
+// Tcl Message: INFO: [USF-XSim-69] 'elaborate' step finished in '8' seconds INFO: [USF-XSim-4] XSim::Simulate design INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/Trabajos/Github/Digitales1/Practica 3/Practica3/Pr3.sim/sim_1/behav/xsim' INFO: [USF-XSim-98] *** Running xsim 
+// Tcl Message:    with args "Circuit_tb_behav -key {Behavioral:sim_1:Functional:Circuit_tb} -tclbatch {Circuit_tb.tcl} -log {simulate.log}" 
+// Tcl Message: INFO: [USF-XSim-8] Loading simulator feature 
+// TclEventType: SIMULATION_CREATE_SIMULATION_OBJECT
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_PROTOCOL_INSTANCE_TREE
+// PAPropertyPanels.initPanels (Circuit.vhd) elapsed time: 0.2s
+// WARNING: HEventQueue.dispatchEvent() is taking  1421 ms.
+// Tcl Message: Time resolution is 1 ps 
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_PROTOCOL_INSTANCE_TREE
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_PROTOCOL_INSTANCE_TREE
+// Elapsed time: 15 seconds
+closeView(PAResourceOtoP.PAViews_PROJECT_SUMMARY, "Project Summary"); // v
+floatFrame(PAResourceOtoP.PAViews_CODE, "Circuit_tb.vhd"); // aA
+floatFrame(PAResourceOtoP.PAViews_CODE, "Circuit.vhd"); // aA
+// TclEventType: WAVEFORM_UPDATE_TITLE
+// TclEventType: WAVEFORM_OPEN_WCFG
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_PROTOCOL_INSTANCE_TREE
+// TclEventType: WAVEFORM_OPEN_WCFG
+// TclEventType: WAVEFORM_DELAYED_MODEL_EVENT
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_MODEL_EVENT
+// Tcl Message: source Circuit_tb.tcl 
+// Tcl Message: # set curr_wave [current_wave_config] # if { [string length $curr_wave] == 0 } { #   if { [llength [get_objects]] > 0} { #     add_wave / #     set_property needs_save false [current_wave_config] #   } else { #      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console." #   } # } 
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_TITLE
+// TclEventType: WAVEFORM_DELAYED_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_TITLE
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// TclEventType: SIMULATION_CLEAR_CURRENT_LINE
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// TclEventType: SIMULATION_OBJECT_TREE_RESTORED
+// HMemoryUtils.trashcanNow. Engine heap size: 1,611 MB. GUI used memory: 61 MB. Current time: 2/24/22, 9:06:21 PM COT
+// TclEventType: SIMULATION_OBJECT_TREE_RESTORED
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: SIMULATION_CURRENT_SCOPE_CHANGED
+// TclEventType: SIMULATION_CURRENT_STACK_CHANGED
+// TclEventType: SIMULATION_UPDATE_STACK_FRAMES
+// TclEventType: SIMULATION_CURRENT_STACK_FRAME_CHANGED
+// TclEventType: SIMULATION_UPDATE_LOCALS
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_STOPPED
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// Tcl Message: # run 1000ns 
+// Tcl Message: ERROR: Array sizes do not match, left array has 5 elements, right array has 4 elements Time: 0 ps  Iteration: 0  Process: /Circuit_tb/uut/line__148   File: D:/Trabajos/Github/Digitales1/Practica 3/Practica3/Pr3.srcs/sources_1/new/Circuit.vhd  HDL Line: D:/Trabajos/Github/Digitales1/Practica 3/Practica3/Pr3.srcs/sources_1/new/Circuit.vhd:154 xsim: Time (s): cpu = 00:00:10 ; elapsed = 00:00:05 . Memory (MB): peak = 1780.965 ; gain = 13.160 
+// Tcl Message: INFO: [USF-XSim-96] XSim completed. Design snapshot 'Circuit_tb_behav' loaded. INFO: [USF-XSim-97] XSim simulation ran for 1000ns 
+// Tcl Message: launch_simulation: Time (s): cpu = 00:00:11 ; elapsed = 00:00:18 . Memory (MB): peak = 1780.965 ; gain = 13.160 
+// 'd' command handler elapsed time: 17 seconds
+dismissDialog("Run Simulation"); // e
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_MODEL_EVENT
+// Elapsed time: 30 seconds
+maximizeFrame(PAResourceOtoP.PAViews_TCL_CONSOLE, "Tcl Console"); // aA
+// Elapsed time: 32 seconds
+selectTab((HResource) null, (HResource) null, "Messages", 1); // aL
+selectCheckBox(PAResourceItoN.MsgView_ERROR_MESSAGES, (String) null, true); // g: TRUE
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Vivado Commands, General Messages, [Synth 8-690] width mismatch in assignment; target has 5 bits, source has 4 bits [D:/Trabajos/Github/Digitales1/Practica 3/Practica3/Pr3.srcs/sources_1/new/Circuit.vhd:152]. ]", 2, false); // ah
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;D:\Trabajos\Github\Digitales1\Practica 3\Practica3\Pr3.srcs\sources_1\new\Circuit.vhd;-;;-;16;-;line;-;152;-;;-;16;-;"); // ah
+// Elapsed time: 30 seconds
+expandTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Vivado Commands, General Messages, [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.. ]", 6); // ah
+expandTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Vivado Commands, General Messages, [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or 'D:/Trabajos/Github/Digitales1/Practica 3/Practica3/Pr3.sim/sim_1/behav/xsim/elaborate.log' file for more information.. ]", 5); // ah
+// Elapsed time: 25 seconds
+selectCodeEditor("Circuit.vhd", 184, 164); // be
+typeControlKey((HResource) null, "Circuit.vhd", 'v'); // be
+selectCodeEditor("Circuit.vhd", 303, 158); // be
+typeControlKey((HResource) null, "Circuit.vhd", 'v'); // be
+selectCodeEditor("Circuit.vhd", 418, 161); // be
+typeControlKey((HResource) null, "Circuit.vhd", 'v'); // be
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Simulation, Run Simulation]", 10, false); // n
+selectMenuItem(PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL, "Run Behavioral Simulation"); // ao
+// Run Command: PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL
+selectButton("OptionPane.button", "Yes"); // JButton
+// TclEventType: WAVEFORM_CLOSE_WCFG
+// TclEventType: SIMULATION_CLOSE_SIMULATION
+// WARNING: HEventQueue.dispatchEvent() is taking  1231 ms.
+unMaximizeFrame(PAResourceOtoP.PAViews_MESSAGES, "Messages"); // aA
+// Tcl Message: close_sim 
+floatFrame(PAResourceOtoP.PAViews_CODE, "Circuit_tb.vhd"); // aA
+floatFrame(PAResourceOtoP.PAViews_CODE, "Circuit.vhd"); // aA
+// Tcl Message: INFO: [Simtcl 6-16] Simulation closed 
+dismissDialog("Close"); // bA
+// TclEventType: LAUNCH_SIM
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Tcl Message: launch_simulation 
+// Tcl Message: Command: launch_simulation  
+// Tcl Message: INFO: [Vivado 12-12493] Simulation top is 'Circuit_tb' 
+// Tcl Message: INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/Trabajos/Github/Digitales1/Practica 3/Practica3/Pr3.sim/sim_1/behav/xsim' INFO: [SIM-utils-51] Simulation object is 'sim_1' INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2021.2/tps/boost_1_72_0' INFO: [SIM-utils-54] Inspecting design source files for 'Circuit_tb' in fileset 'sim_1'... INFO: [USF-XSim-97] Finding global include files... INFO: [USF-XSim-98] Fetching design files from 'sim_1'... INFO: [USF-XSim-2] XSim::Compile design INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/Trabajos/Github/Digitales1/Practica 3/Practica3/Pr3.sim/sim_1/behav/xsim' 
+// Tcl Message: "xvhdl --incr --relax -prj Circuit_tb_vhdl.prj" 
+// TclEventType: LAUNCH_SIM_LOG
+// Tcl Message: INFO: [VRFC 10-163] Analyzing VHDL file "D:/Trabajos/Github/Digitales1/Practica 3/Practica3/Pr3.srcs/sources_1/new/Circuit.vhd" into library xil_defaultlib INFO: [VRFC 10-3107] analyzing entity 'Circuit' 
+// Tcl Message: INFO: [USF-XSim-69] 'compile' step finished in '3' seconds INFO: [USF-XSim-3] XSim::Elaborate design INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/Trabajos/Github/Digitales1/Practica 3/Practica3/Pr3.sim/sim_1/behav/xsim' 
+// Tcl Message: "xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot Circuit_tb_behav xil_defaultlib.Circuit_tb -log elaborate.log" 
+// Tcl Message: Vivado Simulator v2021.2 Copyright 1986-1999, 2001-2021 Xilinx, Inc. All Rights Reserved. Running: C:/Xilinx/Vivado/2021.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot Circuit_tb_behav xil_defaultlib.Circuit_tb -log elaborate.log  Using 2 slave threads. 
+// TclEventType: LAUNCH_SIM
+// Tcl Message: Built simulation snapshot Circuit_tb_behav 
+// Tcl Message: run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 1784.863 ; gain = 0.000 
+// Tcl Message: INFO: [USF-XSim-69] 'elaborate' step finished in '6' seconds INFO: [USF-XSim-4] XSim::Simulate design INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/Trabajos/Github/Digitales1/Practica 3/Practica3/Pr3.sim/sim_1/behav/xsim' INFO: [USF-XSim-98] *** Running xsim 
+// Tcl Message:    with args "Circuit_tb_behav -key {Behavioral:sim_1:Functional:Circuit_tb} -tclbatch {Circuit_tb.tcl} -log {simulate.log}" 
+// Tcl Message: INFO: [USF-XSim-8] Loading simulator feature 
+// TclEventType: SIMULATION_CREATE_SIMULATION_OBJECT
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_PROTOCOL_INSTANCE_TREE
+// 'd' command handler elapsed time: 14 seconds
+// WARNING: HEventQueue.dispatchEvent() is taking  1331 ms.
+// Tcl Message: Time resolution is 1 ps 
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_PROTOCOL_INSTANCE_TREE
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_PROTOCOL_INSTANCE_TREE
+closeView(PAResourceOtoP.PAViews_PROJECT_SUMMARY, "Project Summary"); // v
+floatFrame(PAResourceOtoP.PAViews_CODE, "Circuit_tb.vhd"); // aA
+floatFrame(PAResourceOtoP.PAViews_CODE, "Circuit.vhd"); // aA
+// TclEventType: WAVEFORM_UPDATE_TITLE
+// TclEventType: WAVEFORM_OPEN_WCFG
+// Elapsed time: 11 seconds
+dismissDialog("Run Simulation"); // e
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_PROTOCOL_INSTANCE_TREE
+// TclEventType: WAVEFORM_OPEN_WCFG
+// TclEventType: WAVEFORM_DELAYED_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_DELAYED_MODEL_EVENT
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_TITLE
+// TclEventType: WAVEFORM_DELAYED_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_TITLE
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// TclEventType: SIMULATION_CLEAR_CURRENT_LINE
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_MOVE_CURSOR
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// TclEventType: SIMULATION_OBJECT_TREE_RESTORED
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: SIMULATION_CURRENT_SCOPE_CHANGED
+// TclEventType: SIMULATION_CURRENT_STACK_CHANGED
+// HMemoryUtils.trashcanNow. Engine heap size: 1,611 MB. GUI used memory: 63 MB. Current time: 2/24/22, 9:08:56 PM COT
+// TclEventType: SIMULATION_CURRENT_STACK_CHANGED
+// TclEventType: SIMULATION_UPDATE_STACK_FRAMES
+// Tcl Message: source Circuit_tb.tcl 
+// Tcl Message: # set curr_wave [current_wave_config] # if { [string length $curr_wave] == 0 } { #   if { [llength [get_objects]] > 0} { #     add_wave / #     set_property needs_save false [current_wave_config] #   } else { #      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console." #   } # } # run 1000ns 
+// TclEventType: SIMULATION_UPDATE_STACK_FRAMES
+// TclEventType: SIMULATION_CURRENT_STACK_FRAME_CHANGED
+// TclEventType: SIMULATION_UPDATE_LOCALS
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// Tcl Message: INFO: [USF-XSim-96] XSim completed. Design snapshot 'Circuit_tb_behav' loaded. INFO: [USF-XSim-97] XSim simulation ran for 1000ns 
+// Tcl Message: launch_simulation: Time (s): cpu = 00:00:05 ; elapsed = 00:00:12 . Memory (MB): peak = 1785.645 ; gain = 0.781 
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_MODEL_EVENT
+// Elapsed time: 13 seconds
+maximizeFrame(PAResourceOtoP.PAViews_TCL_CONSOLE, "Tcl Console"); // aA
+// Elapsed time: 11 seconds
+selectTab((HResource) null, (HResource) null, "Messages", 1); // aL
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Vivado Commands, General Messages, [Synth 8-690] width mismatch in assignment; target has 5 bits, source has 4 bits [D:/Trabajos/Github/Digitales1/Practica 3/Practica3/Pr3.srcs/sources_1/new/Circuit.vhd:152]. ]", 2, false); // ah
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;D:\Trabajos\Github\Digitales1\Practica 3\Practica3\Pr3.srcs\sources_1\new\Circuit.vhd;-;;-;16;-;line;-;152;-;;-;16;-;"); // ah
+selectCodeEditor("Circuit.vhd", 239, 131); // be
+selectButton(RDIResourceCommand.RDICommands_SAVE_FILE, (String) null); // D
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("Circuit_tb.vhd", 119, 210); // be
+typeControlKey((HResource) null, "Circuit_tb.vhd", 'v'); // be
+selectCodeEditor("Circuit_tb.vhd", 282, 210); // be
+typeControlKey((HResource) null, "Circuit_tb.vhd", 'v'); // be
+selectCodeEditor("Circuit_tb.vhd", 432, 206); // be
+typeControlKey((HResource) null, "Circuit_tb.vhd", 'v'); // be
+selectButton(RDIResourceCommand.RDICommands_SAVE_FILE, (String) null); // D
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Simulation, Run Simulation]", 10, false); // n
+selectMenuItem(PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL, "Run Behavioral Simulation"); // ao
+// Run Command: PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL
+selectButton("OptionPane.button", "Yes"); // JButton
+// TclEventType: WAVEFORM_CLOSE_WCFG
+// TclEventType: SIMULATION_CLOSE_SIMULATION
+unMaximizeFrame(PAResourceOtoP.PAViews_MESSAGES, "Messages"); // aA
+// Tcl Message: close_sim 
+floatFrame(PAResourceOtoP.PAViews_CODE, "Circuit_tb.vhd"); // aA
+floatFrame(PAResourceOtoP.PAViews_CODE, "Circuit.vhd"); // aA
+// Tcl Message: INFO: [Simtcl 6-16] Simulation closed 
+dismissDialog("Close"); // bA
+// TclEventType: LAUNCH_SIM
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Tcl Message: launch_simulation 
+// Tcl Message: Command: launch_simulation  
+// Tcl Message: INFO: [Vivado 12-12493] Simulation top is 'Circuit_tb' 
+// Tcl Message: INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/Trabajos/Github/Digitales1/Practica 3/Practica3/Pr3.sim/sim_1/behav/xsim' INFO: [SIM-utils-51] Simulation object is 'sim_1' INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2021.2/tps/boost_1_72_0' INFO: [SIM-utils-54] Inspecting design source files for 'Circuit_tb' in fileset 'sim_1'... INFO: [USF-XSim-97] Finding global include files... INFO: [USF-XSim-98] Fetching design files from 'sim_1'... INFO: [USF-XSim-2] XSim::Compile design INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/Trabajos/Github/Digitales1/Practica 3/Practica3/Pr3.sim/sim_1/behav/xsim' 
+// Tcl Message: "xvhdl --incr --relax -prj Circuit_tb_vhdl.prj" 
+// TclEventType: LAUNCH_SIM_LOG
+// Tcl Message: INFO: [VRFC 10-163] Analyzing VHDL file "D:/Trabajos/Github/Digitales1/Practica 3/Practica3/Pr3.srcs/sources_1/new/Circuit.vhd" into library xil_defaultlib INFO: [VRFC 10-3107] analyzing entity 'Circuit' INFO: [VRFC 10-163] Analyzing VHDL file "D:/Trabajos/Github/Digitales1/Practica 3/Practica3/Pr3.srcs/sim_1/new/Circuit_tb.vhd" into library xil_defaultlib INFO: [VRFC 10-3107] analyzing entity 'Circuit_tb' 
+// Tcl Message: INFO: [USF-XSim-69] 'compile' step finished in '3' seconds INFO: [USF-XSim-3] XSim::Elaborate design INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/Trabajos/Github/Digitales1/Practica 3/Practica3/Pr3.sim/sim_1/behav/xsim' 
+// Tcl Message: "xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot Circuit_tb_behav xil_defaultlib.Circuit_tb -log elaborate.log" 
+// TclEventType: LAUNCH_SIM
+// Tcl Message: INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds INFO: [USF-XSim-99] Step results log file:'D:/Trabajos/Github/Digitales1/Practica 3/Practica3/Pr3.sim/sim_1/behav/xsim/elaborate.log' 
+// Tcl Message: ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or 'D:/Trabajos/Github/Digitales1/Practica 3/Practica3/Pr3.sim/sim_1/behav/xsim/elaborate.log' file for more information. ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation. 
+// Tcl Message: launch_simulation: Time (s): cpu = 00:00:00 ; elapsed = 00:00:07 . Memory (MB): peak = 1785.645 ; gain = 0.000 
+// Tcl Message: ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors. 
+// CommandFailedException: ERROR: [Common 17-69] Command failed: ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.  
+// [GUI Memory]: 121 MB (+2683kb) [01:15:42]
+// HOptionPane Error: 'ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.  (Run Simulation)'
+// 'd' command handler elapsed time: 10 seconds
+selectButton("OptionPane.button", "OK"); // JButton
+selectButton(PAResourceAtoD.CmdMsgDialog_OPEN_MESSAGES_VIEW, "Open Messages View"); // a
+// Run Command: PAResourceCommand.PACommandNames_MESSAGE_WINDOW
+dismissDialog("Critical Messages"); // a
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Simulation, sim_1, [VRFC 10-664] expression has 6 elements ; expected 5 [D:/Trabajos/Github/Digitales1/Practica 3/Practica3/Pr3.srcs/sources_1/new/Circuit.vhd:152]. ]", 9, false); // ah
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;D:\Trabajos\Github\Digitales1\Practica 3\Practica3\Pr3.srcs\sources_1\new\Circuit.vhd;-;;-;16;-;line;-;152;-;;-;16;-;"); // ah
+selectButton(RDIResourceCommand.RDICommands_SAVE_FILE, (String) null); // D
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Simulation, Run Simulation]", 10, false); // n
+selectMenuItem(PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL, "Run Behavioral Simulation"); // ao
+// Run Command: PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL
+// TclEventType: LAUNCH_SIM
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Tcl Message: launch_simulation 
+// Tcl Message: Command: launch_simulation  
+// Tcl Message: INFO: [Vivado 12-12493] Simulation top is 'Circuit_tb' 
+// Tcl Message: INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/Trabajos/Github/Digitales1/Practica 3/Practica3/Pr3.sim/sim_1/behav/xsim' INFO: [SIM-utils-51] Simulation object is 'sim_1' INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2021.2/tps/boost_1_72_0' INFO: [SIM-utils-54] Inspecting design source files for 'Circuit_tb' in fileset 'sim_1'... INFO: [USF-XSim-97] Finding global include files... INFO: [USF-XSim-98] Fetching design files from 'sim_1'... INFO: [USF-XSim-2] XSim::Compile design INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/Trabajos/Github/Digitales1/Practica 3/Practica3/Pr3.sim/sim_1/behav/xsim' 
+// Tcl Message: "xvhdl --incr --relax -prj Circuit_tb_vhdl.prj" 
+// TclEventType: LAUNCH_SIM_LOG
+// Tcl Message: INFO: [VRFC 10-163] Analyzing VHDL file "D:/Trabajos/Github/Digitales1/Practica 3/Practica3/Pr3.srcs/sources_1/new/Circuit.vhd" into library xil_defaultlib INFO: [VRFC 10-3107] analyzing entity 'Circuit' 
+// Tcl Message: INFO: [USF-XSim-69] 'compile' step finished in '3' seconds INFO: [USF-XSim-3] XSim::Elaborate design INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/Trabajos/Github/Digitales1/Practica 3/Practica3/Pr3.sim/sim_1/behav/xsim' 
+// Tcl Message: "xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot Circuit_tb_behav xil_defaultlib.Circuit_tb -log elaborate.log" 
+// Tcl Message: Vivado Simulator v2021.2 Copyright 1986-1999, 2001-2021 Xilinx, Inc. All Rights Reserved. Running: C:/Xilinx/Vivado/2021.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot Circuit_tb_behav xil_defaultlib.Circuit_tb -log elaborate.log  Using 2 slave threads. 
+// TclEventType: LAUNCH_SIM
+// Tcl Message: Built simulation snapshot Circuit_tb_behav 
+// Tcl Message: run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 1785.645 ; gain = 0.000 
+// Tcl Message: INFO: [USF-XSim-69] 'elaborate' step finished in '5' seconds INFO: [USF-XSim-4] XSim::Simulate design INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/Trabajos/Github/Digitales1/Practica 3/Practica3/Pr3.sim/sim_1/behav/xsim' INFO: [USF-XSim-98] *** Running xsim 
+// Tcl Message:    with args "Circuit_tb_behav -key {Behavioral:sim_1:Functional:Circuit_tb} -tclbatch {Circuit_tb.tcl} -log {simulate.log}" 
+// Tcl Message: INFO: [USF-XSim-8] Loading simulator feature 
+// TclEventType: SIMULATION_CREATE_SIMULATION_OBJECT
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_PROTOCOL_INSTANCE_TREE
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// Tcl Message: Time resolution is 1 ps 
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_PROTOCOL_INSTANCE_TREE
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_PROTOCOL_INSTANCE_TREE
+// Elapsed time: 11 seconds
+closeView(PAResourceOtoP.PAViews_PROJECT_SUMMARY, "Project Summary"); // v
+floatFrame(PAResourceOtoP.PAViews_CODE, "Circuit_tb.vhd"); // aA
+floatFrame(PAResourceOtoP.PAViews_CODE, "Circuit.vhd"); // aA
+// TclEventType: WAVEFORM_UPDATE_TITLE
+// TclEventType: WAVEFORM_OPEN_WCFG
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_PROTOCOL_INSTANCE_TREE
+// TclEventType: WAVEFORM_OPEN_WCFG
+// TclEventType: WAVEFORM_DELAYED_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_DELAYED_MODEL_EVENT
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_TITLE
+// TclEventType: WAVEFORM_DELAYED_MODEL_EVENT
+// Tcl Message: source Circuit_tb.tcl 
+// TclEventType: WAVEFORM_UPDATE_TITLE
+// Tcl Message: # set curr_wave [current_wave_config] # if { [string length $curr_wave] == 0 } { #   if { [llength [get_objects]] > 0} { #     add_wave / #     set_property needs_save false [current_wave_config] #   } else { #      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console." #   } # } 
+// TclEventType: WAVEFORM_UPDATE_TITLE
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// TclEventType: SIMULATION_CLEAR_CURRENT_LINE
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_MOVE_CURSOR
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// TclEventType: SIMULATION_OBJECT_TREE_RESTORED
+// TclEventType: WAVEFORM_MODEL_EVENT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,611 MB. GUI used memory: 64 MB. Current time: 2/24/22, 9:10:42 PM COT
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: SIMULATION_CURRENT_SCOPE_CHANGED
+// TclEventType: SIMULATION_CURRENT_STACK_CHANGED
+// TclEventType: SIMULATION_UPDATE_STACK_FRAMES
+// TclEventType: SIMULATION_CURRENT_STACK_FRAME_CHANGED
+// TclEventType: SIMULATION_UPDATE_LOCALS
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// Tcl Message: # run 1000ns 
+// Tcl Message: INFO: [USF-XSim-96] XSim completed. Design snapshot 'Circuit_tb_behav' loaded. INFO: [USF-XSim-97] XSim simulation ran for 1000ns 
+// Tcl Message: launch_simulation: Time (s): cpu = 00:00:04 ; elapsed = 00:00:12 . Memory (MB): peak = 1787.266 ; gain = 1.621 
+// 'd' command handler elapsed time: 11 seconds
+dismissDialog("Run Simulation"); // e
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_MODEL_EVENT
+maximizeFrame(PAResourceOtoP.PAViews_TCL_CONSOLE, "Tcl Console"); // aA
+selectTab((HResource) null, (HResource) null, "Messages", 1); // aL
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Vivado Commands, General Messages, [Synth 8-690] width mismatch in assignment; target has 5 bits, source has 4 bits [D:/Trabajos/Github/Digitales1/Practica 3/Practica3/Pr3.srcs/sources_1/new/Circuit.vhd:152]. ]", 2, false); // ah
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;D:\Trabajos\Github\Digitales1\Practica 3\Practica3\Pr3.srcs\sources_1\new\Circuit.vhd;-;;-;16;-;line;-;152;-;;-;16;-;"); // ah
+// Elapsed time: 35 seconds
+selectCodeEditor("Circuit.vhd", 188, 279); // be
+// Elapsed time: 15 seconds
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Vivado Commands, General Messages, [Synth 8-690] width mismatch in assignment; target has 5 bits, source has 4 bits [D:/Trabajos/Github/Digitales1/Practica 3/Practica3/Pr3.srcs/sources_1/new/Circuit.vhd:152]. ]", 2, false); // ah
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Vivado Commands, General Messages, [Synth 8-690] width mismatch in assignment; target has 5 bits, source has 4 bits [D:/Trabajos/Github/Digitales1/Practica 3/Practica3/Pr3.srcs/sources_1/new/Circuit.vhd:152]. ]", 2, false); // ah
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;D:\Trabajos\Github\Digitales1\Practica 3\Practica3\Pr3.srcs\sources_1\new\Circuit.vhd;-;;-;16;-;line;-;152;-;;-;16;-;"); // ah
+expandTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Vivado Commands, General Messages, [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or 'D:/Trabajos/Github/Digitales1/Practica 3/Practica3/Pr3.sim/sim_1/behav/xsim/elaborate.log' file for more information.. ]", 5); // ah
+// Elapsed time: 20 seconds
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Vivado Commands, General Messages, [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or 'D:/Trabajos/Github/Digitales1/Practica 3/Practica3/Pr3.sim/sim_1/behav/xsim/elaborate.log' file for more information.. , [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or 'D:/Trabajos/Github/Digitales1/Practica 3/Practica3/Pr3.sim/sim_1/behav/xsim/elaborate.log' file for more information.. ]", 10, false); // ah
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Vivado Commands, General Messages, [Synth 8-690] width mismatch in assignment; target has 5 bits, source has 4 bits [D:/Trabajos/Github/Digitales1/Practica 3/Practica3/Pr3.srcs/sources_1/new/Circuit.vhd:152]. ]", 2, false); // ah
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Vivado Commands, General Messages, [Synth 8-690] width mismatch in assignment; target has 5 bits, source has 4 bits [D:/Trabajos/Github/Digitales1/Practica 3/Practica3/Pr3.srcs/sources_1/new/Circuit.vhd:152]. ]", 2, false); // ah
+// Elapsed time: 66 seconds
+selectCodeEditor("Circuit.vhd", 283, 189); // be
+selectCodeEditor("Circuit.vhd", 54, 180); // be
+selectCodeEditor("Circuit.vhd", 150, 234); // be
+// PAResourceOtoP.PAViews_CODE: Code: close view
+// Elapsed time: 170 seconds
+closeFrame(PAResourceOtoP.PAViews_CODE, "Circuit.vhd"); // aA
+dockFrame(PAResourceOtoP.PAViews_CODE, "Circuit.vhd"); // aA
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // D
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
