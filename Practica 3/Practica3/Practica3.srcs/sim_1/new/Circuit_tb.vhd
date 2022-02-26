@@ -37,7 +37,8 @@ Architecture Behavioral of Circuit_tb Is
             Sel_ALU : in STD_LOGIC_VECTOR(2 downto 0);
             Salida : out STD_LOGIC_VECTOR(6 downto 0);
             clk : in STD_LOGIC;
-            carry : out STD_LOGIC
+            carry : out STD_LOGIC;
+            clockprobe : out std_logic
             );	
     end Component;
         
@@ -45,14 +46,16 @@ Architecture Behavioral of Circuit_tb Is
     Signal add_b : STD_LOGIC_VECTOR(2 downto 0) := "000";
     Signal dataa : STD_LOGIC_VECTOR(3 downto 0) := "0000";
     Signal datab : STD_LOGIC_VECTOR(3 downto 0) := "0000";
-    Signal fa : STD_LOGIC ;
-    Signal fb : STD_LOGIC ;
+    Signal fa : STD_LOGIC := '0';
+    Signal fb : STD_LOGIC := '0';
     Signal ena : STD_LOGIC_VECTOR(0 to 2) := "111";
     Signal sel_ALU : STD_LOGIC_VECTOR(2 downto 0) := "000";
     Signal salida : STD_LOGIC_VECTOR(6 downto 0) := "0000000";
     Signal CLK : STD_LOGIC := '0';
+    Signal clkprobe : STD_LOGIC := '0';
     Signal Carry : STD_LOGIC := '0';
-          
+    Signal clkpr : std_logic;
+            
     --RomA           
     procedure RomA(
         addrs : in std_logic_vector(2 downto 0);
@@ -133,33 +136,39 @@ Architecture Behavioral of Circuit_tb Is
     
     begin
         if inputEN = '1' then
-            expectedOutput := inputD;
+            outputQ := inputD;
         else
-            expectedOutput := expectedOutput;
+            outputQ := expectedOutput;
                     
         End if;
         
-        outputQ := expectedOutput;
+        --outputQ := expectedOutput;
         
     End FLIPFLOP;      
     
     --ALU
     procedure ALU(
-        inputQ1 : in std_logic_vector(3 downto 0);
-        inputQ2 : in std_logic_vector(3 downto 0);
+        inputQa1 : in std_logic_vector(3 downto 0);
+        inputQb2 : in std_logic_vector(3 downto 0);
         inputSel_ALU : in std_logic_vector(2 downto 0);
         outputS : out std_logic_vector(3 downto 0);
         outputC : out std_logic
     ) is
     
     variable s : std_logic_vector(4 downto 0) := "00000";
+    variable inputQ1 : std_logic_vector(4 downto 0);
+    variable inputQ2 : std_logic_vector(4 downto 0);
     
     begin
+    
+        inputQ1 := '0'&inputQa1;
+        inputQ2 := '0'&inputQb2;
+        
         if(inputSel_ALU = "000") then
             if(inputQ1 < inputQ2) then    
                 s := "00000";              
             else
-                s(3 downto 0) := inputQ1(3 downto 0) - inputQ2(3 downto 0);
+                s := inputQ1 - inputQ2;
             end if;
         
         elsif (inputSel_ALU ="001") then
@@ -172,7 +181,7 @@ Architecture Behavioral of Circuit_tb Is
             s(3 downto 0) := inputQ1(3 downto 0) xnor inputQ2(3 downto 0);
             
         elsif (inputSel_ALU ="100") then
-            s(3 downto 0) := inputQ2;
+            s := inputQ2;
             
         elsif (inputSel_ALU ="101") then
             s := inputQ1 + inputQ1;
@@ -244,8 +253,51 @@ begin
         Sel_ALU => sel_ALU,
         Salida => salida,
         clk => CLK,
-        carry => Carry
+        carry => Carry,
+        clockprobe => clkprobe
     );
+    
+    process
+        begin
+            CLK <= '0';
+            wait for 5ns;
+            CLK <= '1';
+            wait for 5ns;
+    end process;
+    
+    process
+        begin
+            clkpr <= '0';
+            ena(0) <= '0';
+            ena(1) <= '0';
+            ena(2) <= '0';
+            
+            wait for 49ms;
+            
+            ena(0) <= '1';
+            ena(1) <= '1';
+            ena(2) <= '0';
+            
+            wait for 1ms;
+            
+            clkpr <= '0';
+            
+            wait for 40ms;
+            ena(0) <= '1';
+            ena(1) <= '1';
+            
+            wait for 10ms;
+                        
+            clkpr <= '1';
+            
+            wait for 10ms;
+            ena(0) <= '0';
+            ena(1) <= '0';                       
+            
+            wait for 80ms;
+            ena(2) <= '1';
+            wait for 10ms;
+    end process;
     
     process
         variable s : line;
@@ -285,25 +337,27 @@ begin
                 if fa = '0' and fb = '0' then
                     for count_adda in 0 to 7 loop
                         for count_datab in 0 to 15 loop
+                            wait for 49ms; 
                             RomA(add_a, outRomA);
                             RomB(add_b, outRomB);
                             MUX(dataa, outRomA, fa, upper);
-                            Buffers(datab, outRomB, fb, lower);
-                            FLIPFLOP(ena(0), upper, flipflop13); --First Flip-Flop
-                            FLIPFLOP(ena(1), lower, flipflop2); --Second Flip-Flop
-                            wait for 30ms;
-                            
-                            ena(0) <= '0';
-                            ena(1) <= '0';
-                            ena(2) <= '1';
+                            Buffers(datab, outRomB, fb, lower);     
+                            FLIPFLOP(ena(0), upper, flipflop13); --First Flip-Flop                            
+                            FLIPFLOP(ena(1), lower, flipflop2); --Second Flip-Flop  
+                                                      
                             
                             for count_dataSel in 0 to 7 loop
+                                write(s, string'("Enable A: "));write (s, ena(2));
+                                writeline(output, s);
+                                wait for 50ms;
+                                write(s, string'("Enable D: "));write (s, ena(2));
+                                writeline(output, s);
                                 ALU(flipflop13, flipflop2, sel_ALU, outputALU, outCarry);
                                 --Carry <= outCarry;
                                 FLIPFLOP(ena(2), outputALU, flipflop13); --Third FLip-Flop
                                 Decoder(flipflop13, output7); --Last operation                                
                                 --wait for 30ms;
-                                write(s, string'("Address A: "));write (s, add_a);write(s, string'(" ROM A: "));write (s, outRomA);write(s, string'(" Data B: "));write (s, datab);
+                                write(s, string'("Address A: "));write (s, add_a);write(s, string'(" ROM A: "));write (s, outRomA);write(s, string'(" Data B: "));write (s, datab);write(s, string'(" FLIP FLOP A: "));write (s, flipflop13);write(s, string'(" FLIP FLOP B: "));write (s, flipflop2);
                                 writeline(output, s);
                                 write(s, string'(" Expected Out Decoder: "));write (s, output7);write(s, string'(" Actual Out Decoder: "));write (s, salida);write(s, string'(" Expected Out Carry: "));write (s, outCarry);write(s, string'(" Actual Out Carry: "));write (s, Carry);                  
                                 writeline (output, s);
@@ -311,14 +365,12 @@ begin
                                 writeline (output, s);
                                 write(s, string'(" sel ALU: "));write (s, sel_ALU);
                                 writeline (output, s); 
-                                sel_ALU <= sel_ALU + 1; --Change the Sel Alu value                                           
+                                sel_ALU <= sel_ALU + 1; --Change the Sel Alu value
+                                          
                             end loop;
                             
                             sel_ALU <= "000";
                             datab <= datab + 1;
-                            ena(0) <= '1';
-                            ena(1) <= '1';
-                            ena(2) <= '0';
                             
                         end loop;
                         
@@ -335,20 +387,17 @@ begin
                             RomA(add_a, outRomA);
                             RomB(add_b, outRomB);
                             MUX(dataa, outRomA, fa, upper);
-                            Buffers(datab, outRomB, fb, lower);
-                            FLIPFLOP(ena(0), upper, flipflop13); --First Flip-Flop
+                            Buffers(datab, outRomB, fb, lower);                                                                                   
+                            FLIPFLOP(ena(0), upper, flipflop13); --First Flip-Flop                            
                             FLIPFLOP(ena(1), lower, flipflop2); --Second Flip-Flop
-                            wait for 30ms;
-                            
-                            ena(0) <= '0';
-                            ena(1) <= '0';
-                            ena(2) <= '1';
+                            wait for 49ms;
                             
                             for count_dataSel in 0 to 7 loop
                                 ALU(flipflop13, flipflop2, sel_ALU, outputALU, outCarry);
                                 Carry <= outCarry;
                                 FLIPFLOP(ena(2), outputALU, flipflop13); --Third FLip-Flop
                                 Decoder(flipflop13, output7); --Last operation
+                                wait for 100ms;
                                 sel_ALU <= sel_ALU + 1; --Change the Sel Alu value
                                 --wait for 30ms;
                                 write(s, string'("Address A: "));write (s, add_a);write(s, string'(" ROM A: "));write (s, outRomA);write(s, string'(" Address B: "));write (s, add_b);write(s, string'(" ROM B: "));write (s, outRomB);
@@ -362,9 +411,6 @@ begin
                             
                             sel_ALU <= "000";
                             add_b <= add_b + 1;
-                            ena(0) <= '1';
-                            ena(1) <= '1';
-                            ena(2) <= '0';
                             
                         end loop;
                         
@@ -383,17 +429,14 @@ begin
                             Buffers(datab, outRomB, fb, lower);
                             FLIPFLOP(ena(0), upper, flipflop13); --First Flip-Flop
                             FLIPFLOP(ena(1), lower, flipflop2); --Second Flip-Flop
-                            wait for 30ms;
-                            
-                            ena(0) <= '0';
-                            ena(1) <= '0';
-                            ena(2) <= '1';
+                            wait for 49ms;
                             
                             for count_dataSel in 0 to 7 loop
                                 ALU(flipflop13, flipflop2, sel_ALU, outputALU, outCarry);
                                 Carry <= outCarry;
                                 FLIPFLOP(ena(2), outputALU, flipflop13); --Third FLip-Flop
                                 Decoder(flipflop13, output7); --Last operation
+                                wait for 100ms;
                                 sel_ALU <= sel_ALU + 1; --Change the Sel Alu value
                                 --wait for 30ms;
                                 write(s, string'("Data A: "));write (s, dataa);write(s, string'(" Data B: "));write (s, datab);
@@ -407,9 +450,6 @@ begin
                             
                             sel_ALU <= "000";
                             datab <= datab + 1;
-                            ena(0) <= '1';
-                            ena(1) <= '1';
-                            ena(2) <= '0';
                             
                         end loop;
                         
@@ -425,20 +465,17 @@ begin
                             RomA(add_a, outRomA);
                             RomB(add_b, outRomB);
                             MUX(dataa, outRomA, fa, upper);
-                            Buffers(datab, outRomB, fb, lower);
+                            Buffers(datab, outRomB, fb, lower);                            
                             FLIPFLOP(ena(0), upper, flipflop13); --First Flip-Flop
                             FLIPFLOP(ena(1), lower, flipflop2); --Second Flip-Flop
-                            wait for 30ms;
-                            
-                            ena(0) <= '0';
-                            ena(1) <= '0';
-                            ena(2) <= '1';
+                            wait for 49ms;
                             
                             for count_dataSel in 0 to 7 loop
                                 ALU(flipflop13, flipflop2, sel_ALU, outputALU, outCarry);
                                 Carry <= outCarry;
                                 FLIPFLOP(ena(2), outputALU, flipflop13); --Third FLip-Flop
                                 Decoder(flipflop13, output7); --Last operation
+                                wait for 100ms;
                                 sel_ALU <= sel_ALU + 1; --Change the Sel Alu value
                                 --wait for 30ms;
                                 write(s, string'("Address B: "));write (s, add_b);write(s, string'(" ROM B: "));write (s, outRomB);write(s, string'(" Data A: "));write (s, dataa);
@@ -452,10 +489,7 @@ begin
                             
                             sel_ALU <= "000";
                             add_b <= add_b + 1;
-                            ena(0) <= '1';
-                            ena(1) <= '1';
-                            ena(2) <= '0';
-                             
+
                         end loop;
                         
                         add_b <= "000";

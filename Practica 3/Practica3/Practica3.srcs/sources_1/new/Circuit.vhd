@@ -32,7 +32,8 @@ entity Circuit is
         Sel_ALU : in STD_LOGIC_VECTOR(2 downto 0);
         Salida : out STD_LOGIC_VECTOR(6 downto 0);
         clk : in STD_LOGIC;
-        carry : out STD_LOGIC
+        carry : out STD_LOGIC;
+        clockprobe : out std_logic
   );
 end Circuit;
 
@@ -40,7 +41,7 @@ end Circuit;
 architecture Behavioral of Circuit is
 
     --CLOCK 
-    signal clk1 : std_logic;
+    signal clk1 : std_logic := '0';
     --Counter    
     signal aux : integer := 1;
 
@@ -55,7 +56,8 @@ architecture Behavioral of Circuit is
     signal Resultado : STD_LOGIC_VECTOR(3 downto 0);
     
     --Signals for Flip Flops
-    signal QA, QB, QC : STD_LOGIC_VECTOR(3 downto 0);
+    signal QA, QB : STD_LOGIC_VECTOR(4 downto 0);
+    signal QC : STD_LOGIC_VECTOR(3 downto 0);
     
     --ROMs
     component ROMa port
@@ -76,7 +78,7 @@ architecture Behavioral of Circuit is
     CLK_DIV1 : process(clk)
         begin
             if (clk' event and clk='1') then
-                if(aux = 100000000) then                    
+                if(aux = 10000000) then                    
                     aux <= 1;
                     clk1 <= not(clk1);
                 else
@@ -84,6 +86,8 @@ architecture Behavioral of Circuit is
                 end if;
             end if;
     end process;
+    
+    clockprobe <= clk1;
         
 --------Upper Components
         Rom_A : ROMa port map(
@@ -105,7 +109,7 @@ architecture Behavioral of Circuit is
             begin
             if (clk1' event and clk1='1') then
                 if (en(0) = '1') then
-                    QA <= BA;
+                    QA <= '0'&BA;
                 end if;
             end if;          
         end process;        
@@ -139,7 +143,7 @@ architecture Behavioral of Circuit is
         begin
             if (clk1' event and clk1='1') then
                 if (en(1) = '1') then
-                    QB <= BB;
+                    QB <= '0'&BB;
                 end if;
             end if;
         end process;
@@ -151,7 +155,7 @@ architecture Behavioral of Circuit is
                     if(QA < QB) then
                         s <= "00000";
                     else
-                        s(3 downto 0) <= QA(3 downto 0) - QB(3 downto 0);
+                        s <= QA - QB;
                     end if;
                 
                 elsif (Sel_ALU ="001") then
@@ -164,7 +168,7 @@ architecture Behavioral of Circuit is
                     s(3 downto 0) <= QA(3 downto 0) xnor QB(3 downto 0);
                     
                 elsif (Sel_ALU ="100") then
-                    s(3 downto 0) <= QB(3 downto 0);
+                    s <= QB;
                     
                 elsif (Sel_ALU ="101") then
                     s <= QA + QA;
