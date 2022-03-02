@@ -384,7 +384,7 @@ begin
                                 writeline(output, s);
                                 write(s, string'(" Expected Out Decoder: "));write (s, output7);write(s, string'(" Actual Out Decoder: "));write (s, salida);write(s, string'(" Expected Out Carry: "));write (s, outCarry);write(s, string'(" Actual Out Carry: "));write (s, Carry);                  
                                 writeline (output, s);
-                                write(s, string'(" Expected ALU: "));--write (s, outputALU);write(s, string'(" Actual ALU: "));write (s, outAL);write(s, string'(" Flip Flop 1: "));write (s, outFlip1);write(s, string'(" Flip FLop 2: "));write (s, outFlip2);write(s, string'(" ROM A Actual: "));write (s, outROMA1);
+                                write(s, string'(" Expected ALU: "));write (s, outputALU);--write(s, string'(" Actual ALU: "));write (s, outAL);write(s, string'(" Flip Flop 1: "));write (s, outFlip1);write(s, string'(" Flip FLop 2: "));write (s, outFlip2);write(s, string'(" ROM A Actual: "));write (s, outROMA1);
                                 writeline (output, s);
                                 write(s, string'(" sel ALU: "));write (s, sel_ALU);
                                 writeline (output, s); 
