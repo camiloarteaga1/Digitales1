@@ -32,12 +32,12 @@ entity Circuit is
         Sel_ALU : in STD_LOGIC_VECTOR(2 downto 0);
         Salida : out STD_LOGIC_VECTOR(6 downto 0);
         clk : in STD_LOGIC;
-        carry : out STD_LOGIC;
-        clockprobe : out std_logic;
-        outALU : out STD_LOGIC_VECTOR(3 downto 0); --Remember to erase
-        outFlipFlop1 : out STD_LOGIC_VECTOR(3 downto 0); --Remember to erase
-        outFlipFlop2 : out STD_LOGIC_VECTOR(3 downto 0); --Remember to erase
-        outROM1 : out STD_LOGIC_VECTOR(3 downto 0)
+        carry : out STD_LOGIC
+--        clockprobe : out std_logic;
+--        outALU : out STD_LOGIC_VECTOR(3 downto 0); --Remember to erase
+--        outFlipFlop1 : out STD_LOGIC_VECTOR(3 downto 0); --Remember to erase
+--        outFlipFlop2 : out STD_LOGIC_VECTOR(3 downto 0); --Remember to erase
+--        outROM1 : out STD_LOGIC_VECTOR(3 downto 0)
   );
 end Circuit;
 
@@ -96,7 +96,7 @@ architecture Behavioral of Circuit is
             end if;
     end process;
     
-    clockprobe <= clk1;
+    --clockprobe <= clk1;
         
 --------Upper Components
         Rom_A : ROMa port map(
@@ -104,7 +104,7 @@ architecture Behavioral of Circuit is
                  outA => outROMA   
              );
     --MUX 2:1 
-        outROM1 <=outROMA;        
+        --outROM1 <=outROMA;        
         process(clk1)            
             begin
             --wait for 0ms;                
@@ -123,7 +123,7 @@ architecture Behavioral of Circuit is
                     QA <= '0'&BA;
                 end if;
             end if; 
-            outFlipFlop1 <= QA(3 downto 0); --Remember to erase     
+            --outFlipFlop1 <= QA(3 downto 0); --Remember to erase     
         end process;
     
 --------Lower Components             
@@ -157,7 +157,7 @@ architecture Behavioral of Circuit is
                     QB <= '0'&BB;
                 end if;
             end if;
-            outFlipFlop2 <= QB(3 downto 0); --Remember to erase
+            --outFlipFlop2 <= QB(3 downto 0); --Remember to erase
         end process;
               
 --------ALU
@@ -192,7 +192,7 @@ architecture Behavioral of Circuit is
                     s(3 downto 0) <= QA(3 downto 0) and QB(3 downto 0);
                                                                  
                 end if;
-                outALU <= s(3 downto 0); --Remember to erase
+                --outALU <= s(3 downto 0); --Remember to erase
                 carry <= s(4);
             end process;
             

@@ -37,12 +37,12 @@ Architecture Behavioral of Circuit_tb Is
             Sel_ALU : in STD_LOGIC_VECTOR(2 downto 0);
             Salida : out STD_LOGIC_VECTOR(6 downto 0);
             clk : in STD_LOGIC;
-            carry : out STD_LOGIC;
-            clockprobe : out std_logic;
-            outALU : out std_logic_vector(3 downto 0);
-            outFlipFlop1 : out std_logic_vector(3 downto 0);
-            outFlipFlop2 : out std_logic_vector(3 downto 0);
-            outROM1 : out STD_LOGIC_VECTOR(3 downto 0)
+            carry : out STD_LOGIC
+--            clockprobe : out std_logic;
+--            outALU : out std_logic_vector(3 downto 0);
+--            outFlipFlop1 : out std_logic_vector(3 downto 0);
+--            outFlipFlop2 : out std_logic_vector(3 downto 0);
+--            outROM1 : out STD_LOGIC_VECTOR(3 downto 0)
             );	
     end Component;
         
@@ -59,10 +59,10 @@ Architecture Behavioral of Circuit_tb Is
     Signal clkprobe : STD_LOGIC := '0';
     Signal Carry : STD_LOGIC := '0';
     Signal clkpr : std_logic := '0';
-    Signal outAl : std_logic_vector(3 downto 0);
-    Signal outFlip1 : std_logic_vector(3 downto 0);
-    Signal outFlip2 : std_logic_vector(3 downto 0);
-    Signal outROMA1 : std_logic_vector(3 downto 0);
+--    Signal outAl : std_logic_vector(3 downto 0);
+--    Signal outFlip1 : std_logic_vector(3 downto 0);
+--    Signal outFlip2 : std_logic_vector(3 downto 0);
+--    Signal outROMA1 : std_logic_vector(3 downto 0);
             
     --RomA           
     procedure RomA(
@@ -261,12 +261,12 @@ begin
         Sel_ALU => sel_ALU,
         Salida => salida,
         clk => CLK,
-        carry => Carry,
-        clockprobe => clkprobe,
-        outALU => outAL,
-        outFlipFlop1 => outFlip1,
-        outFlipFlop2 => outFlip2,
-        outROM1 => outROMA1
+        carry => Carry
+        --clockprobe => clkprobe,
+        --outALU => outAL,
+        --outFlipFlop1 => outFlip1,
+        --outFlipFlop2 => outFlip2,
+        --outROM1 => outROMA1
         
     );
     
@@ -384,7 +384,7 @@ begin
                                 writeline(output, s);
                                 write(s, string'(" Expected Out Decoder: "));write (s, output7);write(s, string'(" Actual Out Decoder: "));write (s, salida);write(s, string'(" Expected Out Carry: "));write (s, outCarry);write(s, string'(" Actual Out Carry: "));write (s, Carry);                  
                                 writeline (output, s);
-                                write(s, string'(" Expected ALU: "));write (s, outputALU);write(s, string'(" Actual ALU: "));write (s, outAL);write(s, string'(" Flip Flop 1: "));write (s, outFlip1);write(s, string'(" Flip FLop 2: "));write (s, outFlip2);write(s, string'(" ROM A Actual: "));write (s, outROMA1);
+                                write(s, string'(" Expected ALU: "));--write (s, outputALU);write(s, string'(" Actual ALU: "));write (s, outAL);write(s, string'(" Flip Flop 1: "));write (s, outFlip1);write(s, string'(" Flip FLop 2: "));write (s, outFlip2);write(s, string'(" ROM A Actual: "));write (s, outROMA1);
                                 writeline (output, s);
                                 write(s, string'(" sel ALU: "));write (s, sel_ALU);
                                 writeline (output, s); 
