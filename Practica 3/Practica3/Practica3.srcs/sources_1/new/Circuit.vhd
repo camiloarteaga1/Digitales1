@@ -33,7 +33,11 @@ entity Circuit is
         Salida : out STD_LOGIC_VECTOR(6 downto 0);
         clk : in STD_LOGIC;
         carry : out STD_LOGIC;
-        clockprobe : out std_logic
+        clockprobe : out std_logic;
+        outALU : out STD_LOGIC_VECTOR(3 downto 0); --Remember to erase
+        outFlipFlop1 : out STD_LOGIC_VECTOR(3 downto 0); --Remember to erase
+        outFlipFlop2 : out STD_LOGIC_VECTOR(3 downto 0); --Remember to erase
+        outROM1 : out STD_LOGIC_VECTOR(3 downto 0)
   );
 end Circuit;
 
@@ -41,9 +45,9 @@ end Circuit;
 architecture Behavioral of Circuit is
 
     --CLOCK 
-    signal clk1 : std_logic := '0';
+    signal clk1 : std_logic := '1';
     --Counter    
-    signal aux : integer := 1;
+    signal aux : integer := 0;
 
     --ROMs outputs
     signal outROMA : std_logic_vector(3 downto 0);
@@ -52,12 +56,12 @@ architecture Behavioral of Circuit is
     --Processes outputs
     signal BA : STD_LOGIC_VECTOR(3 downto 0);
     signal BB : STD_LOGIC_VECTOR(3 downto 0);
-    signal S : STD_LOGIC_VECTOR(4 downto 0); --Pos 4, carry out
+    signal s : STD_LOGIC_VECTOR(4 downto 0); --Pos 4, carry out
     signal Resultado : STD_LOGIC_VECTOR(3 downto 0);
     
     --Signals for Flip Flops
-    signal QA, QB : STD_LOGIC_VECTOR(4 downto 0);
-    signal QC : STD_LOGIC_VECTOR(3 downto 0);
+    signal QA, QB : STD_LOGIC_VECTOR(4 downto 0) := "00000";
+    signal QC : STD_LOGIC_VECTOR(3 downto 0):= "0000";
     
     --ROMs
     component ROMa port
@@ -77,6 +81,11 @@ architecture Behavioral of Circuit is
     --CLOCK
     CLK_DIV1 : process(clk)
         begin
+            if aux = 0 then
+                clk1 <= '0';
+                aux <= aux + 1;
+            end if;         
+                 
             if (clk' event and clk='1') then
                 if(aux = 10000000) then                    
                     aux <= 1;
@@ -94,9 +103,11 @@ architecture Behavioral of Circuit is
                  addA => Add_A,
                  outA => outROMA   
              );
-    --MUX 2:1         
-        process(FA)
-            begin                
+    --MUX 2:1 
+        outROM1 <=outROMA;        
+        process(clk1)            
+            begin
+            --wait for 0ms;                
                 if FA = '0' then
                     BA <= outROMA;
                 else 
@@ -111,9 +122,9 @@ architecture Behavioral of Circuit is
                 if (en(0) = '1') then
                     QA <= '0'&BA;
                 end if;
-            end if;          
-        end process;        
-    
+            end if; 
+            outFlipFlop1 <= QA(3 downto 0); --Remember to erase     
+        end process;
     
 --------Lower Components             
         Rom_B : ROMb port map(
@@ -146,10 +157,11 @@ architecture Behavioral of Circuit is
                     QB <= '0'&BB;
                 end if;
             end if;
+            outFlipFlop2 <= QB(3 downto 0); --Remember to erase
         end process;
               
 --------ALU
-        process(Sel_ALU)
+        process(clk1)
             begin
                 if(Sel_ALU = "000") then
                     if(QA < QB) then
@@ -180,6 +192,7 @@ architecture Behavioral of Circuit is
                     s(3 downto 0) <= QA(3 downto 0) and QB(3 downto 0);
                                                                  
                 end if;
+                outALU <= s(3 downto 0); --Remember to erase
                 carry <= s(4);
             end process;
             
@@ -194,7 +207,7 @@ architecture Behavioral of Circuit is
         end process;
         
 --------Decoder BCD
-        process(QC)
+        process(QC  )
         begin
             case QC is
                 when "0000" =>
