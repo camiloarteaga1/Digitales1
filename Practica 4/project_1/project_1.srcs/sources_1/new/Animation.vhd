@@ -29,8 +29,8 @@ entity Animation is
     Port ( CLK : in  STD_LOGIC; -- Clk a 50MHz
            RST : in  STD_LOGIC; -- reset
            RGB : out  STD_LOGIC_VECTOR (11 downto 0); -- Color de salida a la pantalla
-           HS : out  STD_LOGIC; -- Señal de sincronizacion horizontal
-           VS : out  STD_LOGIC); -- Señal de sincronizacion vertical
+           HS : out  STD_LOGIC; -- SeÃ±al de sincronizacion horizontal
+           VS : out  STD_LOGIC); -- SeÃ±al de sincronizacion vertical
 			  
 	-- Las siguientes declaraciones realizan la asignacion de pines 
 --	attribute loc: string;
@@ -44,12 +44,12 @@ end Animation;
 
 architecture Behavioral of Animation is
 
--- Declaración arrays para posiciones
+-- DeclaraciÃ³n arrays para posiciones
     
     type arinteger1 is array (0 to 5) of integer range 0 to 639; 
     type arinteger2 is array (0 to 5) of integer range 0 to 479;
     
--- Declaracion señales
+-- Declaracion seÃ±ales
     --Para 34 segmentos
     signal paintLet : STD_LOGIC_VECTOR(6 downto 0);
     signal rgb_aux2 : STD_LOGIC_VECTOR (11 downto 0);
@@ -89,7 +89,7 @@ architecture Behavioral of Animation is
 	Signal posy : integer range 0 to 49 := 0;
 	Signal wColor : std_logic_vector(2 downto 0);
 	
-	-- Constantes de la posición de dibujo
+	-- Constantes de la posiciÃ³n de dibujo
 	constant iposx : integer := 150;
 	constant iposy : integer := 0;
 	
@@ -153,7 +153,7 @@ architecture Behavioral of Animation is
 	END COMPONENT;
 	
 begin
-    --Declaración de los 34 segmentos
+    --DeclaraciÃ³n de los 34 segmentos
     
     DisplayLET1 : display34segm
     GENERIC MAP(
@@ -276,7 +276,6 @@ DisplayLET6 : display34segm
 		rgb_out => RGB,
 		blank => open
 	);
-	
 
 	VS <= VS2;
 	
@@ -316,38 +315,40 @@ DisplayLET6 : display34segm
             else
                 LetPOS2(5) <= 479;
             end if;
+
             if count = 480 then
-                   count <= 0;
---                   auxCuco <= auxCuco + 1;
-                   
+                count <= 0;
+                auxCuco <= 0;
+                
             else
                 count <= count + 3;
---                    if auxCuco = 10000000 then
---                        auxCuco <= 0;
---                        aux <= aux + 1;
---                    end if;
---                    auxCuco <= auxCuco + 1;
-            end if;  
-        end if;
-   end process; 
-   
-   CLK_DIV1 : process(CLK)
-        begin
-            if auxCuco = 0 then
-                clkCuco <= '0';
-                auxCuco <= auxCuco + 1;
-            end if;        
+                auxCuco <= auxCuco + 4;
                  
-            if (CLK' event and CLK='1') then
-                if(auxCuco = 10000000) then                    
-                    clkCuco <= not(clkCuco);
-                    auxCuco <= 1;
-                else
-                    auxCuco <= auxCuco + 1;
+                if auxCuco = 80 then
+                    auxCuco <= 0;
                     aux <= aux + 1;
                 end if;
             end if;
-    end process;
+        end if;
+   end process; 
+   
+--    CLK_DIV1 : process(CLK)
+--         begin
+--             if auxCuco = 0 then
+--                 clkCuco <= '0';
+--                 auxCuco <= auxCuco + 1;
+--             end if;        
+                 
+--             if (CLK' event and CLK='1') then
+--                 if(auxCuco = 10000000) then                    
+--                     clkCuco <= not(clkCuco);
+--                     auxCuco <= 1;
+--                 else
+--                     auxCuco <= auxCuco + 1;
+--                     aux <= aux + 1;
+--                 end if;
+--             end if;
+--     end process;
    
    INT_RGB2 <= "111111111111" when (paintLet(0)='1' or paintLet(1)='1' or paintLet(2)='1' or paintLet(3) = '1' or paintLet(4) = '1' or paintLet(5) = '1');
    
@@ -385,6 +386,7 @@ DisplayLET6 : display34segm
                 paintLet(6)<='1';
                 
             else
+                COLOR(7 downto 4) <= VCOUNT(8 downto 5);
                 paintLet(6)<='0';
             
             end if; 
@@ -404,9 +406,8 @@ DisplayLET6 : display34segm
 --            end if;
                  
 --    end process;
-	-- Dibuja el cuadro y asigna colores
+-- 	Dibuja el cuadro y asigna colores
 --   INT_RGB <= COLOR when ((VCOUNT>=290) AND (VCOUNT<=340) AND (HCOUNT>=220) AND (HCOUNT<=270)) else
---			     not COLOR;
+-- 			     not COLOR;
 	
 end Behavioral;
-
