@@ -42,7 +42,7 @@
 ------------------------------------------------------------------------
 -- rst               - global reset signal
 -- clk         		- input clock of 50MHz
--- rgb_in				- input 8 bits with the pixel color in RGB (RRRGGGBB) format
+-- rgb_in				- input 12 bits with the pixel color in RGB (RRRGGGBB) format (OJO)
 -- HS                - output pin, to monitor horizontal synch pulse
 -- VS                - output pin, to monitor vertical synch pulse
 -- hcount            - output pin, 11 bits, to clients horizontal count of the currently displayed pixel (even if not in visible area)
@@ -73,13 +73,12 @@ port(
    rst         : in std_logic;
    clk   : in std_logic;
    rgb_in     : in std_logic_vector(11 downto 0);
-   --rgb_in2     : in std_logic_vector(11 downto 0);
-   
+	
    HS          : out std_logic;
    VS          : out std_logic;
    hcount      : out std_logic_vector(10 downto 0);
    vcount      : out std_logic_vector(10 downto 0);
-   rgb_out     : out std_logic_vector(11 downto 0);
+   rgb_out     : out std_logic_vector(11 downto 0);--R3R2R1R0GR3GR3GR3GR3B3B2B1B0
    blank       : out std_logic
 );
 end vga_ctrl_640x480_60Hz;
@@ -214,7 +213,6 @@ begin
 			if video_enable = '0' then
 				rgb_out <= "000000000000";
 			else
-			    --rgb_out <= rgb_in2;			    
 				rgb_out <= rgb_in;
 			end if;
 		end if;

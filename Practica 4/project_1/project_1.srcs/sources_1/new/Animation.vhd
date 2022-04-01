@@ -28,6 +28,9 @@ use UNISIM.vcomponents.all;
 entity Animation is
     Port ( CLK : in  STD_LOGIC; -- Clk a 50MHz
            RST : in  STD_LOGIC; -- reset
+           --RSTREAL : in STD_LOGIC;           
+           UP : in STD_LOGIC; --arriba
+           DOWN : in STD_LOGIC; --abajo           
            RGB : out  STD_LOGIC_VECTOR (11 downto 0); -- Color de salida a la pantalla
            HS : out  STD_LOGIC; -- Señal de sincronizacion horizontal
            VS : out  STD_LOGIC); -- Señal de sincronizacion vertical
@@ -44,12 +47,12 @@ end Animation;
 
 architecture Behavioral of Animation is
 
--- Declaración arrays para posiciones
+-- Declaracion arrays para posiciones
     
     type arinteger1 is array (0 to 5) of integer range 0 to 639; 
     type arinteger2 is array (0 to 5) of integer range 0 to 479;
     
--- Declaracion señales
+-- Declaracion senales
     --Para 34 segmentos
     signal paintLet : STD_LOGIC_VECTOR(6 downto 0);
     signal rgb_aux2 : STD_LOGIC_VECTOR (11 downto 0);
@@ -66,11 +69,15 @@ architecture Behavioral of Animation is
 	signal HCOUNT: STD_LOGIC_VECTOR (10 downto 0);
 	signal VCOUNT: STD_LOGIC_VECTOR (10 downto 0);
 	signal INT_RGB : STD_LOGIC_VECTOR (11 downto 0);
-	signal INT_RGB2 : STD_LOGIC_VECTOR (11 downto 0);
+	--signal INT_RGB2 : STD_LOGIC_VECTOR (11 downto 0);
 	signal clkint : std_logic;
 	signal clkCuco : std_logic;
 	signal count : integer := 0;
-	Signal COLOR : STD_LOGIC_VECTOR (11 downto 0); -- Color
+	signal count2 : integer := 480;
+	Signal rawr : STD_LOGIC_VECTOR (11 downto 0); -- Color
+	
+	--PUSH BUTTONS
+	signal auxil : STD_LOGIC_VECTOR (1 downto 0):= "00"; 
 	
 	-- Para el contador
 	Signal VS2 : std_logic;
@@ -92,6 +99,7 @@ architecture Behavioral of Animation is
 	-- Constantes de la posición de dibujo
 	constant iposx : integer := 150;
 	constant iposy : integer := 0;
+	constant iposy2 : integer := 480;
 	
 	-- Declaracion de colores
     constant Black : std_logic_vector(11 downto 0) := "000000000000";
@@ -153,7 +161,7 @@ architecture Behavioral of Animation is
 	END COMPONENT;
 	
 begin
-    --Declaración de los 34 segmentos
+    --Declaracion de los 34 segmentos
     
     DisplayLET1 : display34segm
     GENERIC MAP(
@@ -278,58 +286,70 @@ DisplayLET6 : display34segm
 	);
 
 	VS <= VS2;
-	
-	 --RGB <= rgb_aux3;
-	 
---Process para mover las letras y el contador para mover el cuco 	
-	process (VS2) 
-	   begin
-       if (VS2'event and VS2 = '0') then
-            if(LetPOS2(0) >= -20) then
-                LetPOS2(0) <= LetPOS2(0)-5;
-            else
-                LetPOS2(0) <= 479;
-            end if; 
-            if(LetPOS2(1) >= -20) then
-                LetPOS2(1) <= LetPOS2(1)-5;
-            else
-                LetPOS2(1) <= 479;
-            end if;
-            if(LetPOS2(2) >= -20) then
-                LetPOS2(2) <= LetPOS2(2)-5;
-            else
-                LetPOS2(2) <= 479;
-            end if;      
-            if(LetPOS2(3) >= -20) then
-                LetPOS2(3) <= LetPOS2(3)-5;
-            else
-                LetPOS2(3) <= 479;
-            end if;    
-            if(LetPOS2(4) >= -20) then
-                LetPOS2(4) <= LetPOS2(4)-5;
-            else
-                LetPOS2(4) <= 479;
-            end if;
-            if(LetPOS2(5) >= -20) then
-                LetPOS2(5) <= LetPOS2(5)-5;
-            else
-                LetPOS2(5) <= 479;
-            end if;
+		 
+ 
 
-            if count = 480 then
-                count <= 0;
-                auxCuco <= 0;
-                
-            else
-                count <= count + 3;
-                auxCuco <= auxCuco + 4;
-                 
-                if auxCuco = 80 then
-                    auxCuco <= 0;
-                    aux <= aux + 1;
-                end if;
+    --Process para mover las letras y el contador para mover el cuco 	
+	process (VS2) 
+	
+	   begin
+	               
+            
+               if (VS2'event and VS2 = '0') then
+               
+                    if(LetPOS2(0) >= -20) then
+                        LetPOS2(0) <= LetPOS2(0)-5;
+                    else
+                        LetPOS2(0) <= 479;
+                    end if;
+                     
+                    if(LetPOS2(1) >= -20) then
+                        LetPOS2(1) <= LetPOS2(1)-5;
+                    else
+                        LetPOS2(1) <= 479;
+                    end if;
+                    
+                    if(LetPOS2(2) >= -20) then
+                        LetPOS2(2) <= LetPOS2(2)-5;
+                    else
+                        LetPOS2(2) <= 479;
+                    end if;
+                          
+                    if(LetPOS2(3) >= -20) then
+                        LetPOS2(3) <= LetPOS2(3)-5;
+                    else
+                        LetPOS2(3) <= 479;
+                    end if;
+                        
+                    if(LetPOS2(4) >= -20) then
+                        LetPOS2(4) <= LetPOS2(4)-5;
+                    else
+                        LetPOS2(4) <= 479;
+                    end if;
+                    
+                    if(LetPOS2(5) >= -20) then
+                        LetPOS2(5) <= LetPOS2(5)-5;
+                    else
+                        LetPOS2(5) <= 479;
+                    end if;
+        
+                    if count = 480 then
+                        count <= 0;
+                        auxCuco <= 0;
+                        
+                    else
+                        count <= count + 3;
+                        auxCuco <= auxCuco + 4;
+                         
+                        if auxCuco = 80 then
+                            auxCuco <= 0;
+                            aux <= aux + 1;
+                        end if;
+                        
+                    end if;
+                                                                                                                   
             end if;
-        end if;
+                                                       
    end process; 
    
 --    CLK_DIV1 : process(CLK)
@@ -349,54 +369,52 @@ DisplayLET6 : display34segm
 --                 end if;
 --             end if;
 --     end process;
-   
-   INT_RGB2 <= "111111111111" when (paintLet(0)='1' or paintLet(1)='1' or paintLet(2)='1' or paintLet(3) = '1' or paintLet(4) = '1' or paintLet(5) = '1');
-   
-   process (VS2)
-       begin
-            if ((VCOUNT>=(iposy+count)) AND (VCOUNT<(iposy+50+count)) AND (HCOUNT>=iposx) AND (HCOUNT<iposx+50)) then
+process(VS2)
+    begin
+    if ((VCOUNT>=(iposy+count)) AND (VCOUNT<(iposy+50+count)) AND (HCOUNT>=iposx) AND (HCOUNT<iposx+50)) then
            
-                posx <= to_integer(unsigned(HCOUNT-iposx));
-                posy <= to_integer(unsigned(VCOUNT-iposy-count));
-           
-                if aux(0) = '0' then
-                    wcolor <= wcolor1;
+                    posx <= to_integer(unsigned(HCOUNT-iposx));
+                    posy <= to_integer(unsigned(VCOUNT-iposy-count));
+               
+                    if aux(0) = '0' then
+                        wcolor <= wcolor1;
+                    else
+                        wcolor <= wcolor2;
+                    end if;
+                    
+                    if (wColor = "000") then
+                        rawr(7 downto 4) <= VCOUNT(8 downto 5);
+                    elsif (wColor = "001") then
+                        rawr(11 downto 0) <= Black(11 downto 0);
+                    elsif (wColor = "010") then
+                        rawr(11 downto 0) <= White(11 downto 0);
+                    elsif (wColor = "011") then
+                        rawr(11 downto 0) <= Red(11 downto 0);
+                    elsif (wColor = "100") then
+                        rawr(11 downto 0) <= Yellow(11 downto 0);
+                    elsif (wColor = "101") then
+                        rawr(11 downto 0) <= Gray(11 downto 0);
+                    elsif (wColor = "110") then
+                        rawr(11 downto 0) <= Orange(11 downto 0);                
+                    else
+                        rawr(7 downto 4) <= VCOUNT(8 downto 5);      
+                    end if;
+                    
+                    paintLet(6)<='1';
+                
                 else
-                    wcolor <= wcolor2;
-                end if;
+                    rawr(7 downto 4) <= VCOUNT(8 downto 5);
+                    paintLet(6)<='0';
                 
-                if (wColor = "000") then
-                    COLOR(7 downto 4) <= VCOUNT(8 downto 5);
-                elsif (wColor = "001") then
-                    COLOR(11 downto 0) <= Black(11 downto 0);
-                elsif (wColor = "010") then
-                    COLOR(11 downto 0) <= White(11 downto 0);
-                elsif (wColor = "011") then
-                    COLOR(11 downto 0) <= Red(11 downto 0);
-                elsif (wColor = "100") then
-                    COLOR(11 downto 0) <= Yellow(11 downto 0);
-                elsif (wColor = "101") then
-                    COLOR(11 downto 0) <= Gray(11 downto 0);
-                elsif (wColor = "110") then
-                    COLOR(11 downto 0) <= Orange(11 downto 0);                
-                else
-                    COLOR(7 downto 4) <= VCOUNT(8 downto 5);      
-                end if;
+                end if; 
+end process;
                 
-                paintLet(6)<='1';
-                
-            else
-                COLOR(7 downto 4) <= VCOUNT(8 downto 5);
-                paintLet(6)<='0';
-            
-            end if; 
-    end process; 
-    
     INT_RGB <= "111111111111" when ((paintLet(0)='1' or paintLet(1)='1' or paintLet(2)='1' or paintLet(3) = '1' or paintLet(4) = '1' or paintLet(5) = '1') and paintLet(6) = '0')     
-    else  X"0"&COLOR(7 downto 4)&X"0";
+    else rawr; 
+    --"0000"&rawr(7 downto 4)&"0000";
      
-    INT_RGB <= COLOR when (paintLet(6) = '1')
-    else  X"0"&COLOR(7 downto 4)&X"0";
+    --INT_RGB <= rawr when (paintLet(6) = '1');
+--    else  "0000"&rawr(7 downto 4)&"0000";
      
 --    process (VS2)
 --       begin
