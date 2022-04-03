@@ -35,14 +35,6 @@ entity Animation is
            HS : out  STD_LOGIC; -- Señal de sincronizacion horizontal
            VS : out  STD_LOGIC); -- Señal de sincronizacion vertical
 			  
-	-- Las siguientes declaraciones realizan la asignacion de pines 
---	attribute loc: string;
---	attribute loc of CLK : signal is "B8"; -- Pin de reloj
---	attribute loc of RST : signal is "B18"; -- Pulsador BTN0
---	attribute loc of COLOR : signal is "R17,N17,L13,L14,K17,K18,H18,G18"; -- Slide Switches SW7 a SW0
---	attribute loc of HS : signal is "T4"; -- Driver VGA
---	attribute loc of VS	: signal is "U3"; -- Driver VGA
---	attribute loc of RGB : signal is "R9,T8,R8,N8,P8,P6,U5,U4"; -- Driver VGA
 end Animation;
 
 architecture Behavioral of Animation is
