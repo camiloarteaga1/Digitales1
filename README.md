@@ -1,4 +1,5 @@
-Lab 2 Digitales 1
+Digitales 1
 
-Simón Sánchez Rúa
+Equipo 8: 
+Simón Sánchez Rúa -
 Juan Camilo Arteaga Ibarra
